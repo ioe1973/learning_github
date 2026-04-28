@@ -1,0 +1,207 @@
+start	end	text
+0	5440	Next question we will talk about is the problem number 14 and its name is binary strings problem.
+5440	8200	This problem is in the interviews of the PATM.
+8200	12800	The problem is that we have to print binary strings, what are binary strings?
+12800	24080	Binary strings means such a string in which only 0, 1, 0, 1, 0 or 0, 0, 0, 0 or 1, 0, 1, 0, 1, 1, 1, 1, 0.
+24080	28480	This is the kind of combination, that is, we have to form binary numbers to form these strings.
+28480	33760	Either a string can have a character 0 or a character 1, apart from that, there is no character.
+33760	36000	We call it binary strings.
+36000	39720	Now, what we have to do? We have to print binary strings of size n.
+39720	44840	I have to print the binary string of size n without consecutive ones.
+44840	52440	That is, if 0, 1, 0, 0, 1, 1 is such a string, what will be its size? 1, 2, 3, 4, 5, 6.
+52880	56800	The size of this string is 6 or 6 or 6.
+56800	59200	But I do not have to print this string. Why do not I print it?
+59200	61200	Because now after this, there is 1.
+61200	64360	We should not have consecutive one after one.
+64360	68320	For example, if in any string 1,1, 0, 1, 0, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1.
+68320	71840	If this is after one, 1, 0, 1, 0, 1, 0, 1, 0, 1, 1, 0, 1, 1, 0, 1, 1, 1, 1, 0.
+71840	76120	But if I have such a string, then this is my one valid string also.
+76120	79000	In fact, this is my one valid string also.
+79000	86500	So I don't want to print a string that has a consecutive 1, but I want to print the rest of the strings that have a size n.
+86500	88000	How will we solve this?
+88000	91000	First of all, let's talk about the base case recursion.
+91000	94000	How will the base case of the recursion be made?
+94000	97000	Base case means smallest possible case for which we can find out.
+97000	103000	If I had given the value of n to 0, then what would I print in my string?
+103000	107000	I would print in my string, nothing, empty.
+107000	111000	If I had given the value of n to 1, then what would I print in my string?
+111000	115000	Either my string would be 1, or my string would be 0.
+115000	117000	There are only two possible strings.
+117000	121000	If the value of n is 1, then either 1 or 0 can come.
+121000	125000	In both cases, there will be no consecutive 1s because there are no 2 1s anywhere.
+125000	127000	So I will print these two.
+127000	131000	If my value of n is 2, then who can I print?
+131000	138000	So I can print either 0 0, or I can print 0 1, or I can print 1 0.
+138000	140000	Can I print 1 1?
+140000	145000	I can't print this because there are consecutive 1s here.
+145000	150000	So I don't want to print this, but I will print the rest of the strings.
+150000	152000	That is, I will print these three.
+152000	160000	So can I say that forming binary strings is equal to taking n chairs
+160000	164000	and you can either print 0 or print 1 on n chairs.
+164000	166000	Let me tell you a little bit about this.
+166000	173000	If I want to make a binary string of n size, then what does it mean?
+173000	176000	It means I have to fill n places.
+176000	178000	Suppose I have taken n as 2.
+178000	181000	So I have two empty chairs that I have to fill.
+181000	183000	And how can I fill them?
+183000	188000	Either I can print 0 1 or print 1 on them.
+188000	190000	So what did I do here?
+190000	192000	Here I first printed 0.
+192000	194000	After that the next chair is left.
+194000	196000	I print 0 again on the next chair.
+196000	198000	So this combination came to me.
+198000	200000	After that what did I do?
+200000	203000	I printed 0 on the first chair and I printed 1 on the second.
+203000	205000	So I got this combination.
+205000	209000	Now I printed 1 instead of 0 on the first chair.
+209000	210000	So what can I do?
+210000	213000	Now I can print 0 on the second chair.
+213000	215000	So I got this combination.
+215000	217000	Or I have printed 1 on the first chair.
+217000	221000	So I have to remember the last chair because 1 was sitting.
+221000	224000	So on the next chair, I can't print 1.
+224000	229000	Either 0 will come here or nothing will come in this string.
+229000	230000	Only 0 can come.
+230000	233000	As soon as 0 comes, it will become the same combination.
+233000	239000	So these are the three possible combinations of binary strings that I have to print.
+239000	241000	So how did I visualize my problem?
+241000	244000	I imagined n size as n chairs.
+244000	247000	And on every chair, I can either print 0 or print 1.
+247000	250000	But yes, I have to remember one thing.
+250000	255000	If I can call it my last chair or my last index,
+255000	258000	or I can call it my last place.
+258000	261000	If I had 1 on my last place,
+261000	265000	then I can't print 1 on the next place.
+265000	268000	If I had 0 on the last place,
+268000	272000	then I can print 0 or print 1 on the next place.
+272000	275000	Because if 0 comes here, then print 0 or print 1.
+275000	277000	The consecutive 1 will not come.
+277000	279000	But yes, last time, if 1 came in the last place,
+279000	281000	and now I print 1 on the next place,
+281000	282000	then what will happen?
+282000	285000	The condition of the consecutive 1 will not be proved.
+285000	287000	I will solve this a little more.
+287000	289000	I will solve it a little more.
+289000	291000	Let's see for n is equal to 3.
+291000	293000	What will be for n is equal to 3?
+293000	294000	I have 3 places.
+294000	295000	1, 2, 3.
+295000	297000	What can I do?
+297000	299000	Now in the first place, as soon as I sent 0,
+299000	301000	what is my last place?
+301000	303000	My last place is 0 for this index.
+303000	305000	Now if I send 0 here too,
+305000	307000	then my last place will be 0.
+307000	309000	Now if I send 0 here too,
+309000	312000	I have the first combination of 0, 0, 0.
+312000	313000	Now what did I do?
+313000	315000	Here and here, I had sent 0.
+315000	317000	Because here the last place was 0,
+317000	319000	then I send 1 here.
+319000	321000	I have the combination of 0, 0, 1.
+321000	323000	Now what do I do?
+323000	325000	Here I had sent 0.
+325000	327000	Here, instead of sending 0,
+327000	329000	I send 1.
+329000	331000	Now in the last place,
+331000	333000	I will pass 1.
+333000	335000	For which index?
+335000	337000	For this index.
+337000	339000	Since I had sent 1 here,
+339000	341000	now I can only send 0 here.
+341000	343000	I can't send 1.
+343000	345000	So my new string is 0, 1, 0.
+345000	347000	Now I sent 0 after sending 0.
+347000	349000	After sending 0, I sent 1 after sending 1.
+349000	351000	Now I send 1 here.
+351000	353000	As soon as I sent 1,
+353000	355000	my last place will be equal to 1.
+355000	357000	So I will go to send here.
+357000	359000	Now I can only send 0 here.
+359000	361000	I can't send 1.
+361000	363000	As soon as I sent 0 here,
+363000	365000	my last place became 0.
+365000	367000	As soon as the last place became 0,
+367000	369000	now I can send 0 here too.
+369000	371000	So my string will be 0, 0, 0.
+371000	373000	And I can send 1 here too.
+373000	375000	So my string will be 1, 0, 1.
+375000	377000	So here 1, 0.
+377000	379000	After that, all possible combinations came.
+379000	381000	Can I send 1 after 1?
+381000	383000	So my possible solutions will be
+383000	385000	only this much.
+385000	387000	I will have 5 strings printed
+387000	389000	for n is equal to 3.
+389000	391000	And those strings will look something like this.
+391000	393000	So what will be my base case?
+393000	395000	My base case will be for n is equal to 0.
+395000	397000	What I have to do?
+397000	399000	I have to print the empty string.
+399000	401000	And what I have to do in my recursion?
+401000	403000	I have to do this.
+403000	405000	First of all, I will pass the last
+405000	407000	place variable in the recursion call.
+407000	409000	What will be the last place?
+409000	411000	I will tell the next level that
+411000	413000	the last seat was 0 or 1.
+413000	415000	I will be able to decide from that
+415000	417000	whether I have to send 0 or 1 this time.
+417000	419000	So what is my function?
+419000	421000	My recursive function.
+421000	423000	If I pass n,
+423000	425000	then this n can mean
+425000	427000	who I have to send on nth place.
+427000	429000	This is my third place.
+429000	431000	n is equal to 3.
+431000	433000	This is my second place. This is my first place.
+433000	435000	So what will be my work in the recursion?
+435000	437000	My work in the recursion
+437000	439000	is that if I take a choice
+439000	441000	on my nth place
+441000	443000	or I send 0
+443000	445000	or I send 1
+445000	447000	then the choice after that
+447000	449000	means the rest of the n minus
+449000	451000	1 places will be my work.
+451000	453000	That will be my internal function.
+453000	455000	If I had
+455000	457000	n places in the recursion
+457000	459000	what would I do in the recursion?
+459000	461000	I would fill one place
+461000	463000	i.e. fill the nth place.
+463000	465000	And then I would
+465000	467000	put a call for these levels
+467000	469000	to fill in n minus 1 places.
+469000	471000	So my work in the recursion
+471000	473000	is that I have to take a choice
+473000	475000	on this nth place.
+475000	477000	How will I take that choice?
+477000	479000	Either I can send 0 here
+479000	481000	or I can send 1.
+481000	483000	I will send 0 in every case.
+483000	485000	I will send 1 only in the case
+485000	487000	where my last place
+487000	489000	was not equal to 1.
+489000	491000	If the last place was 0 then
+491000	493000	anyone can add it. If the last place was 1
+493000	495000	then I have to do this.
+495000	497000	Whether I send 0 or 1
+497000	499000	on the nth seat
+499000	501000	and then how I have to call the internal function
+501000	503000	means here
+503000	505000	when I have to call fn minus 1
+505000	507000	to fill in the rest of the n minus places.
+507000	509000	So in my recursion
+509000	511000	the base case is clear for n is equal to 0
+511000	513000	I have to print the empty string.
+513000	515000	The work is clear that I have to send
+515000	517000	someone on the nth seat
+517000	519000	to take the choice of nth seat.
+519000	521000	Either that choice can be 0 or 1.
+521000	523000	If the place is 1 or 0
+523000	525000	then I will take the decision
+525000	527000	from here.
+527000	529000	I will send fn minus 1
+529000	531000	to fill in the rest of the places.
+531000	533000	Call.

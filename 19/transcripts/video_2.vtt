@@ -1,0 +1,242 @@
+WEBVTT
+
+00:00.000 --> 00:04.000
+What will I do for the code? First, I will make a function. I will give the name of the function
+
+00:04.000 --> 00:10.000
+Public static. It has a return type int. Why int? Because I am going to return the total number of ways.
+
+00:10.000 --> 00:17.000
+I will give the name of this function. Tiling problem. There will be one parameter in it, my integer n.
+
+00:17.000 --> 00:24.000
+Why is this integer n? Because my size of the floor is equal to 2xn. 2xn is my floor size.
+
+00:24.000 --> 00:30.000
+So, n is the sign that the length of my floor is going to be equal to the length of my floor.
+
+00:30.000 --> 00:35.000
+Now, what I have to do first? First of all, I will do my work.
+
+00:35.000 --> 00:40.000
+What is the work in my recursive function? The work is to take a choice.
+
+00:40.000 --> 00:43.000
+Let us assume that first of all, I have taken a vertical choice.
+
+00:43.000 --> 00:46.000
+As soon as I have taken a vertical choice, what do I have to calculate?
+
+00:46.000 --> 00:50.000
+I have taken a vertical choice and sold one tile. Now, I just have to calculate this.
+
+00:50.000 --> 00:56.000
+How many tiles will be in n minus 1? Int vertical tiles is equal to...
+
+00:56.000 --> 01:01.000
+I will call this same function to the tiling problem for n minus 1.
+
+01:01.000 --> 01:08.000
+So, I have taken a choice here. After placing the vertical, how many tiles will be in n minus 1?
+
+01:08.000 --> 01:16.000
+I have stored this in vertical tiles. In fact, instead of vertical tiles, I will write fn minus 1.
+
+01:16.000 --> 01:22.000
+That means, I will get so many choices. Now, what will I do? I will take a horizontal choice.
+
+01:22.000 --> 01:32.000
+Horizontal choice. As soon as I have taken a horizontal choice, I will have to calculate fn minus 2.
+
+01:32.000 --> 01:36.000
+What will happen? This will be the tiling problem for n minus 2.
+
+01:36.000 --> 01:41.000
+So, the horizontal choice will be left here and the vertical choice will be left here.
+
+01:41.000 --> 01:47.000
+What will be my total ways? Int total ways is equal to...
+
+01:47.000 --> 01:53.000
+My fn minus 1 will return and fn minus 2 will return.
+
+01:53.000 --> 01:57.000
+And finally, with the same function, I will return my total ways.
+
+01:57.000 --> 02:01.000
+What can I do on top? I can write my base case on top.
+
+02:01.000 --> 02:07.000
+My base case will be that if my value of n is 0 or my value of n is 1, then I have only one way left.
+
+02:07.000 --> 02:12.000
+So, I will return 1. I hope this thing will be clear.
+
+02:12.000 --> 02:14.000
+We discussed this in the base case first.
+
+02:14.000 --> 02:19.000
+The work is to make a choice. As soon as we make a choice, then the tiling problem for n minus 1 will be solved.
+
+02:19.000 --> 02:22.000
+The tiling problem for n minus 2 will be solved.
+
+02:22.000 --> 02:26.000
+Here, I am faith that n minus 1 and n minus 2 will be the right answer.
+
+02:26.000 --> 02:29.000
+I will calculate the total ways and then I will return the total ways.
+
+02:29.000 --> 02:33.000
+Let's do this safely. We will put a call from the main function.
+
+02:33.000 --> 02:40.000
+I will pass the tiling problem and here I will pass my n as 3.
+
+02:40.000 --> 02:47.000
+I know that the answer I should get for 3 should be equal to 3.
+
+02:47.000 --> 02:52.000
+Now, if I put a call for n is equal to 2, then the answer should be equal to 2.
+
+02:52.000 --> 02:56.000
+One is that we will place both horizontally and one is that we will place both vertically.
+
+02:56.000 --> 03:00.000
+If I put a call for n is equal to 4, then what should happen?
+
+03:00.000 --> 03:02.000
+I will get the answer 5.
+
+03:02.000 --> 03:05.000
+This is a homework problem for you to figure out.
+
+03:05.000 --> 03:07.000
+You have to solve it on a paper pen.
+
+03:07.000 --> 03:12.000
+If the size of the floor is equal to 2 cross 4, then how do I get 5 ways?
+
+03:12.000 --> 03:16.000
+What are the 5 ways in which I am placing my tiles?
+
+03:16.000 --> 03:18.000
+We have to solve this right now.
+
+03:18.000 --> 03:22.000
+The most important thing about this question is that it will not come only for 2 cross 1.
+
+03:22.000 --> 03:24.000
+What will happen in the question?
+
+03:24.000 --> 03:27.000
+This question can also come for 4 cross 1.
+
+03:27.000 --> 03:29.000
+How will I get the question?
+
+03:30.000 --> 03:37.000
+I will get the question that the size of the floor is equal to 4 cross n.
+
+03:37.000 --> 03:40.000
+So, my floor will look something like this.
+
+03:40.000 --> 03:45.000
+This side will always be 4 and this side will always be n.
+
+03:45.000 --> 03:47.000
+After that, what will be the size of the tile?
+
+03:47.000 --> 03:53.000
+We will get the size of the tile equal to 4 cross 1.
+
+03:53.000 --> 03:56.000
+So, there is no need to apply the same formula.
+
+03:56.000 --> 03:58.000
+The formula will look exactly the same.
+
+03:58.000 --> 04:01.000
+If you have this question for 4 cross 1, then it will also come.
+
+04:01.000 --> 04:05.000
+Along with this, there will be a lot of questions in the recursion,
+
+04:05.000 --> 04:07.000
+in which one thing is used called DP.
+
+04:07.000 --> 04:10.000
+DP means Dynamic Programming.
+
+04:10.000 --> 04:15.000
+Dynamic Programming means that we are solving the same question again and again.
+
+04:15.000 --> 04:18.000
+Instead of calculating the same thing again and again,
+
+04:18.000 --> 04:19.000
+what do we do?
+
+04:19.000 --> 04:21.000
+We store the answer somewhere.
+
+04:21.000 --> 04:25.000
+So, here, because we have only learned basic recursion,
+
+04:25.000 --> 04:28.000
+then there will be some questions that we will solve from the recursion app,
+
+04:28.000 --> 04:30.000
+but it will not have the most optimized solution.
+
+04:30.000 --> 04:32.000
+Its time complexity will be quite large.
+
+04:32.000 --> 04:35.000
+So, when we go to the end and learn Dynamic Programming,
+
+04:35.000 --> 04:39.000
+after that we can solve all these questions in a maximum optimized way.
+
+04:39.000 --> 04:43.000
+Till then, we have to wait a little because we are only working on the logic building,
+
+04:43.000 --> 04:45.000
+we are building the logic of the recursion.
+
+04:45.000 --> 04:47.000
+So, we are not doing the most optimized solution.
+
+04:47.000 --> 04:50.000
+We are learning the recursion now that how is the recursion working?
+
+04:50.000 --> 04:52.000
+We have understood the logic of the recursion.
+
+04:52.000 --> 04:54.000
+So, the questions of the graph will be very easy.
+
+04:54.000 --> 04:56.000
+The questions of the linked list will be very easy.
+
+04:56.000 --> 04:58.000
+There will be a lot more things that will be easy.
+
+04:58.000 --> 05:00.000
+In fact, the concept of Dynamic Programming,
+
+05:00.000 --> 05:03.000
+we will be understanding that very well in the end.
+
+05:03.000 --> 05:06.000
+So, right now, the most optimized solution may not be available to you.
+
+05:06.000 --> 05:08.000
+There are a lot of problems.
+
+05:08.000 --> 05:10.000
+But yes, you will get the most logical solution.
+
+05:10.000 --> 05:13.000
+How to understand them, how to visualize them.
+

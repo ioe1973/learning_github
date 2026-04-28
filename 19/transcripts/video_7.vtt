@@ -1,0 +1,680 @@
+WEBVTT
+
+00:00.000 --> 00:02.000
+What happened in the stack analysis?
+
+00:02.000 --> 00:04.000
+First of all, in the main function,
+
+00:04.000 --> 00:08.000
+the first stack frame will be the main function.
+
+00:08.000 --> 00:11.000
+There will be three variables in the main function stack frame.
+
+00:11.000 --> 00:14.000
+The first variable is n, the value of n is with 3.
+
+00:14.000 --> 00:19.000
+After that, I have passed the last place as 0.
+
+00:19.000 --> 00:21.000
+And after that, I have an empty string.
+
+00:21.000 --> 00:23.000
+Now I will come to my next level.
+
+00:23.000 --> 00:27.000
+As soon as my function is called to print binary strings,
+
+00:27.000 --> 00:30.000
+there are the same values in which the value of n is equal to 3.
+
+00:30.000 --> 00:34.000
+The last place is 0 and the string is empty.
+
+00:34.000 --> 00:36.000
+Now what will this function do?
+
+00:36.000 --> 00:39.000
+In this function, I will do my work.
+
+00:39.000 --> 00:40.000
+What is my work?
+
+00:40.000 --> 00:42.000
+I first set 0 to nth place.
+
+00:42.000 --> 00:45.000
+As soon as I set 0 to nth place,
+
+00:45.000 --> 00:47.000
+another function will go up.
+
+00:47.000 --> 00:49.000
+In this, my string has come to 0.
+
+00:49.000 --> 00:52.000
+Now I have passed 0 to the last place.
+
+00:52.000 --> 00:55.000
+And my value of n will be 2.
+
+00:55.000 --> 00:57.000
+After that, I will do my work again.
+
+00:57.000 --> 00:59.000
+That is, to set 0 to the next place again.
+
+00:59.000 --> 01:02.000
+So I will come to another level in the stack frame.
+
+01:02.000 --> 01:04.000
+Now the value of n will be equal to 1.
+
+01:04.000 --> 01:06.000
+Now I have set 0 to the last place again.
+
+01:06.000 --> 01:08.000
+And my string has become 0.
+
+01:08.000 --> 01:11.000
+Now I will do one more work and call again.
+
+01:11.000 --> 01:14.000
+When the call will go, the value of n will pass 0.
+
+01:14.000 --> 01:17.000
+Because n is happening every time in my code.
+
+01:17.000 --> 01:19.000
+You will analyze that in the code,
+
+01:19.000 --> 01:22.000
+the value of n that I am passing every time is n minus 1.
+
+01:22.000 --> 01:24.000
+It is becoming minus 1.
+
+01:24.000 --> 01:29.000
+This time too, my last place is equal to 0.
+
+01:29.000 --> 01:31.000
+And this time my string is 0.
+
+01:31.000 --> 01:34.000
+Because as soon as I am sending it on the next level,
+
+01:34.000 --> 01:36.000
+I have set 0 to the third place.
+
+01:36.000 --> 01:39.000
+But here, my base case will hit.
+
+01:39.000 --> 01:40.000
+n is equal to 0.
+
+01:40.000 --> 01:41.000
+As soon as the base case hits,
+
+01:41.000 --> 01:42.000
+what will I do?
+
+01:42.000 --> 01:43.000
+I will get the string printed.
+
+01:43.000 --> 01:44.000
+So here in the output window,
+
+01:44.000 --> 01:46.000
+I will get 0, 0, 0 printed.
+
+01:46.000 --> 01:47.000
+After that, what will I do?
+
+01:47.000 --> 01:49.000
+I will do it from this level.
+
+01:49.000 --> 01:51.000
+Return back to the lower level.
+
+01:51.000 --> 01:53.000
+As soon as it comes to the lower level,
+
+01:53.000 --> 01:55.000
+the upper level will be empty.
+
+01:55.000 --> 01:57.000
+As soon as I come to the lower level,
+
+01:57.000 --> 01:58.000
+what do I have to do?
+
+01:58.000 --> 02:01.000
+Now I have to put another call on the top.
+
+02:01.000 --> 02:02.000
+After putting another call,
+
+02:02.000 --> 02:03.000
+now instead of 0,
+
+02:03.000 --> 02:05.000
+I have to place 1 on the chair.
+
+02:05.000 --> 02:07.000
+So the last place will be 1.
+
+02:07.000 --> 02:09.000
+And this time I will place 0, 0, 1 on the chair.
+
+02:09.000 --> 02:11.000
+For n is equal to 0.
+
+02:11.000 --> 02:12.000
+As soon as n is equal to 0,
+
+02:12.000 --> 02:13.000
+n is equal to 0,
+
+02:13.000 --> 02:16.000
+I will set this base case and 0, 0, 0, 1.
+
+02:16.000 --> 02:20.000
+0, 0, 1 will be printed on my output screen.
+
+02:20.000 --> 02:22.000
+I will come back to the lower level again.
+
+02:22.000 --> 02:24.000
+When I come back to the lower level,
+
+02:24.000 --> 02:26.000
+the upper level will be empty.
+
+02:26.000 --> 02:28.000
+Now what did I do?
+
+02:28.000 --> 02:32.000
+Now I saw that I have put 0 and 1 here.
+
+02:32.000 --> 02:34.000
+Now I have to come back to another level.
+
+02:34.000 --> 02:37.000
+So the upper level will be empty.
+
+02:37.000 --> 02:39.000
+Now for this level,
+
+02:39.000 --> 02:40.000
+if I talk,
+
+02:40.000 --> 02:41.000
+I have put 0 here.
+
+02:41.000 --> 02:42.000
+Now after that,
+
+02:42.000 --> 02:44.000
+I have put 0 and 1.
+
+02:44.000 --> 02:45.000
+Now I have to put 1.
+
+02:45.000 --> 02:47.000
+So to put 1,
+
+02:47.000 --> 02:49.000
+I will go up for n is equal to 1.
+
+02:49.000 --> 02:51.000
+So now the last place will be my 1.
+
+02:51.000 --> 02:53.000
+And now I will place 0, 1.
+
+02:53.000 --> 02:55.000
+As soon as I have placed 0, 1,
+
+02:55.000 --> 02:57.000
+I have to put one more call.
+
+02:57.000 --> 02:58.000
+Why do I have to put a call?
+
+02:58.000 --> 03:00.000
+Now I can place 0, 1,
+
+03:00.000 --> 03:02.000
+on the third place.
+
+03:02.000 --> 03:05.000
+So I will place 0, 1, 0 first.
+
+03:05.000 --> 03:07.000
+So the last place will be 0.
+
+03:07.000 --> 03:09.000
+And n is equal to 0.
+
+03:09.000 --> 03:10.000
+As soon as n is equal to 0,
+
+03:10.000 --> 03:11.000
+I have set this base case.
+
+03:11.000 --> 03:14.000
+So now I will print 0, 1, 0.
+
+03:14.000 --> 03:16.000
+As soon as I have put 0, 1, 0,
+
+03:16.000 --> 03:18.000
+it will come back to the lower level.
+
+03:18.000 --> 03:20.000
+So the upper level will be empty.
+
+03:20.000 --> 03:22.000
+If the upper level is empty,
+
+03:22.000 --> 03:23.000
+then I will look at this level.
+
+03:23.000 --> 03:25.000
+I have put 0 here.
+
+03:25.000 --> 03:27.000
+Now can I place 1 here?
+
+03:27.000 --> 03:29.000
+No, I can't place 1 here.
+
+03:29.000 --> 03:30.000
+Because if I place 1 here,
+
+03:30.000 --> 03:32.000
+then it will be consecutive 1s.
+
+03:32.000 --> 03:34.000
+So I have placed it here
+
+03:34.000 --> 03:37.000
+for every possible combination.
+
+03:37.000 --> 03:39.000
+I will come back to the lower level.
+
+03:39.000 --> 03:41.000
+In the lower level,
+
+03:41.000 --> 03:43.000
+I have put 0 after 0.
+
+03:43.000 --> 03:45.000
+I have put 1 after 0.
+
+03:45.000 --> 03:46.000
+Now what will I do?
+
+03:46.000 --> 03:48.000
+I can't place it further.
+
+03:48.000 --> 03:50.000
+So from here also,
+
+03:50.000 --> 03:52.000
+I will come back to the lower level.
+
+03:52.000 --> 03:54.000
+And the upper level will be empty.
+
+03:54.000 --> 03:56.000
+In this level,
+
+03:56.000 --> 03:58.000
+I have analyzed all the things by placing 0.
+
+03:58.000 --> 04:00.000
+Now at the first nth place,
+
+04:00.000 --> 04:02.000
+I will place 1 here.
+
+04:02.000 --> 04:04.000
+As soon as I have placed 1,
+
+04:04.000 --> 04:05.000
+what will happen here?
+
+04:05.000 --> 04:07.000
+My string will be equal to 1.
+
+04:07.000 --> 04:08.000
+I will pass it to the last place.
+
+04:08.000 --> 04:09.000
+1 will be value of n.
+
+04:09.000 --> 04:11.000
+Now I can place 0 here
+
+04:11.000 --> 04:12.000
+or place 1 here.
+
+04:12.000 --> 04:13.000
+I can't place 1 here
+
+04:13.000 --> 04:14.000
+because it is 1 in the last place.
+
+04:14.000 --> 04:16.000
+So I will be able to place 0 only.
+
+04:16.000 --> 04:17.000
+If I place 0,
+
+04:17.000 --> 04:19.000
+for n is equal to 1,
+
+04:19.000 --> 04:21.000
+I have passed 0 in the last place
+
+04:21.000 --> 04:23.000
+and the string passed 1, 0, 0.
+
+04:23.000 --> 04:24.000
+Now in 1, 0, 0,
+
+04:24.000 --> 04:26.000
+I can place 1 here as well.
+
+04:26.000 --> 04:27.000
+I can place 0 as well.
+
+04:27.000 --> 04:28.000
+I will place 0 first.
+
+04:28.000 --> 04:31.000
+So for n is equal to 0,
+
+04:31.000 --> 04:33.000
+I passed 0 in the last place
+
+04:33.000 --> 04:36.000
+and the string became 1, 0, 0.
+
+04:36.000 --> 04:37.000
+So what will happen here?
+
+04:37.000 --> 04:39.000
+My base case will be set here.
+
+04:39.000 --> 04:41.000
+So I will print it to 1, 0, 0.
+
+04:41.000 --> 04:42.000
+Then what will I do?
+
+04:42.000 --> 04:44.000
+I will come back to a level below
+
+04:44.000 --> 04:46.000
+and the upper level will be empty.
+
+04:46.000 --> 04:47.000
+In this level,
+
+04:47.000 --> 04:49.000
+I have placed 0 here.
+
+04:49.000 --> 04:51.000
+Now I will place 1 here.
+
+04:51.000 --> 04:52.000
+I will place 1 here.
+
+04:52.000 --> 04:53.000
+I will place 1 here.
+
+04:53.000 --> 04:54.000
+I will place 1 here.
+
+04:54.000 --> 04:55.000
+I will place 1 here.
+
+04:55.000 --> 04:57.000
+I will place 1 here.
+
+04:57.000 --> 05:00.000
+So this string will become 1, 0, 1.
+
+05:00.000 --> 05:02.000
+I have reached the last place.
+
+05:02.000 --> 05:03.000
+For n is equal to 0.
+
+05:03.000 --> 05:04.000
+As soon as n is equal to 0,
+
+05:04.000 --> 05:06.000
+I have reached the base case.
+
+05:06.000 --> 05:07.000
+When I have reached the base case,
+
+05:07.000 --> 05:09.000
+I will get the string printed.
+
+05:09.000 --> 05:10.000
+This is 1, 0, 1.
+
+05:10.000 --> 05:12.000
+After this, what will I do?
+
+05:12.000 --> 05:13.000
+After this, I will see that
+
+05:13.000 --> 05:14.000
+the base case is hit.
+
+05:14.000 --> 05:15.000
+So I will return from here.
+
+05:15.000 --> 05:16.000
+As soon as I return,
+
+05:16.000 --> 05:18.000
+I will come to this function call.
+
+05:18.000 --> 05:20.000
+As soon as I come to this function call,
+
+05:20.000 --> 05:22.000
+I will see that I have placed 0 here.
+
+05:22.000 --> 05:24.000
+I have placed 1 here.
+
+05:24.000 --> 05:26.000
+So I have to return from here.
+
+05:26.000 --> 05:28.000
+So this will be my stack frame empty.
+
+05:28.000 --> 05:30.000
+After this, I will come here.
+
+05:30.000 --> 05:32.000
+I have placed 0 here.
+
+05:32.000 --> 05:33.000
+I have placed 1 here.
+
+05:33.000 --> 05:35.000
+So this will be empty for me.
+
+05:35.000 --> 05:36.000
+I will come to the lower level.
+
+05:36.000 --> 05:37.000
+Here too,
+
+05:37.000 --> 05:40.000
+I have seen all the combinations of 0
+
+05:40.000 --> 05:41.000
+and all combinations of 1.
+
+05:41.000 --> 05:43.000
+So now I will return to the main function.
+
+05:43.000 --> 05:45.000
+If I return to the main function,
+
+05:45.000 --> 05:47.000
+this stack frame will also be empty.
+
+05:47.000 --> 05:49.000
+In the main function,
+
+05:49.000 --> 05:50.000
+I will return from here.
+
+05:50.000 --> 05:51.000
+And my program will be over.
+
+05:51.000 --> 05:52.000
+And at the end,
+
+05:52.000 --> 05:54.000
+I will see that the output window
+
+05:54.000 --> 05:55.000
+has the same things.
+
+05:55.000 --> 05:57.000
+It is printed in the same sequence.
+
+05:57.000 --> 05:59.000
+First, it has printed 0, 0, 0.
+
+05:59.000 --> 06:01.000
+In the first line,
+
+06:01.000 --> 06:03.000
+it has printed 0, 0, 1.
+
+06:03.000 --> 06:05.000
+After that, it has printed 0, 1, 0.
+
+06:05.000 --> 06:07.000
+After that, it has printed 1, 0, 0.
+
+06:07.000 --> 06:10.000
+And at the end, it has printed 1, 0, 1.
+
+06:10.000 --> 06:11.000
+So in this way,
+
+06:11.000 --> 06:14.000
+we print binary numbers and binary strings
+
+06:14.000 --> 06:16.000
+without consecutive 1s.
+
+06:16.000 --> 06:18.000
+Now you can also change this question.
+
+06:18.000 --> 06:20.000
+It is possible that in the interview,
+
+06:20.000 --> 06:21.000
+instead of consecutive 1s,
+
+06:21.000 --> 06:23.000
+there should be no consecutive 0s.
+
+06:23.000 --> 06:24.000
+So what to do in that?
+
+06:24.000 --> 06:25.000
+In the last place,
+
+06:25.000 --> 06:26.000
+when I have placed 0,
+
+06:26.000 --> 06:28.000
+then I will not place the other 0.
+
+06:28.000 --> 06:30.000
+If I have placed 1,
+
+06:30.000 --> 06:32.000
+then I can place any of the 0 or 1.
+
+06:32.000 --> 06:34.000
+So that question changes in this way.
+
+06:34.000 --> 06:36.000
+Conditions will change slightly.
+
+06:36.000 --> 06:37.000
+So by changing the form,
+
+06:37.000 --> 06:39.000
+we can come into the same interview.
+
+06:39.000 --> 06:41.000
+I hope that many of you
+
+06:41.000 --> 06:43.000
+have asked the basic questions of recursion
+
+06:43.000 --> 06:44.000
+or I have understood it well.
+
+06:44.000 --> 06:46.000
+If there is a small doubt in any question,
+
+06:46.000 --> 06:48.000
+then you have to write the code
+
+06:48.000 --> 06:50.000
+and see the logic again.
+
+06:50.000 --> 06:51.000
+You have to see the video again.
+
+06:51.000 --> 06:52.000
+And what to do?
+
+06:52.000 --> 06:53.000
+You have to do the stack analysis
+
+06:53.000 --> 06:55.000
+by yourself, line by line.
+
+06:55.000 --> 06:57.000
+So we will have clear those things.
+
+06:57.000 --> 06:59.000
+Now in the next chapters,
+
+06:59.000 --> 07:02.000
+we will read the recursion in more detail.
+
+07:02.000 --> 07:04.000
+Now we have seen simple recursion.
+
+07:04.000 --> 07:07.000
+We will see more different types of recursion.
+
+07:07.000 --> 07:10.000
+Once our hands have become very strong on recursion,
+
+07:10.000 --> 07:13.000
+then we will move towards our advanced data structures.
+

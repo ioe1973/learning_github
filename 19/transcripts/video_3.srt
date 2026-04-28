@@ -1,0 +1,1200 @@
+1
+00:00:00,000 --> 00:00:05,000
+Next is my problem number 12, the name of this question is to remove duplicates in a string.
+
+2
+00:00:05,000 --> 00:00:11,000
+That is, I will give a string in which I have to remove duplicate letters and characters.
+
+3
+00:00:11,000 --> 00:00:17,000
+And in the question, I already have a condition that my characters will go from small a to small z.
+
+4
+00:00:17,000 --> 00:00:22,000
+That is, it is not that capital A will come or add the rate or capital F will come.
+
+5
+00:00:22,000 --> 00:00:29,000
+In my question, what will happen? Only small a to small z or small z will be my characters or my letters.
+
+6
+00:00:29,000 --> 00:00:35,000
+We can also transform this question in such a way that it is coming in capital or all the characters are coming.
+
+7
+00:00:35,000 --> 00:00:42,000
+That is, the add rate can also come, the slash can also come, the underscore can also come, the hyphen can also come, the comma can also come, any character can come.
+
+8
+00:00:42,000 --> 00:00:52,000
+If we have to solve that question, then we will have to use the hash set, the data structure called hash set, which we will learn later.
+
+9
+00:00:52,000 --> 00:00:57,000
+So, we have taken a slight easier version of the same question of remove duplicates here.
+
+10
+00:00:57,000 --> 00:01:03,000
+We have put a condition in the easier version that it will come from small a to small z, it will not come from that.
+
+11
+00:01:03,000 --> 00:01:11,000
+Now, this question is already in the interviews of companies like Google, Microsoft or in their tests.
+
+12
+00:01:11,000 --> 00:01:13,000
+So, let us learn the logic of the question.
+
+13
+00:01:13,000 --> 00:01:15,000
+Suppose I have given this string.
+
+14
+00:01:15,000 --> 00:01:21,000
+If I go to remove duplicates in this string, then what will be the logical way to do it?
+
+15
+00:01:21,000 --> 00:01:24,000
+The logical way is that I will go to each index.
+
+16
+00:01:24,000 --> 00:01:26,000
+First of all, I will make an empty string.
+
+17
+00:01:26,000 --> 00:01:28,000
+Now, I went to the first index.
+
+18
+00:01:28,000 --> 00:01:30,000
+I have already come to A.
+
+19
+00:01:30,000 --> 00:01:33,000
+I saw that there was no character before turning back.
+
+20
+00:01:33,000 --> 00:01:35,000
+So, I can connect A to the new string.
+
+21
+00:01:35,000 --> 00:01:37,000
+After that, I will go to P.
+
+22
+00:01:37,000 --> 00:01:38,000
+P has already come.
+
+23
+00:01:38,000 --> 00:01:39,000
+P did not come before.
+
+24
+00:01:39,000 --> 00:01:40,000
+Before this, I just came A.
+
+25
+00:01:40,000 --> 00:01:41,000
+So, I will connect P.
+
+26
+00:01:41,000 --> 00:01:43,000
+After that, I will go to this P.
+
+27
+00:01:43,000 --> 00:01:48,000
+When I will look at the characters before this P, then I will remember that I had already come to P.
+
+28
+00:01:48,000 --> 00:01:51,000
+So, I will not connect this P to my new string.
+
+29
+00:01:51,000 --> 00:01:53,000
+After that, I will go to the next character.
+
+30
+00:01:53,000 --> 00:01:55,000
+So, I will look at N for N.
+
+31
+00:01:55,000 --> 00:01:57,000
+If N has come before this, then it has not come before this.
+
+32
+00:01:57,000 --> 00:01:59,000
+So, I will copy N here.
+
+33
+00:01:59,000 --> 00:02:01,000
+After that, I will go to the next character.
+
+34
+00:02:01,000 --> 00:02:03,000
+This N has already come.
+
+35
+00:02:03,000 --> 00:02:04,000
+Why?
+
+36
+00:02:04,000 --> 00:02:07,000
+Because the character before this was already N.
+
+37
+00:02:07,000 --> 00:02:08,000
+I remember this.
+
+38
+00:02:08,000 --> 00:02:09,000
+So, what will I do?
+
+39
+00:02:09,000 --> 00:02:12,000
+I will not connect this N because N has already come to the string.
+
+40
+00:02:12,000 --> 00:02:14,000
+After that, I will go to the next letter.
+
+41
+00:02:14,000 --> 00:02:15,000
+I will look at A here.
+
+42
+00:02:15,000 --> 00:02:18,000
+If I look back for A, then I will remember.
+
+43
+00:02:18,000 --> 00:02:21,000
+If A has already come, then I will not add this A.
+
+44
+00:02:21,000 --> 00:02:23,000
+Next, I will go to C.
+
+45
+00:02:23,000 --> 00:02:26,000
+If I look back for C, then I have not come to C even once.
+
+46
+00:02:26,000 --> 00:02:27,000
+So, what will I do?
+
+47
+00:02:27,000 --> 00:02:29,000
+I will add C to my string.
+
+48
+00:02:29,000 --> 00:02:31,000
+After that, I will go to O.
+
+49
+00:02:31,000 --> 00:02:33,000
+If I look back for O, then I will remember.
+
+50
+00:02:33,000 --> 00:02:34,000
+I have not come to O even once.
+
+51
+00:02:34,000 --> 00:02:36,000
+I will also add O to my string.
+
+52
+00:02:36,000 --> 00:02:37,000
+Then I will come to L.
+
+53
+00:02:37,000 --> 00:02:39,000
+I have not come to L even once.
+
+54
+00:02:39,000 --> 00:02:40,000
+So, I will add L.
+
+55
+00:02:40,000 --> 00:02:42,000
+After that, I will go to the second L.
+
+56
+00:02:42,000 --> 00:02:44,000
+If I come to the second L, then I will remember.
+
+57
+00:02:44,000 --> 00:02:46,000
+I already have this L.
+
+58
+00:02:46,000 --> 00:02:49,000
+So, I do not have to add this second L.
+
+59
+00:02:49,000 --> 00:02:51,000
+Next, I will go to my E.
+
+60
+00:02:51,000 --> 00:02:53,000
+As soon as I go to E, I will look back.
+
+61
+00:02:53,000 --> 00:02:54,000
+Then I will remember.
+
+62
+00:02:54,000 --> 00:02:58,000
+If I do not have any other E, then I can add this E.
+
+63
+00:02:58,000 --> 00:03:00,000
+If I go to G, then I will look back.
+
+64
+00:03:00,000 --> 00:03:03,000
+If I do not have any other G, then I can add this G.
+
+65
+00:03:03,000 --> 00:03:05,000
+And lastly, I will go to E.
+
+66
+00:03:05,000 --> 00:03:07,000
+If I go to E, then I will look back.
+
+67
+00:03:07,000 --> 00:03:10,000
+Then I will remember that E has already come.
+
+68
+00:03:10,000 --> 00:03:13,000
+So, I do not have to add this E.
+
+69
+00:03:13,000 --> 00:03:14,000
+So, what will happen?
+
+70
+00:03:14,000 --> 00:03:16,000
+All my characters will be finished.
+
+71
+00:03:16,000 --> 00:03:18,000
+And my final string will look like this.
+
+72
+00:03:18,000 --> 00:03:21,000
+And the best thing about this final string is that
+
+73
+00:03:21,000 --> 00:03:23,000
+there are only unique characters in it.
+
+74
+00:03:23,000 --> 00:03:27,000
+All the duplicates have completely been removed from this string.
+
+75
+00:03:27,000 --> 00:03:30,000
+Now, the logic of removing is that
+
+76
+00:03:30,000 --> 00:03:34,000
+I will go ahead one by one and see
+
+77
+00:03:34,000 --> 00:03:37,000
+that the letter I am in, which is my current character,
+
+78
+00:03:37,000 --> 00:03:40,000
+has it already come somewhere?
+
+79
+00:03:40,000 --> 00:03:42,000
+If it has already come somewhere,
+
+80
+00:03:42,000 --> 00:03:43,000
+then what will I do?
+
+81
+00:03:43,000 --> 00:03:44,000
+I will not add it.
+
+82
+00:03:44,000 --> 00:03:47,000
+But if it has never come before,
+
+83
+00:03:47,000 --> 00:03:50,000
+then I will add it in my new string.
+
+84
+00:03:50,000 --> 00:03:52,000
+I am getting a big understanding.
+
+85
+00:03:52,000 --> 00:03:53,000
+I will have to take two or three variables.
+
+86
+00:03:53,000 --> 00:03:56,000
+I will have to take a new string.
+
+87
+00:03:56,000 --> 00:04:00,000
+I can keep the new string as a string builder type.
+
+88
+00:04:00,000 --> 00:04:05,000
+Because every time I am adding a new string,
+
+89
+00:04:05,000 --> 00:04:09,000
+there is no duplicate but only a unique character.
+
+90
+00:04:09,000 --> 00:04:12,000
+I will take a new string, which is string builder type.
+
+91
+00:04:12,000 --> 00:04:13,000
+What I can do?
+
+92
+00:04:13,000 --> 00:04:14,000
+I can take an index variable.
+
+93
+00:04:14,000 --> 00:04:20,000
+It will track out what to do with my strings.
+
+94
+00:04:20,000 --> 00:04:23,000
+I will take an index variable with the string and it will track
+
+95
+00:04:23,000 --> 00:04:24,000
+it out.
+
+96
+00:04:24,000 --> 00:04:26,000
+When it has the value zero, I am standing on A,
+
+97
+00:04:26,000 --> 00:04:27,000
+when it has the value one, I am standing on P,
+
+98
+00:04:27,000 --> 00:04:28,000
+when it has the value two.
+
+99
+00:04:28,000 --> 00:04:29,000
+When it has the value three.
+
+100
+00:04:29,000 --> 00:04:31,000
+and when it has the value four.
+
+101
+00:04:31,000 --> 00:04:32,000
+Then I am standing on N.
+
+102
+00:04:32,000 --> 00:04:38,600
+So in this way, this index variable will increase its value from 0 to the length of the string.
+
+103
+00:04:38,600 --> 00:04:42,400
+Now I will have to take one more variable here. What variable will I have to take?
+
+104
+00:04:42,400 --> 00:04:50,600
+I have figured out by myself that if I am standing on this n, then someone has already come.
+
+105
+00:04:50,600 --> 00:04:56,400
+But how does the code remember? How does Java remember which character had come, which character did not come?
+
+106
+00:04:56,400 --> 00:05:00,800
+So to remember Java, which character has come, which one has not come?
+
+107
+00:05:00,800 --> 00:05:05,200
+What will we do? We will make an array of boolean type.
+
+108
+00:05:05,200 --> 00:05:08,600
+And what will this array do? Let's name this array as map.
+
+109
+00:05:08,600 --> 00:05:14,400
+This map name array will track it. You can name it track, you can name it any other name.
+
+110
+00:05:14,400 --> 00:05:18,000
+It will track which letter has come, which one has not come.
+
+111
+00:05:18,000 --> 00:05:21,200
+This will be my array. This will be the boolean type array.
+
+112
+00:05:21,200 --> 00:05:25,600
+And what will I keep in size in this? I will keep 26 in size. Why?
+
+113
+00:05:25,600 --> 00:05:31,200
+Because from small a to small z, I have a total of 26 characters.
+
+114
+00:05:31,200 --> 00:05:36,400
+So I will keep 26 in its size. There will be some more spaces in between here.
+
+115
+00:05:36,400 --> 00:05:42,200
+So what will my index 0 map with? It will map with character a.
+
+116
+00:05:42,200 --> 00:05:48,400
+My index 1 will map with character b. Index 2 will map with character c.
+
+117
+00:05:48,400 --> 00:05:51,800
+Index 3 will map with my character d.
+
+118
+00:05:52,000 --> 00:05:55,400
+In the same way, index 4 will map with my character e.
+
+119
+00:05:55,400 --> 00:06:01,600
+And going on, my index 24 will map with my character y.
+
+120
+00:06:01,600 --> 00:06:05,400
+And what will I map with z? My index 25.
+
+121
+00:06:05,400 --> 00:06:10,000
+So in this way, from 0 to 25, total 26 places have been made.
+
+122
+00:06:10,000 --> 00:06:13,400
+I will make an array of 26 sizes. I will name this array as map.
+
+123
+00:06:13,400 --> 00:06:17,400
+This is the boolean type. It can be a true store or a false store.
+
+124
+00:06:17,400 --> 00:06:21,200
+If the a has already come, I will store the true one there.
+
+125
+00:06:21,200 --> 00:06:25,400
+As soon as the a has come, I will store the true one there.
+
+126
+00:06:25,400 --> 00:06:27,800
+Because what will I do with this boolean type?
+
+127
+00:06:27,800 --> 00:06:32,000
+As soon as the a has come, I will store the true one here.
+
+128
+00:06:32,000 --> 00:06:34,800
+After that, I will go to p. I will check for p for p.
+
+129
+00:06:34,800 --> 00:06:38,000
+What is the true store in this array on the position of p?
+
+130
+00:06:38,000 --> 00:06:40,200
+If the true store is there, it means it has already come.
+
+131
+00:06:40,200 --> 00:06:44,200
+Do not add it. If the true store is not there, it means it has not come.
+
+132
+00:06:44,200 --> 00:06:48,400
+So it has to be added. So as soon as it has come, there is no true store here.
+
+133
+00:06:48,400 --> 00:06:51,800
+So I will add p here and store the true one here.
+
+134
+00:06:51,800 --> 00:06:58,000
+So as soon as I come to this a, what will I check before this a is stored?
+
+135
+00:06:58,000 --> 00:07:02,000
+This a will check if the value in the map is true or not.
+
+136
+00:07:02,000 --> 00:07:06,400
+As soon as the value of the index of the a is true, it will not be added.
+
+137
+00:07:06,400 --> 00:07:10,000
+So in the final string, it will come a only once and after that it will not come a.
+
+138
+00:07:10,000 --> 00:07:11,600
+And how will I do the map?
+
+139
+00:07:11,600 --> 00:07:12,800
+That is, how will I know?
+
+140
+00:07:12,800 --> 00:07:17,600
+For a, the index is 0. For b, it is 1. For c, it is 2. For d, it is 3.
+
+141
+00:07:17,600 --> 00:07:22,600
+So for this, when I read my operators or when I read my variables,
+
+142
+00:07:22,600 --> 00:07:25,600
+I read type conversion.
+
+143
+00:07:25,600 --> 00:07:30,000
+Type conversion was a concept called in expressions.
+
+144
+00:07:30,000 --> 00:07:34,600
+This concept says that all the characters, when they come into an expression,
+
+145
+00:07:34,600 --> 00:07:37,200
+they are converted into an integer.
+
+146
+00:07:37,200 --> 00:07:44,000
+That is, if I write c-a, then its value will be equal to an integer.
+
+147
+00:07:44,000 --> 00:07:47,000
+And what will be the integer value? The difference between these two.
+
+148
+00:07:47,000 --> 00:07:48,400
+That is, equal to 3.
+
+149
+00:07:48,400 --> 00:07:52,000
+So this was my concept, if I do not remember, then we can revise it.
+
+150
+00:07:52,000 --> 00:07:55,000
+Otherwise, we can print it in Java and see.
+
+151
+00:07:55,000 --> 00:07:58,000
+These concepts will be using it again and again.
+
+152
+00:07:58,000 --> 00:07:59,600
+What does this concept say?
+
+153
+00:07:59,600 --> 00:08:05,000
+This concept says that if I minus a character from a character, then its value is 0.
+
+154
+00:08:05,000 --> 00:08:08,000
+If I minus a character from b character, then its value is 1.
+
+155
+00:08:08,000 --> 00:08:11,400
+If I minus a character from c character, then its value is 2.
+
+156
+00:08:11,400 --> 00:08:15,400
+If I minus a character from d character, then its value is 3.
+
+157
+00:08:15,400 --> 00:08:19,800
+So the value of the value that I wrote c-a is actually 2.
+
+158
+00:08:19,800 --> 00:08:20,800
+We have to remember this.
+
+159
+00:08:20,800 --> 00:08:23,800
+If I minus a character from e character, then its value is 4.
+
+160
+00:08:23,800 --> 00:08:29,800
+And similarly, if I minus a character from z character, then its value will be 25.
+
+161
+00:08:29,800 --> 00:08:32,800
+And coincidentally, if I look here, what is a here?
+
+162
+00:08:32,800 --> 00:08:33,800
+It is mapped from 0.
+
+163
+00:08:33,800 --> 00:08:35,800
+So this concept will be 0.
+
+164
+00:08:35,800 --> 00:08:36,800
+What is b here?
+
+165
+00:08:36,800 --> 00:08:37,800
+It is mapped from a.
+
+166
+00:08:37,800 --> 00:08:39,800
+So it will be a-1 from b.
+
+167
+00:08:39,800 --> 00:08:40,800
+What is c?
+
+168
+00:08:40,800 --> 00:08:41,800
+It is mapped from 2.
+
+169
+00:08:41,800 --> 00:08:43,800
+So it will be 2 if it is a-1 from c.
+
+170
+00:08:43,800 --> 00:08:45,800
+If it is mapped from 3, then it will be a-3 from d.
+
+171
+00:08:45,800 --> 00:08:51,800
+In the same way, if my z is mapped from 25, then it will be a-25 from z.
+
+172
+00:08:51,800 --> 00:08:54,800
+So can I say that I have to take out the index?
+
+173
+00:08:54,800 --> 00:08:57,800
+I have to take out the index of my map array.
+
+174
+00:08:57,800 --> 00:08:58,800
+How will that index come out?
+
+175
+00:08:58,800 --> 00:08:59,800
+For any character?
+
+176
+00:08:59,800 --> 00:09:00,800
+That index will come out.
+
+177
+00:09:00,800 --> 00:09:04,800
+My current character's value is minus a.
+
+178
+00:09:04,800 --> 00:09:07,800
+So with this formula, my entire index will come out.
+
+179
+00:09:07,800 --> 00:09:09,800
+Now let me give you a summary.
+
+180
+00:09:09,800 --> 00:09:14,800
+I have made a new string, a string builder in which I will make my new string, in which there will be no duplicates.
+
+181
+00:09:14,800 --> 00:09:19,800
+Apart from that, I will take an index variable which will traverse ahead of my string.
+
+182
+00:09:19,800 --> 00:09:22,800
+Then I have to take a map array of the boolean type of 26 size.
+
+183
+00:09:22,800 --> 00:09:27,800
+So that I can track which letter has come, which character has come and which has not come.
+
+184
+00:09:27,800 --> 00:09:30,800
+Now how to find out the index of this map?
+
+185
+00:09:30,800 --> 00:09:35,800
+I will find out the index with the help of this formula, which says to minus a from the current character.
+
+186
+00:09:35,800 --> 00:09:37,800
+So I will have an index.
+
+187
+00:09:37,800 --> 00:09:40,800
+Now let's enter a little recursion here.
+
+188
+00:09:40,800 --> 00:09:43,800
+I mean how to solve the same problem with recursion.
+
+189
+00:09:43,800 --> 00:09:44,800
+What will be my base case?
+
+190
+00:09:44,800 --> 00:09:51,800
+My base case will be when my index will come from 0 to n, i.e. to the string length.
+
+191
+00:09:51,800 --> 00:09:58,800
+As soon as I am moving ahead one by one, and finally I have come to the last index.
+
+192
+00:09:58,800 --> 00:10:00,800
+And I have crossed this too.
+
+193
+00:10:00,800 --> 00:10:05,800
+I have traversed all the indexes and now I have come to the end of line.
+
+194
+00:10:05,800 --> 00:10:06,800
+So what will happen then?
+
+195
+00:10:06,800 --> 00:10:08,800
+Then I will get my new string printed.
+
+196
+00:10:08,800 --> 00:10:10,800
+That means till then I will have this string.
+
+197
+00:10:10,800 --> 00:10:12,800
+Now what I have to do?
+
+198
+00:10:12,800 --> 00:10:15,800
+I have to do the work that I have done on the index.
+
+199
+00:10:15,800 --> 00:10:19,800
+For that I will check whether the character has come or not.
+
+200
+00:10:19,800 --> 00:10:25,800
+Whether my character is present in the map or not.
+
+201
+00:10:25,800 --> 00:10:30,800
+If my character is present in the map, then I do not have to add it in the new string.
+
+202
+00:10:30,800 --> 00:10:34,800
+If it is not present, then I will add it in the new string.
+
+203
+00:10:34,800 --> 00:10:36,800
+So this way duplicates will not be created.
+
+204
+00:10:36,800 --> 00:10:40,800
+If it is already present in the map, then that means it has already been added in the new string.
+
+205
+00:10:40,800 --> 00:10:45,800
+If it is not added in the new string, then we will add it in the new string.
+
+206
+00:10:45,800 --> 00:10:50,800
+And we will true its value in the map so that it will not be added again next time.
+
+207
+00:10:50,800 --> 00:10:54,800
+And if I do this work for my index, then what I have to do?
+
+208
+00:10:54,800 --> 00:10:57,800
+I have to call for my index plus 1.
+
+209
+00:10:57,800 --> 00:11:02,800
+I.e. I will call myself for the index and for index plus 1 I will call the recursive function.
+
+210
+00:11:02,800 --> 00:11:07,800
+So if I have done it for FIDX, then what will be my next call for?
+
+211
+00:11:07,800 --> 00:11:09,800
+F of IDX plus 1.
+
+212
+00:11:09,800 --> 00:11:14,800
+So the next recursive call will be seen for the next index i.e. for the next character.
+
+213
+00:11:14,800 --> 00:11:17,800
+It will be seen for the next character in the next one.
+
+214
+00:11:17,800 --> 00:11:19,800
+So in this way I will write my recursive function.
+
+215
+00:11:19,800 --> 00:11:21,800
+For this you see by coding.
+
+216
+00:11:21,800 --> 00:11:24,800
+I will make a function in the code, public static.
+
+217
+00:11:24,800 --> 00:11:26,800
+I will keep it as void type.
+
+218
+00:11:26,800 --> 00:11:29,800
+I will give it a name, remove duplicates.
+
+219
+00:11:29,800 --> 00:11:33,800
+In remove duplicates, I will pass many parameters.
+
+220
+00:11:33,800 --> 00:11:36,800
+First of all, my string will come in it, the str type.
+
+221
+00:11:36,800 --> 00:11:40,800
+After that I will have my index i.e. IDX.
+
+222
+00:11:40,800 --> 00:11:44,800
+Apart from this, I will have string builder which is my new string.
+
+223
+00:11:44,800 --> 00:11:45,800
+Why string builder?
+
+224
+00:11:45,800 --> 00:11:46,800
+You could have used string builder here.
+
+225
+00:11:46,800 --> 00:11:51,800
+String builder is used because string builder is the data type in which string does not take as much time.
+
+226
+00:11:51,800 --> 00:11:53,800
+All operations are the same.
+
+227
+00:11:53,800 --> 00:11:55,800
+It will be faster execution in less time.
+
+228
+00:11:55,800 --> 00:11:57,800
+So here I write string builder SB.
+
+229
+00:11:57,800 --> 00:11:59,800
+I can also call it my new string.
+
+230
+00:11:59,800 --> 00:12:01,800
+Apart from this, what will be the fourth?
+
+231
+00:12:01,800 --> 00:12:04,800
+My boolean type map will come.
+
+232
+00:12:07,800 --> 00:12:15,800
+So if I reduce it a little, my string came, my index came, my string builder new string came and my boolean map came.
+
+233
+00:12:15,800 --> 00:12:16,800
+I write the base case.
+
+234
+00:12:16,800 --> 00:12:22,800
+First of all, the base case will be that my index increases as soon as my string is equal to the dot length.
+
+235
+00:12:22,800 --> 00:12:24,800
+Anyway, what should I do?
+
+236
+00:12:24,800 --> 00:12:26,800
+I have seen all the characters here.
+
+237
+00:12:26,800 --> 00:12:29,800
+So here I simply have to get my new string printed.
+
+238
+00:12:29,800 --> 00:12:31,800
+And from here I will return.
+
+239
+00:12:31,800 --> 00:12:32,800
+What to do in other places?
+
+240
+00:12:32,800 --> 00:12:34,800
+I have to do my work in other places.
+
+241
+00:12:34,800 --> 00:12:35,800
+What is my work?
+
+242
+00:12:35,800 --> 00:12:40,800
+My work is that I take out the character from here and check if it exists in the map or not.
+
+243
+00:12:40,800 --> 00:12:42,800
+So let's take out the character first.
+
+244
+00:12:42,800 --> 00:12:48,800
+Current character is equal to str dot character index.
+
+245
+00:12:48,800 --> 00:12:53,800
+I have taken out the character on the index and stored it in the current character.
+
+246
+00:12:53,800 --> 00:12:59,800
+Now I will check if in the map, my current character minus a.
+
+247
+00:12:59,800 --> 00:13:02,800
+My index will come out of here, the map character.
+
+248
+00:13:02,800 --> 00:13:06,800
+If the current character comes out of it, minus a, then the index of the map will come out.
+
+249
+00:13:06,800 --> 00:13:08,800
+Is this value true?
+
+250
+00:13:08,800 --> 00:13:13,800
+If this value is true, then my current character is a duplicate.
+
+251
+00:13:13,800 --> 00:13:14,800
+What do I have to do in that case?
+
+252
+00:13:14,800 --> 00:13:17,800
+In that case, I have to call for the next index.
+
+253
+00:13:17,800 --> 00:13:21,800
+In that case, I will pass my string index plus one.
+
+254
+00:13:21,800 --> 00:13:23,800
+I will add the new string to the new string.
+
+255
+00:13:23,800 --> 00:13:26,800
+I mean, I will not add my current character to the new string.
+
+256
+00:13:26,800 --> 00:13:28,800
+I will call my map.
+
+257
+00:13:28,800 --> 00:13:33,800
+But if the second case happens, the second case says that this value falls.
+
+258
+00:13:33,800 --> 00:13:37,800
+That is, this current character has not come into the map yet.
+
+259
+00:13:37,800 --> 00:13:39,800
+So what do I have to do in that case?
+
+260
+00:13:39,800 --> 00:13:45,800
+Current character minus a in the map.
+
+261
+00:13:45,800 --> 00:13:47,800
+I will do it true.
+
+262
+00:13:47,800 --> 00:13:50,800
+And I will call the removed duplicates.
+
+263
+00:13:50,800 --> 00:13:53,800
+This time I will pass the string index plus one.
+
+264
+00:13:53,800 --> 00:13:57,800
+But in the new string, now I will append it.
+
+265
+00:13:57,800 --> 00:14:01,800
+I will append it to my current character.
+
+266
+00:14:01,800 --> 00:14:02,800
+So what will happen?
+
+267
+00:14:02,800 --> 00:14:04,800
+The current character will be connected to the new string.
+
+268
+00:14:04,800 --> 00:14:05,800
+Why will it be connected?
+
+269
+00:14:05,800 --> 00:14:06,800
+Because this is the first time.
+
+270
+00:14:06,800 --> 00:14:09,800
+And that is why I have true its value in the map.
+
+271
+00:14:09,800 --> 00:14:11,800
+So my whole function is complete.
+
+272
+00:14:11,800 --> 00:14:16,800
+Once the index value is plus one, plus one, plus one, plus one, plus one, plus one, plus one.
+
+273
+00:14:16,800 --> 00:14:18,800
+We will get our new string there.
+
+274
+00:14:18,800 --> 00:14:20,800
+We will call from the main function.
+
+275
+00:14:20,800 --> 00:14:23,800
+In the main function, we define your string first.
+
+276
+00:14:23,800 --> 00:14:26,800
+string str is equal to our college.
+
+277
+00:14:26,800 --> 00:14:30,800
+Here I will call the removed duplicates.
+
+278
+00:14:30,800 --> 00:14:32,800
+I will pass this string.
+
+279
+00:14:32,800 --> 00:14:35,800
+The starting index will be passed as zero.
+
+280
+00:14:35,800 --> 00:14:40,800
+I will pass the new string builder.
+
+281
+00:14:40,800 --> 00:14:44,800
+i.e. I have written it in the right side, I have not made it a different variable,
+
+282
+00:14:44,800 --> 00:14:46,800
+I have just written it in the calling statement.
+
+283
+00:14:46,800 --> 00:14:53,800
+And next I want to pass my map, so I will pass the map to new boolean array of size 26.
+
+284
+00:14:53,800 --> 00:14:56,800
+Let's do it safe and run it.
+
+285
+00:14:56,800 --> 00:15:00,800
+What string did I pass? I have a string that has returned in the output.
+
+286
+00:15:00,800 --> 00:15:03,800
+There are all the unique characters in it.
+
+287
+00:15:03,800 --> 00:15:07,800
+So in this way we remove duplicates using recursive.
+
+288
+00:15:07,800 --> 00:15:11,800
+Now I will suggest you to do a stack analysis of this question.
+
+289
+00:15:11,800 --> 00:15:15,800
+i.e. you have to make a proper stack and look at it from the main function.
+
+290
+00:15:15,800 --> 00:15:17,800
+What did the four values pass?
+
+291
+00:15:17,800 --> 00:15:23,800
+After that, when the first call took place, what changes came in these four parameters in the first call?
+
+292
+00:15:23,800 --> 00:15:28,800
+After that, what changes came in these four parameters in the next call?
+
+293
+00:15:28,800 --> 00:15:35,800
+If we do a stack analysis ourselves, then we will get more clarity about how this function works.
+
+294
+00:15:35,800 --> 00:15:40,800
+If we understand the logic of the most simple removed duplicates,
+
+295
+00:15:40,800 --> 00:15:47,800
+then whether we add capital characters, special characters, add the rate, underscore, etc.
+
+296
+00:15:47,800 --> 00:15:50,800
+So as soon as we do the data structure of the hash set,
+
+297
+00:15:50,800 --> 00:15:54,800
+or we do a little more data structure, then we will be able to solve this question ourselves.
+
+298
+00:15:54,800 --> 00:15:56,800
+We will solve the advanced question ourselves,
+
+299
+00:15:56,800 --> 00:16:00,800
+but it is necessary that we do this stack analysis once.
+
+300
+00:16:00,800 --> 00:16:04,800
+So we have to do the stack analysis, this is a homework problem.
+

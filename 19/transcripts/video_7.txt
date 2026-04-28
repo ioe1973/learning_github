@@ -1,0 +1,226 @@
+What happened in the stack analysis?
+First of all, in the main function,
+the first stack frame will be the main function.
+There will be three variables in the main function stack frame.
+The first variable is n, the value of n is with 3.
+After that, I have passed the last place as 0.
+And after that, I have an empty string.
+Now I will come to my next level.
+As soon as my function is called to print binary strings,
+there are the same values in which the value of n is equal to 3.
+The last place is 0 and the string is empty.
+Now what will this function do?
+In this function, I will do my work.
+What is my work?
+I first set 0 to nth place.
+As soon as I set 0 to nth place,
+another function will go up.
+In this, my string has come to 0.
+Now I have passed 0 to the last place.
+And my value of n will be 2.
+After that, I will do my work again.
+That is, to set 0 to the next place again.
+So I will come to another level in the stack frame.
+Now the value of n will be equal to 1.
+Now I have set 0 to the last place again.
+And my string has become 0.
+Now I will do one more work and call again.
+When the call will go, the value of n will pass 0.
+Because n is happening every time in my code.
+You will analyze that in the code,
+the value of n that I am passing every time is n minus 1.
+It is becoming minus 1.
+This time too, my last place is equal to 0.
+And this time my string is 0.
+Because as soon as I am sending it on the next level,
+I have set 0 to the third place.
+But here, my base case will hit.
+n is equal to 0.
+As soon as the base case hits,
+what will I do?
+I will get the string printed.
+So here in the output window,
+I will get 0, 0, 0 printed.
+After that, what will I do?
+I will do it from this level.
+Return back to the lower level.
+As soon as it comes to the lower level,
+the upper level will be empty.
+As soon as I come to the lower level,
+what do I have to do?
+Now I have to put another call on the top.
+After putting another call,
+now instead of 0,
+I have to place 1 on the chair.
+So the last place will be 1.
+And this time I will place 0, 0, 1 on the chair.
+For n is equal to 0.
+As soon as n is equal to 0,
+n is equal to 0,
+I will set this base case and 0, 0, 0, 1.
+0, 0, 1 will be printed on my output screen.
+I will come back to the lower level again.
+When I come back to the lower level,
+the upper level will be empty.
+Now what did I do?
+Now I saw that I have put 0 and 1 here.
+Now I have to come back to another level.
+So the upper level will be empty.
+Now for this level,
+if I talk,
+I have put 0 here.
+Now after that,
+I have put 0 and 1.
+Now I have to put 1.
+So to put 1,
+I will go up for n is equal to 1.
+So now the last place will be my 1.
+And now I will place 0, 1.
+As soon as I have placed 0, 1,
+I have to put one more call.
+Why do I have to put a call?
+Now I can place 0, 1,
+on the third place.
+So I will place 0, 1, 0 first.
+So the last place will be 0.
+And n is equal to 0.
+As soon as n is equal to 0,
+I have set this base case.
+So now I will print 0, 1, 0.
+As soon as I have put 0, 1, 0,
+it will come back to the lower level.
+So the upper level will be empty.
+If the upper level is empty,
+then I will look at this level.
+I have put 0 here.
+Now can I place 1 here?
+No, I can't place 1 here.
+Because if I place 1 here,
+then it will be consecutive 1s.
+So I have placed it here
+for every possible combination.
+I will come back to the lower level.
+In the lower level,
+I have put 0 after 0.
+I have put 1 after 0.
+Now what will I do?
+I can't place it further.
+So from here also,
+I will come back to the lower level.
+And the upper level will be empty.
+In this level,
+I have analyzed all the things by placing 0.
+Now at the first nth place,
+I will place 1 here.
+As soon as I have placed 1,
+what will happen here?
+My string will be equal to 1.
+I will pass it to the last place.
+1 will be value of n.
+Now I can place 0 here
+or place 1 here.
+I can't place 1 here
+because it is 1 in the last place.
+So I will be able to place 0 only.
+If I place 0,
+for n is equal to 1,
+I have passed 0 in the last place
+and the string passed 1, 0, 0.
+Now in 1, 0, 0,
+I can place 1 here as well.
+I can place 0 as well.
+I will place 0 first.
+So for n is equal to 0,
+I passed 0 in the last place
+and the string became 1, 0, 0.
+So what will happen here?
+My base case will be set here.
+So I will print it to 1, 0, 0.
+Then what will I do?
+I will come back to a level below
+and the upper level will be empty.
+In this level,
+I have placed 0 here.
+Now I will place 1 here.
+I will place 1 here.
+I will place 1 here.
+I will place 1 here.
+I will place 1 here.
+I will place 1 here.
+So this string will become 1, 0, 1.
+I have reached the last place.
+For n is equal to 0.
+As soon as n is equal to 0,
+I have reached the base case.
+When I have reached the base case,
+I will get the string printed.
+This is 1, 0, 1.
+After this, what will I do?
+After this, I will see that
+the base case is hit.
+So I will return from here.
+As soon as I return,
+I will come to this function call.
+As soon as I come to this function call,
+I will see that I have placed 0 here.
+I have placed 1 here.
+So I have to return from here.
+So this will be my stack frame empty.
+After this, I will come here.
+I have placed 0 here.
+I have placed 1 here.
+So this will be empty for me.
+I will come to the lower level.
+Here too,
+I have seen all the combinations of 0
+and all combinations of 1.
+So now I will return to the main function.
+If I return to the main function,
+this stack frame will also be empty.
+In the main function,
+I will return from here.
+And my program will be over.
+And at the end,
+I will see that the output window
+has the same things.
+It is printed in the same sequence.
+First, it has printed 0, 0, 0.
+In the first line,
+it has printed 0, 0, 1.
+After that, it has printed 0, 1, 0.
+After that, it has printed 1, 0, 0.
+And at the end, it has printed 1, 0, 1.
+So in this way,
+we print binary numbers and binary strings
+without consecutive 1s.
+Now you can also change this question.
+It is possible that in the interview,
+instead of consecutive 1s,
+there should be no consecutive 0s.
+So what to do in that?
+In the last place,
+when I have placed 0,
+then I will not place the other 0.
+If I have placed 1,
+then I can place any of the 0 or 1.
+So that question changes in this way.
+Conditions will change slightly.
+So by changing the form,
+we can come into the same interview.
+I hope that many of you
+have asked the basic questions of recursion
+or I have understood it well.
+If there is a small doubt in any question,
+then you have to write the code
+and see the logic again.
+You have to see the video again.
+And what to do?
+You have to do the stack analysis
+by yourself, line by line.
+So we will have clear those things.
+Now in the next chapters,
+we will read the recursion in more detail.
+Now we have seen simple recursion.
+We will see more different types of recursion.
+Once our hands have become very strong on recursion,
+then we will move towards our advanced data structures.

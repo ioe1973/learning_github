@@ -1,0 +1,117 @@
+start	end	text
+0	10000	For this, let's write a function and see if something like this will be a function, public, static, void, print, binary, strings.
+10000	14000	First of all, I will pass my integer n.
+14000	18000	Along with that, I will pass int last place.
+18000	21000	Along with this, let's take another parameter.
+21000	25000	This will be my parameter binary string str.
+25000	28000	Now, first of all, I will look at my work.
+28000	32000	First of all, I will look at who I should put on the place.
+32000	37000	That is, my nth place, which is n, I have to put on this place.
+37000	40000	So, for this, I will look at who I had put in last place.
+40000	45000	If I had put 0 in last place, then I can also put 0, I can also put 1.
+45000	49000	0 means to put 0 in this binary string.
+49000	53000	So, string plus equal to 0.
+53000	55000	Here, I should use string builder.
+55000	59000	If you are writing this function, then you can use string builder.
+59000	63000	In fact, I will also change here and do string builder str.
+63000	68000	So, here it will be str.append 0.
+68000	70000	So, I have put 0 here.
+70000	74000	Now, what I will do is, I will call the print binary strings for n minus 1 places.
+74000	78000	So, I can do the same thing in the function call.
+78000	80000	Means, I have called the print strings.
+80000	82000	Now, I have to fill n minus 1 places.
+82000	84000	Now, what is the last place?
+84000	86000	Because I am going to put 0 now.
+86000	90000	Sit 0 on chair n.
+90000	92000	I have put 0 on chair n.
+92000	95000	So, last place, what will be for the next level?
+95000	96000	It will be 0.
+96000	99000	And what will I pass in this string?
+99000	102000	Now, I will append my 0 in the string.
+102000	104000	I have put this 0.
+104000	108000	And I have told the next level that I have put 0 in your last place.
+108000	110000	What can I do in the second?
+110000	114000	In the second, I can call the print binary strings by sitting 1 here.
+114000	118000	So, here I will pass the last place as 1.
+118000	120000	And here, what will I do?
+120000	123000	I will append it in the string to 1.
+123000	127000	So, once I have put 0 and passed the last place as 0 to the next level.
+127000	131000	Once I have put 1 and added the next level as 1 to the last place.
+131000	135000	This is what happened when I sat 0 on the last seat.
+135000	139000	If I sat 1 on the last seat, then only 0 was able to sit.
+139000	143000	So, in that case, only this condition would have been true.
+143000	146000	So, I would have made my next function in this single call.
+146000	148000	That is, I would have been able to sit 0 here.
+148000	151000	And the last place would have been 0 for the next level.
+151000	155000	Now, I can write a little better for this part of the code.
+155000	156000	How will I write better?
+156000	159000	That I have to sit 0 every time on this last place.
+159000	162000	So, I will always do this work.
+162000	164000	I will do so much work here.
+164000	171000	If I sat 0 on the last place, then only I would have sat 1 this time.
+171000	174000	Then only this statement would have been executed.
+174000	177000	So, I had to write this much code.
+177000	180000	So, I will replace this with this much code.
+180000	182000	I don't have to sit 0 every time.
+182000	185000	If the last place was 0, then I will also sit 1.
+185000	189000	If the last place was 1, then 1 would not be sitting again for the consecutive ones.
+189000	192000	Now, I have to see my base case.
+192000	193000	What I will do in the base case?
+193000	198000	I will see in the base case that if the value of n is 0, then what I have to print in that case?
+198000	201000	In that case, I will print my str.
+201000	203000	Why did I print str?
+203000	209000	As soon as the value of n has become 0, that is, there is no place to fill.
+209000	212000	So, I will print any value in the string builder.
+212000	216000	If it is empty, that is, directly, I passed n is equal to 0.
+216000	218000	So, there will be no value in it.
+218000	220000	It will become empty string print.
+220000	222000	We will return from here.
+222000	224000	So, let's call the main function.
+224000	228000	I will pass the print binary strings to n as 3.
+228000	231000	What can we do in the last place at the beginning?
+231000	234000	We can pass the last place at the beginning as 0.
+234000	236000	That at the last place, it was 0.
+236000	238000	That means you can also get 0, you can also get 1.
+238000	240000	I will pass the string builder instead.
+240000	246000	New string builder in which I have initialized with empty string.
+246000	248000	Let's do this save and run.
+248000	251000	I have some output like this.
+251000	253000	Why has the output come like this?
+253000	257000	Because I passed n as 3.
+257000	258000	What is happening every time?
+258000	261000	Every time, this value is being appended in my string builder.
+261000	265000	So, as soon as the function call will be complete here,
+265000	267000	the value will be appended after that.
+267000	270000	That means if the stack is clear,
+270000	272000	as soon as I have appended it,
+272000	275000	when it will come back here to execute it,
+275000	277000	then the appended is still 0.
+277000	280000	That is why my answer is being printed wrong here.
+280000	283000	Instead of string builder, I will use string here.
+283000	285000	I will pass an empty string here.
+285000	288000	I will pass the empty string here as well.
+288000	290000	The question can be asked from the string builder too.
+290000	293000	But there will be a little complexity in understanding
+293000	296000	how to remove the last character.
+296000	298000	What is my problem?
+298000	300000	My problem is that I have put 0 on the chair.
+300000	301000	What am I doing now?
+301000	303000	I am trying to put 1 on the same chair.
+303000	305000	So, what will happen?
+305000	307000	That 1 will happen after that 0.
+307000	309000	So, what do I have to do?
+309000	311000	After putting 0 on the chair,
+311000	313000	I will have to remove it before putting 1.
+313000	318000	So, here I will do string plus 0.
+318000	324000	And here I will do string plus 1.
+324000	326000	What happened with this?
+326000	330000	The 0 added in my string is added only for the next level.
+330000	332000	That is, I have put 0 on the chair.
+332000	335000	I have not put it on the chair above the current level.
+335000	338000	Let's do this save and run once.
+338000	341000	So, I have an answer for n is equal to 3.
+341000	343000	What is the answer?
+343000	348000	0, 0, 0, 0, 0, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1.
+348000	352000	Let's see the stack analysis of this code.
+352000	355000	We will get a little more clarity.
+355000	358000	We will get a little more clarity.

@@ -1,0 +1,824 @@
+1
+00:00:00,000 --> 00:00:05,440
+Next question we will talk about is the problem number 14 and its name is binary strings problem.
+
+2
+00:00:05,440 --> 00:00:08,200
+This problem is in the interviews of the PATM.
+
+3
+00:00:08,200 --> 00:00:12,800
+The problem is that we have to print binary strings, what are binary strings?
+
+4
+00:00:12,800 --> 00:00:24,080
+Binary strings means such a string in which only 0, 1, 0, 1, 0 or 0, 0, 0, 0 or 1, 0, 1, 0, 1, 1, 1, 1, 0.
+
+5
+00:00:24,080 --> 00:00:28,480
+This is the kind of combination, that is, we have to form binary numbers to form these strings.
+
+6
+00:00:28,480 --> 00:00:33,760
+Either a string can have a character 0 or a character 1, apart from that, there is no character.
+
+7
+00:00:33,760 --> 00:00:36,000
+We call it binary strings.
+
+8
+00:00:36,000 --> 00:00:39,720
+Now, what we have to do? We have to print binary strings of size n.
+
+9
+00:00:39,720 --> 00:00:44,840
+I have to print the binary string of size n without consecutive ones.
+
+10
+00:00:44,840 --> 00:00:52,440
+That is, if 0, 1, 0, 0, 1, 1 is such a string, what will be its size? 1, 2, 3, 4, 5, 6.
+
+11
+00:00:52,880 --> 00:00:56,800
+The size of this string is 6 or 6 or 6.
+
+12
+00:00:56,800 --> 00:00:59,200
+But I do not have to print this string. Why do not I print it?
+
+13
+00:00:59,200 --> 00:01:01,200
+Because now after this, there is 1.
+
+14
+00:01:01,200 --> 00:01:04,360
+We should not have consecutive one after one.
+
+15
+00:01:04,360 --> 00:01:08,320
+For example, if in any string 1,1, 0, 1, 0, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1.
+
+16
+00:01:08,320 --> 00:01:11,840
+If this is after one, 1, 0, 1, 0, 1, 0, 1, 0, 1, 1, 0, 1, 1, 0, 1, 1, 1, 1, 0.
+
+17
+00:01:11,840 --> 00:01:16,120
+But if I have such a string, then this is my one valid string also.
+
+18
+00:01:16,120 --> 00:01:19,000
+In fact, this is my one valid string also.
+
+19
+00:01:19,000 --> 00:01:26,500
+So I don't want to print a string that has a consecutive 1, but I want to print the rest of the strings that have a size n.
+
+20
+00:01:26,500 --> 00:01:28,000
+How will we solve this?
+
+21
+00:01:28,000 --> 00:01:31,000
+First of all, let's talk about the base case recursion.
+
+22
+00:01:31,000 --> 00:01:34,000
+How will the base case of the recursion be made?
+
+23
+00:01:34,000 --> 00:01:37,000
+Base case means smallest possible case for which we can find out.
+
+24
+00:01:37,000 --> 00:01:43,000
+If I had given the value of n to 0, then what would I print in my string?
+
+25
+00:01:43,000 --> 00:01:47,000
+I would print in my string, nothing, empty.
+
+26
+00:01:47,000 --> 00:01:51,000
+If I had given the value of n to 1, then what would I print in my string?
+
+27
+00:01:51,000 --> 00:01:55,000
+Either my string would be 1, or my string would be 0.
+
+28
+00:01:55,000 --> 00:01:57,000
+There are only two possible strings.
+
+29
+00:01:57,000 --> 00:02:01,000
+If the value of n is 1, then either 1 or 0 can come.
+
+30
+00:02:01,000 --> 00:02:05,000
+In both cases, there will be no consecutive 1s because there are no 2 1s anywhere.
+
+31
+00:02:05,000 --> 00:02:07,000
+So I will print these two.
+
+32
+00:02:07,000 --> 00:02:11,000
+If my value of n is 2, then who can I print?
+
+33
+00:02:11,000 --> 00:02:18,000
+So I can print either 0 0, or I can print 0 1, or I can print 1 0.
+
+34
+00:02:18,000 --> 00:02:20,000
+Can I print 1 1?
+
+35
+00:02:20,000 --> 00:02:25,000
+I can't print this because there are consecutive 1s here.
+
+36
+00:02:25,000 --> 00:02:30,000
+So I don't want to print this, but I will print the rest of the strings.
+
+37
+00:02:30,000 --> 00:02:32,000
+That is, I will print these three.
+
+38
+00:02:32,000 --> 00:02:40,000
+So can I say that forming binary strings is equal to taking n chairs
+
+39
+00:02:40,000 --> 00:02:44,000
+and you can either print 0 or print 1 on n chairs.
+
+40
+00:02:44,000 --> 00:02:46,000
+Let me tell you a little bit about this.
+
+41
+00:02:46,000 --> 00:02:53,000
+If I want to make a binary string of n size, then what does it mean?
+
+42
+00:02:53,000 --> 00:02:56,000
+It means I have to fill n places.
+
+43
+00:02:56,000 --> 00:02:58,000
+Suppose I have taken n as 2.
+
+44
+00:02:58,000 --> 00:03:01,000
+So I have two empty chairs that I have to fill.
+
+45
+00:03:01,000 --> 00:03:03,000
+And how can I fill them?
+
+46
+00:03:03,000 --> 00:03:08,000
+Either I can print 0 1 or print 1 on them.
+
+47
+00:03:08,000 --> 00:03:10,000
+So what did I do here?
+
+48
+00:03:10,000 --> 00:03:12,000
+Here I first printed 0.
+
+49
+00:03:12,000 --> 00:03:14,000
+After that the next chair is left.
+
+50
+00:03:14,000 --> 00:03:16,000
+I print 0 again on the next chair.
+
+51
+00:03:16,000 --> 00:03:18,000
+So this combination came to me.
+
+52
+00:03:18,000 --> 00:03:20,000
+After that what did I do?
+
+53
+00:03:20,000 --> 00:03:23,000
+I printed 0 on the first chair and I printed 1 on the second.
+
+54
+00:03:23,000 --> 00:03:25,000
+So I got this combination.
+
+55
+00:03:25,000 --> 00:03:29,000
+Now I printed 1 instead of 0 on the first chair.
+
+56
+00:03:29,000 --> 00:03:30,000
+So what can I do?
+
+57
+00:03:30,000 --> 00:03:33,000
+Now I can print 0 on the second chair.
+
+58
+00:03:33,000 --> 00:03:35,000
+So I got this combination.
+
+59
+00:03:35,000 --> 00:03:37,000
+Or I have printed 1 on the first chair.
+
+60
+00:03:37,000 --> 00:03:41,000
+So I have to remember the last chair because 1 was sitting.
+
+61
+00:03:41,000 --> 00:03:44,000
+So on the next chair, I can't print 1.
+
+62
+00:03:44,000 --> 00:03:49,000
+Either 0 will come here or nothing will come in this string.
+
+63
+00:03:49,000 --> 00:03:50,000
+Only 0 can come.
+
+64
+00:03:50,000 --> 00:03:53,000
+As soon as 0 comes, it will become the same combination.
+
+65
+00:03:53,000 --> 00:03:59,000
+So these are the three possible combinations of binary strings that I have to print.
+
+66
+00:03:59,000 --> 00:04:01,000
+So how did I visualize my problem?
+
+67
+00:04:01,000 --> 00:04:04,000
+I imagined n size as n chairs.
+
+68
+00:04:04,000 --> 00:04:07,000
+And on every chair, I can either print 0 or print 1.
+
+69
+00:04:07,000 --> 00:04:10,000
+But yes, I have to remember one thing.
+
+70
+00:04:10,000 --> 00:04:15,000
+If I can call it my last chair or my last index,
+
+71
+00:04:15,000 --> 00:04:18,000
+or I can call it my last place.
+
+72
+00:04:18,000 --> 00:04:21,000
+If I had 1 on my last place,
+
+73
+00:04:21,000 --> 00:04:25,000
+then I can't print 1 on the next place.
+
+74
+00:04:25,000 --> 00:04:28,000
+If I had 0 on the last place,
+
+75
+00:04:28,000 --> 00:04:32,000
+then I can print 0 or print 1 on the next place.
+
+76
+00:04:32,000 --> 00:04:35,000
+Because if 0 comes here, then print 0 or print 1.
+
+77
+00:04:35,000 --> 00:04:37,000
+The consecutive 1 will not come.
+
+78
+00:04:37,000 --> 00:04:39,000
+But yes, last time, if 1 came in the last place,
+
+79
+00:04:39,000 --> 00:04:41,000
+and now I print 1 on the next place,
+
+80
+00:04:41,000 --> 00:04:42,000
+then what will happen?
+
+81
+00:04:42,000 --> 00:04:45,000
+The condition of the consecutive 1 will not be proved.
+
+82
+00:04:45,000 --> 00:04:47,000
+I will solve this a little more.
+
+83
+00:04:47,000 --> 00:04:49,000
+I will solve it a little more.
+
+84
+00:04:49,000 --> 00:04:51,000
+Let's see for n is equal to 3.
+
+85
+00:04:51,000 --> 00:04:53,000
+What will be for n is equal to 3?
+
+86
+00:04:53,000 --> 00:04:54,000
+I have 3 places.
+
+87
+00:04:54,000 --> 00:04:55,000
+1, 2, 3.
+
+88
+00:04:55,000 --> 00:04:57,000
+What can I do?
+
+89
+00:04:57,000 --> 00:04:59,000
+Now in the first place, as soon as I sent 0,
+
+90
+00:04:59,000 --> 00:05:01,000
+what is my last place?
+
+91
+00:05:01,000 --> 00:05:03,000
+My last place is 0 for this index.
+
+92
+00:05:03,000 --> 00:05:05,000
+Now if I send 0 here too,
+
+93
+00:05:05,000 --> 00:05:07,000
+then my last place will be 0.
+
+94
+00:05:07,000 --> 00:05:09,000
+Now if I send 0 here too,
+
+95
+00:05:09,000 --> 00:05:12,000
+I have the first combination of 0, 0, 0.
+
+96
+00:05:12,000 --> 00:05:13,000
+Now what did I do?
+
+97
+00:05:13,000 --> 00:05:15,000
+Here and here, I had sent 0.
+
+98
+00:05:15,000 --> 00:05:17,000
+Because here the last place was 0,
+
+99
+00:05:17,000 --> 00:05:19,000
+then I send 1 here.
+
+100
+00:05:19,000 --> 00:05:21,000
+I have the combination of 0, 0, 1.
+
+101
+00:05:21,000 --> 00:05:23,000
+Now what do I do?
+
+102
+00:05:23,000 --> 00:05:25,000
+Here I had sent 0.
+
+103
+00:05:25,000 --> 00:05:27,000
+Here, instead of sending 0,
+
+104
+00:05:27,000 --> 00:05:29,000
+I send 1.
+
+105
+00:05:29,000 --> 00:05:31,000
+Now in the last place,
+
+106
+00:05:31,000 --> 00:05:33,000
+I will pass 1.
+
+107
+00:05:33,000 --> 00:05:35,000
+For which index?
+
+108
+00:05:35,000 --> 00:05:37,000
+For this index.
+
+109
+00:05:37,000 --> 00:05:39,000
+Since I had sent 1 here,
+
+110
+00:05:39,000 --> 00:05:41,000
+now I can only send 0 here.
+
+111
+00:05:41,000 --> 00:05:43,000
+I can't send 1.
+
+112
+00:05:43,000 --> 00:05:45,000
+So my new string is 0, 1, 0.
+
+113
+00:05:45,000 --> 00:05:47,000
+Now I sent 0 after sending 0.
+
+114
+00:05:47,000 --> 00:05:49,000
+After sending 0, I sent 1 after sending 1.
+
+115
+00:05:49,000 --> 00:05:51,000
+Now I send 1 here.
+
+116
+00:05:51,000 --> 00:05:53,000
+As soon as I sent 1,
+
+117
+00:05:53,000 --> 00:05:55,000
+my last place will be equal to 1.
+
+118
+00:05:55,000 --> 00:05:57,000
+So I will go to send here.
+
+119
+00:05:57,000 --> 00:05:59,000
+Now I can only send 0 here.
+
+120
+00:05:59,000 --> 00:06:01,000
+I can't send 1.
+
+121
+00:06:01,000 --> 00:06:03,000
+As soon as I sent 0 here,
+
+122
+00:06:03,000 --> 00:06:05,000
+my last place became 0.
+
+123
+00:06:05,000 --> 00:06:07,000
+As soon as the last place became 0,
+
+124
+00:06:07,000 --> 00:06:09,000
+now I can send 0 here too.
+
+125
+00:06:09,000 --> 00:06:11,000
+So my string will be 0, 0, 0.
+
+126
+00:06:11,000 --> 00:06:13,000
+And I can send 1 here too.
+
+127
+00:06:13,000 --> 00:06:15,000
+So my string will be 1, 0, 1.
+
+128
+00:06:15,000 --> 00:06:17,000
+So here 1, 0.
+
+129
+00:06:17,000 --> 00:06:19,000
+After that, all possible combinations came.
+
+130
+00:06:19,000 --> 00:06:21,000
+Can I send 1 after 1?
+
+131
+00:06:21,000 --> 00:06:23,000
+So my possible solutions will be
+
+132
+00:06:23,000 --> 00:06:25,000
+only this much.
+
+133
+00:06:25,000 --> 00:06:27,000
+I will have 5 strings printed
+
+134
+00:06:27,000 --> 00:06:29,000
+for n is equal to 3.
+
+135
+00:06:29,000 --> 00:06:31,000
+And those strings will look something like this.
+
+136
+00:06:31,000 --> 00:06:33,000
+So what will be my base case?
+
+137
+00:06:33,000 --> 00:06:35,000
+My base case will be for n is equal to 0.
+
+138
+00:06:35,000 --> 00:06:37,000
+What I have to do?
+
+139
+00:06:37,000 --> 00:06:39,000
+I have to print the empty string.
+
+140
+00:06:39,000 --> 00:06:41,000
+And what I have to do in my recursion?
+
+141
+00:06:41,000 --> 00:06:43,000
+I have to do this.
+
+142
+00:06:43,000 --> 00:06:45,000
+First of all, I will pass the last
+
+143
+00:06:45,000 --> 00:06:47,000
+place variable in the recursion call.
+
+144
+00:06:47,000 --> 00:06:49,000
+What will be the last place?
+
+145
+00:06:49,000 --> 00:06:51,000
+I will tell the next level that
+
+146
+00:06:51,000 --> 00:06:53,000
+the last seat was 0 or 1.
+
+147
+00:06:53,000 --> 00:06:55,000
+I will be able to decide from that
+
+148
+00:06:55,000 --> 00:06:57,000
+whether I have to send 0 or 1 this time.
+
+149
+00:06:57,000 --> 00:06:59,000
+So what is my function?
+
+150
+00:06:59,000 --> 00:07:01,000
+My recursive function.
+
+151
+00:07:01,000 --> 00:07:03,000
+If I pass n,
+
+152
+00:07:03,000 --> 00:07:05,000
+then this n can mean
+
+153
+00:07:05,000 --> 00:07:07,000
+who I have to send on nth place.
+
+154
+00:07:07,000 --> 00:07:09,000
+This is my third place.
+
+155
+00:07:09,000 --> 00:07:11,000
+n is equal to 3.
+
+156
+00:07:11,000 --> 00:07:13,000
+This is my second place. This is my first place.
+
+157
+00:07:13,000 --> 00:07:15,000
+So what will be my work in the recursion?
+
+158
+00:07:15,000 --> 00:07:17,000
+My work in the recursion
+
+159
+00:07:17,000 --> 00:07:19,000
+is that if I take a choice
+
+160
+00:07:19,000 --> 00:07:21,000
+on my nth place
+
+161
+00:07:21,000 --> 00:07:23,000
+or I send 0
+
+162
+00:07:23,000 --> 00:07:25,000
+or I send 1
+
+163
+00:07:25,000 --> 00:07:27,000
+then the choice after that
+
+164
+00:07:27,000 --> 00:07:29,000
+means the rest of the n minus
+
+165
+00:07:29,000 --> 00:07:31,000
+1 places will be my work.
+
+166
+00:07:31,000 --> 00:07:33,000
+That will be my internal function.
+
+167
+00:07:33,000 --> 00:07:35,000
+If I had
+
+168
+00:07:35,000 --> 00:07:37,000
+n places in the recursion
+
+169
+00:07:37,000 --> 00:07:39,000
+what would I do in the recursion?
+
+170
+00:07:39,000 --> 00:07:41,000
+I would fill one place
+
+171
+00:07:41,000 --> 00:07:43,000
+i.e. fill the nth place.
+
+172
+00:07:43,000 --> 00:07:45,000
+And then I would
+
+173
+00:07:45,000 --> 00:07:47,000
+put a call for these levels
+
+174
+00:07:47,000 --> 00:07:49,000
+to fill in n minus 1 places.
+
+175
+00:07:49,000 --> 00:07:51,000
+So my work in the recursion
+
+176
+00:07:51,000 --> 00:07:53,000
+is that I have to take a choice
+
+177
+00:07:53,000 --> 00:07:55,000
+on this nth place.
+
+178
+00:07:55,000 --> 00:07:57,000
+How will I take that choice?
+
+179
+00:07:57,000 --> 00:07:59,000
+Either I can send 0 here
+
+180
+00:07:59,000 --> 00:08:01,000
+or I can send 1.
+
+181
+00:08:01,000 --> 00:08:03,000
+I will send 0 in every case.
+
+182
+00:08:03,000 --> 00:08:05,000
+I will send 1 only in the case
+
+183
+00:08:05,000 --> 00:08:07,000
+where my last place
+
+184
+00:08:07,000 --> 00:08:09,000
+was not equal to 1.
+
+185
+00:08:09,000 --> 00:08:11,000
+If the last place was 0 then
+
+186
+00:08:11,000 --> 00:08:13,000
+anyone can add it. If the last place was 1
+
+187
+00:08:13,000 --> 00:08:15,000
+then I have to do this.
+
+188
+00:08:15,000 --> 00:08:17,000
+Whether I send 0 or 1
+
+189
+00:08:17,000 --> 00:08:19,000
+on the nth seat
+
+190
+00:08:19,000 --> 00:08:21,000
+and then how I have to call the internal function
+
+191
+00:08:21,000 --> 00:08:23,000
+means here
+
+192
+00:08:23,000 --> 00:08:25,000
+when I have to call fn minus 1
+
+193
+00:08:25,000 --> 00:08:27,000
+to fill in the rest of the n minus places.
+
+194
+00:08:27,000 --> 00:08:29,000
+So in my recursion
+
+195
+00:08:29,000 --> 00:08:31,000
+the base case is clear for n is equal to 0
+
+196
+00:08:31,000 --> 00:08:33,000
+I have to print the empty string.
+
+197
+00:08:33,000 --> 00:08:35,000
+The work is clear that I have to send
+
+198
+00:08:35,000 --> 00:08:37,000
+someone on the nth seat
+
+199
+00:08:37,000 --> 00:08:39,000
+to take the choice of nth seat.
+
+200
+00:08:39,000 --> 00:08:41,000
+Either that choice can be 0 or 1.
+
+201
+00:08:41,000 --> 00:08:43,000
+If the place is 1 or 0
+
+202
+00:08:43,000 --> 00:08:45,000
+then I will take the decision
+
+203
+00:08:45,000 --> 00:08:47,000
+from here.
+
+204
+00:08:47,000 --> 00:08:49,000
+I will send fn minus 1
+
+205
+00:08:49,000 --> 00:08:51,000
+to fill in the rest of the places.
+
+206
+00:08:51,000 --> 00:08:53,000
+Call.
+

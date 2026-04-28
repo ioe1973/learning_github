@@ -1,0 +1,464 @@
+1
+00:00:00,000 --> 00:00:10,000
+For this, let's write a function and see if something like this will be a function, public, static, void, print, binary, strings.
+
+2
+00:00:10,000 --> 00:00:14,000
+First of all, I will pass my integer n.
+
+3
+00:00:14,000 --> 00:00:18,000
+Along with that, I will pass int last place.
+
+4
+00:00:18,000 --> 00:00:21,000
+Along with this, let's take another parameter.
+
+5
+00:00:21,000 --> 00:00:25,000
+This will be my parameter binary string str.
+
+6
+00:00:25,000 --> 00:00:28,000
+Now, first of all, I will look at my work.
+
+7
+00:00:28,000 --> 00:00:32,000
+First of all, I will look at who I should put on the place.
+
+8
+00:00:32,000 --> 00:00:37,000
+That is, my nth place, which is n, I have to put on this place.
+
+9
+00:00:37,000 --> 00:00:40,000
+So, for this, I will look at who I had put in last place.
+
+10
+00:00:40,000 --> 00:00:45,000
+If I had put 0 in last place, then I can also put 0, I can also put 1.
+
+11
+00:00:45,000 --> 00:00:49,000
+0 means to put 0 in this binary string.
+
+12
+00:00:49,000 --> 00:00:53,000
+So, string plus equal to 0.
+
+13
+00:00:53,000 --> 00:00:55,000
+Here, I should use string builder.
+
+14
+00:00:55,000 --> 00:00:59,000
+If you are writing this function, then you can use string builder.
+
+15
+00:00:59,000 --> 00:01:03,000
+In fact, I will also change here and do string builder str.
+
+16
+00:01:03,000 --> 00:01:08,000
+So, here it will be str.append 0.
+
+17
+00:01:08,000 --> 00:01:10,000
+So, I have put 0 here.
+
+18
+00:01:10,000 --> 00:01:14,000
+Now, what I will do is, I will call the print binary strings for n minus 1 places.
+
+19
+00:01:14,000 --> 00:01:18,000
+So, I can do the same thing in the function call.
+
+20
+00:01:18,000 --> 00:01:20,000
+Means, I have called the print strings.
+
+21
+00:01:20,000 --> 00:01:22,000
+Now, I have to fill n minus 1 places.
+
+22
+00:01:22,000 --> 00:01:24,000
+Now, what is the last place?
+
+23
+00:01:24,000 --> 00:01:26,000
+Because I am going to put 0 now.
+
+24
+00:01:26,000 --> 00:01:30,000
+Sit 0 on chair n.
+
+25
+00:01:30,000 --> 00:01:32,000
+I have put 0 on chair n.
+
+26
+00:01:32,000 --> 00:01:35,000
+So, last place, what will be for the next level?
+
+27
+00:01:35,000 --> 00:01:36,000
+It will be 0.
+
+28
+00:01:36,000 --> 00:01:39,000
+And what will I pass in this string?
+
+29
+00:01:39,000 --> 00:01:42,000
+Now, I will append my 0 in the string.
+
+30
+00:01:42,000 --> 00:01:44,000
+I have put this 0.
+
+31
+00:01:44,000 --> 00:01:48,000
+And I have told the next level that I have put 0 in your last place.
+
+32
+00:01:48,000 --> 00:01:50,000
+What can I do in the second?
+
+33
+00:01:50,000 --> 00:01:54,000
+In the second, I can call the print binary strings by sitting 1 here.
+
+34
+00:01:54,000 --> 00:01:58,000
+So, here I will pass the last place as 1.
+
+35
+00:01:58,000 --> 00:02:00,000
+And here, what will I do?
+
+36
+00:02:00,000 --> 00:02:03,000
+I will append it in the string to 1.
+
+37
+00:02:03,000 --> 00:02:07,000
+So, once I have put 0 and passed the last place as 0 to the next level.
+
+38
+00:02:07,000 --> 00:02:11,000
+Once I have put 1 and added the next level as 1 to the last place.
+
+39
+00:02:11,000 --> 00:02:15,000
+This is what happened when I sat 0 on the last seat.
+
+40
+00:02:15,000 --> 00:02:19,000
+If I sat 1 on the last seat, then only 0 was able to sit.
+
+41
+00:02:19,000 --> 00:02:23,000
+So, in that case, only this condition would have been true.
+
+42
+00:02:23,000 --> 00:02:26,000
+So, I would have made my next function in this single call.
+
+43
+00:02:26,000 --> 00:02:28,000
+That is, I would have been able to sit 0 here.
+
+44
+00:02:28,000 --> 00:02:31,000
+And the last place would have been 0 for the next level.
+
+45
+00:02:31,000 --> 00:02:35,000
+Now, I can write a little better for this part of the code.
+
+46
+00:02:35,000 --> 00:02:36,000
+How will I write better?
+
+47
+00:02:36,000 --> 00:02:39,000
+That I have to sit 0 every time on this last place.
+
+48
+00:02:39,000 --> 00:02:42,000
+So, I will always do this work.
+
+49
+00:02:42,000 --> 00:02:44,000
+I will do so much work here.
+
+50
+00:02:44,000 --> 00:02:51,000
+If I sat 0 on the last place, then only I would have sat 1 this time.
+
+51
+00:02:51,000 --> 00:02:54,000
+Then only this statement would have been executed.
+
+52
+00:02:54,000 --> 00:02:57,000
+So, I had to write this much code.
+
+53
+00:02:57,000 --> 00:03:00,000
+So, I will replace this with this much code.
+
+54
+00:03:00,000 --> 00:03:02,000
+I don't have to sit 0 every time.
+
+55
+00:03:02,000 --> 00:03:05,000
+If the last place was 0, then I will also sit 1.
+
+56
+00:03:05,000 --> 00:03:09,000
+If the last place was 1, then 1 would not be sitting again for the consecutive ones.
+
+57
+00:03:09,000 --> 00:03:12,000
+Now, I have to see my base case.
+
+58
+00:03:12,000 --> 00:03:13,000
+What I will do in the base case?
+
+59
+00:03:13,000 --> 00:03:18,000
+I will see in the base case that if the value of n is 0, then what I have to print in that case?
+
+60
+00:03:18,000 --> 00:03:21,000
+In that case, I will print my str.
+
+61
+00:03:21,000 --> 00:03:23,000
+Why did I print str?
+
+62
+00:03:23,000 --> 00:03:29,000
+As soon as the value of n has become 0, that is, there is no place to fill.
+
+63
+00:03:29,000 --> 00:03:32,000
+So, I will print any value in the string builder.
+
+64
+00:03:32,000 --> 00:03:36,000
+If it is empty, that is, directly, I passed n is equal to 0.
+
+65
+00:03:36,000 --> 00:03:38,000
+So, there will be no value in it.
+
+66
+00:03:38,000 --> 00:03:40,000
+It will become empty string print.
+
+67
+00:03:40,000 --> 00:03:42,000
+We will return from here.
+
+68
+00:03:42,000 --> 00:03:44,000
+So, let's call the main function.
+
+69
+00:03:44,000 --> 00:03:48,000
+I will pass the print binary strings to n as 3.
+
+70
+00:03:48,000 --> 00:03:51,000
+What can we do in the last place at the beginning?
+
+71
+00:03:51,000 --> 00:03:54,000
+We can pass the last place at the beginning as 0.
+
+72
+00:03:54,000 --> 00:03:56,000
+That at the last place, it was 0.
+
+73
+00:03:56,000 --> 00:03:58,000
+That means you can also get 0, you can also get 1.
+
+74
+00:03:58,000 --> 00:04:00,000
+I will pass the string builder instead.
+
+75
+00:04:00,000 --> 00:04:06,000
+New string builder in which I have initialized with empty string.
+
+76
+00:04:06,000 --> 00:04:08,000
+Let's do this save and run.
+
+77
+00:04:08,000 --> 00:04:11,000
+I have some output like this.
+
+78
+00:04:11,000 --> 00:04:13,000
+Why has the output come like this?
+
+79
+00:04:13,000 --> 00:04:17,000
+Because I passed n as 3.
+
+80
+00:04:17,000 --> 00:04:18,000
+What is happening every time?
+
+81
+00:04:18,000 --> 00:04:21,000
+Every time, this value is being appended in my string builder.
+
+82
+00:04:21,000 --> 00:04:25,000
+So, as soon as the function call will be complete here,
+
+83
+00:04:25,000 --> 00:04:27,000
+the value will be appended after that.
+
+84
+00:04:27,000 --> 00:04:30,000
+That means if the stack is clear,
+
+85
+00:04:30,000 --> 00:04:32,000
+as soon as I have appended it,
+
+86
+00:04:32,000 --> 00:04:35,000
+when it will come back here to execute it,
+
+87
+00:04:35,000 --> 00:04:37,000
+then the appended is still 0.
+
+88
+00:04:37,000 --> 00:04:40,000
+That is why my answer is being printed wrong here.
+
+89
+00:04:40,000 --> 00:04:43,000
+Instead of string builder, I will use string here.
+
+90
+00:04:43,000 --> 00:04:45,000
+I will pass an empty string here.
+
+91
+00:04:45,000 --> 00:04:48,000
+I will pass the empty string here as well.
+
+92
+00:04:48,000 --> 00:04:50,000
+The question can be asked from the string builder too.
+
+93
+00:04:50,000 --> 00:04:53,000
+But there will be a little complexity in understanding
+
+94
+00:04:53,000 --> 00:04:56,000
+how to remove the last character.
+
+95
+00:04:56,000 --> 00:04:58,000
+What is my problem?
+
+96
+00:04:58,000 --> 00:05:00,000
+My problem is that I have put 0 on the chair.
+
+97
+00:05:00,000 --> 00:05:01,000
+What am I doing now?
+
+98
+00:05:01,000 --> 00:05:03,000
+I am trying to put 1 on the same chair.
+
+99
+00:05:03,000 --> 00:05:05,000
+So, what will happen?
+
+100
+00:05:05,000 --> 00:05:07,000
+That 1 will happen after that 0.
+
+101
+00:05:07,000 --> 00:05:09,000
+So, what do I have to do?
+
+102
+00:05:09,000 --> 00:05:11,000
+After putting 0 on the chair,
+
+103
+00:05:11,000 --> 00:05:13,000
+I will have to remove it before putting 1.
+
+104
+00:05:13,000 --> 00:05:18,000
+So, here I will do string plus 0.
+
+105
+00:05:18,000 --> 00:05:24,000
+And here I will do string plus 1.
+
+106
+00:05:24,000 --> 00:05:26,000
+What happened with this?
+
+107
+00:05:26,000 --> 00:05:30,000
+The 0 added in my string is added only for the next level.
+
+108
+00:05:30,000 --> 00:05:32,000
+That is, I have put 0 on the chair.
+
+109
+00:05:32,000 --> 00:05:35,000
+I have not put it on the chair above the current level.
+
+110
+00:05:35,000 --> 00:05:38,000
+Let's do this save and run once.
+
+111
+00:05:38,000 --> 00:05:41,000
+So, I have an answer for n is equal to 3.
+
+112
+00:05:41,000 --> 00:05:43,000
+What is the answer?
+
+113
+00:05:43,000 --> 00:05:48,000
+0, 0, 0, 0, 0, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1, 0, 1.
+
+114
+00:05:48,000 --> 00:05:52,000
+Let's see the stack analysis of this code.
+
+115
+00:05:52,000 --> 00:05:55,000
+We will get a little more clarity.
+
+116
+00:05:55,000 --> 00:05:58,000
+We will get a little more clarity.
+

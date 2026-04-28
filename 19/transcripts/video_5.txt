@@ -1,0 +1,206 @@
+Next question we will talk about is the problem number 14 and its name is binary strings problem.
+This problem is in the interviews of the PATM.
+The problem is that we have to print binary strings, what are binary strings?
+Binary strings means such a string in which only 0, 1, 0, 1, 0 or 0, 0, 0, 0 or 1, 0, 1, 0, 1, 1, 1, 1, 0.
+This is the kind of combination, that is, we have to form binary numbers to form these strings.
+Either a string can have a character 0 or a character 1, apart from that, there is no character.
+We call it binary strings.
+Now, what we have to do? We have to print binary strings of size n.
+I have to print the binary string of size n without consecutive ones.
+That is, if 0, 1, 0, 0, 1, 1 is such a string, what will be its size? 1, 2, 3, 4, 5, 6.
+The size of this string is 6 or 6 or 6.
+But I do not have to print this string. Why do not I print it?
+Because now after this, there is 1.
+We should not have consecutive one after one.
+For example, if in any string 1,1, 0, 1, 0, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1.
+If this is after one, 1, 0, 1, 0, 1, 0, 1, 0, 1, 1, 0, 1, 1, 0, 1, 1, 1, 1, 0.
+But if I have such a string, then this is my one valid string also.
+In fact, this is my one valid string also.
+So I don't want to print a string that has a consecutive 1, but I want to print the rest of the strings that have a size n.
+How will we solve this?
+First of all, let's talk about the base case recursion.
+How will the base case of the recursion be made?
+Base case means smallest possible case for which we can find out.
+If I had given the value of n to 0, then what would I print in my string?
+I would print in my string, nothing, empty.
+If I had given the value of n to 1, then what would I print in my string?
+Either my string would be 1, or my string would be 0.
+There are only two possible strings.
+If the value of n is 1, then either 1 or 0 can come.
+In both cases, there will be no consecutive 1s because there are no 2 1s anywhere.
+So I will print these two.
+If my value of n is 2, then who can I print?
+So I can print either 0 0, or I can print 0 1, or I can print 1 0.
+Can I print 1 1?
+I can't print this because there are consecutive 1s here.
+So I don't want to print this, but I will print the rest of the strings.
+That is, I will print these three.
+So can I say that forming binary strings is equal to taking n chairs
+and you can either print 0 or print 1 on n chairs.
+Let me tell you a little bit about this.
+If I want to make a binary string of n size, then what does it mean?
+It means I have to fill n places.
+Suppose I have taken n as 2.
+So I have two empty chairs that I have to fill.
+And how can I fill them?
+Either I can print 0 1 or print 1 on them.
+So what did I do here?
+Here I first printed 0.
+After that the next chair is left.
+I print 0 again on the next chair.
+So this combination came to me.
+After that what did I do?
+I printed 0 on the first chair and I printed 1 on the second.
+So I got this combination.
+Now I printed 1 instead of 0 on the first chair.
+So what can I do?
+Now I can print 0 on the second chair.
+So I got this combination.
+Or I have printed 1 on the first chair.
+So I have to remember the last chair because 1 was sitting.
+So on the next chair, I can't print 1.
+Either 0 will come here or nothing will come in this string.
+Only 0 can come.
+As soon as 0 comes, it will become the same combination.
+So these are the three possible combinations of binary strings that I have to print.
+So how did I visualize my problem?
+I imagined n size as n chairs.
+And on every chair, I can either print 0 or print 1.
+But yes, I have to remember one thing.
+If I can call it my last chair or my last index,
+or I can call it my last place.
+If I had 1 on my last place,
+then I can't print 1 on the next place.
+If I had 0 on the last place,
+then I can print 0 or print 1 on the next place.
+Because if 0 comes here, then print 0 or print 1.
+The consecutive 1 will not come.
+But yes, last time, if 1 came in the last place,
+and now I print 1 on the next place,
+then what will happen?
+The condition of the consecutive 1 will not be proved.
+I will solve this a little more.
+I will solve it a little more.
+Let's see for n is equal to 3.
+What will be for n is equal to 3?
+I have 3 places.
+1, 2, 3.
+What can I do?
+Now in the first place, as soon as I sent 0,
+what is my last place?
+My last place is 0 for this index.
+Now if I send 0 here too,
+then my last place will be 0.
+Now if I send 0 here too,
+I have the first combination of 0, 0, 0.
+Now what did I do?
+Here and here, I had sent 0.
+Because here the last place was 0,
+then I send 1 here.
+I have the combination of 0, 0, 1.
+Now what do I do?
+Here I had sent 0.
+Here, instead of sending 0,
+I send 1.
+Now in the last place,
+I will pass 1.
+For which index?
+For this index.
+Since I had sent 1 here,
+now I can only send 0 here.
+I can't send 1.
+So my new string is 0, 1, 0.
+Now I sent 0 after sending 0.
+After sending 0, I sent 1 after sending 1.
+Now I send 1 here.
+As soon as I sent 1,
+my last place will be equal to 1.
+So I will go to send here.
+Now I can only send 0 here.
+I can't send 1.
+As soon as I sent 0 here,
+my last place became 0.
+As soon as the last place became 0,
+now I can send 0 here too.
+So my string will be 0, 0, 0.
+And I can send 1 here too.
+So my string will be 1, 0, 1.
+So here 1, 0.
+After that, all possible combinations came.
+Can I send 1 after 1?
+So my possible solutions will be
+only this much.
+I will have 5 strings printed
+for n is equal to 3.
+And those strings will look something like this.
+So what will be my base case?
+My base case will be for n is equal to 0.
+What I have to do?
+I have to print the empty string.
+And what I have to do in my recursion?
+I have to do this.
+First of all, I will pass the last
+place variable in the recursion call.
+What will be the last place?
+I will tell the next level that
+the last seat was 0 or 1.
+I will be able to decide from that
+whether I have to send 0 or 1 this time.
+So what is my function?
+My recursive function.
+If I pass n,
+then this n can mean
+who I have to send on nth place.
+This is my third place.
+n is equal to 3.
+This is my second place. This is my first place.
+So what will be my work in the recursion?
+My work in the recursion
+is that if I take a choice
+on my nth place
+or I send 0
+or I send 1
+then the choice after that
+means the rest of the n minus
+1 places will be my work.
+That will be my internal function.
+If I had
+n places in the recursion
+what would I do in the recursion?
+I would fill one place
+i.e. fill the nth place.
+And then I would
+put a call for these levels
+to fill in n minus 1 places.
+So my work in the recursion
+is that I have to take a choice
+on this nth place.
+How will I take that choice?
+Either I can send 0 here
+or I can send 1.
+I will send 0 in every case.
+I will send 1 only in the case
+where my last place
+was not equal to 1.
+If the last place was 0 then
+anyone can add it. If the last place was 1
+then I have to do this.
+Whether I send 0 or 1
+on the nth seat
+and then how I have to call the internal function
+means here
+when I have to call fn minus 1
+to fill in the rest of the n minus places.
+So in my recursion
+the base case is clear for n is equal to 0
+I have to print the empty string.
+The work is clear that I have to send
+someone on the nth seat
+to take the choice of nth seat.
+Either that choice can be 0 or 1.
+If the place is 1 or 0
+then I will take the decision
+from here.
+I will send fn minus 1
+to fill in the rest of the places.
+Call.

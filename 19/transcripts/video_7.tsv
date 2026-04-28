@@ -1,0 +1,227 @@
+start	end	text
+0	2000	What happened in the stack analysis?
+2000	4000	First of all, in the main function,
+4000	8000	the first stack frame will be the main function.
+8000	11000	There will be three variables in the main function stack frame.
+11000	14000	The first variable is n, the value of n is with 3.
+14000	19000	After that, I have passed the last place as 0.
+19000	21000	And after that, I have an empty string.
+21000	23000	Now I will come to my next level.
+23000	27000	As soon as my function is called to print binary strings,
+27000	30000	there are the same values in which the value of n is equal to 3.
+30000	34000	The last place is 0 and the string is empty.
+34000	36000	Now what will this function do?
+36000	39000	In this function, I will do my work.
+39000	40000	What is my work?
+40000	42000	I first set 0 to nth place.
+42000	45000	As soon as I set 0 to nth place,
+45000	47000	another function will go up.
+47000	49000	In this, my string has come to 0.
+49000	52000	Now I have passed 0 to the last place.
+52000	55000	And my value of n will be 2.
+55000	57000	After that, I will do my work again.
+57000	59000	That is, to set 0 to the next place again.
+59000	62000	So I will come to another level in the stack frame.
+62000	64000	Now the value of n will be equal to 1.
+64000	66000	Now I have set 0 to the last place again.
+66000	68000	And my string has become 0.
+68000	71000	Now I will do one more work and call again.
+71000	74000	When the call will go, the value of n will pass 0.
+74000	77000	Because n is happening every time in my code.
+77000	79000	You will analyze that in the code,
+79000	82000	the value of n that I am passing every time is n minus 1.
+82000	84000	It is becoming minus 1.
+84000	89000	This time too, my last place is equal to 0.
+89000	91000	And this time my string is 0.
+91000	94000	Because as soon as I am sending it on the next level,
+94000	96000	I have set 0 to the third place.
+96000	99000	But here, my base case will hit.
+99000	100000	n is equal to 0.
+100000	101000	As soon as the base case hits,
+101000	102000	what will I do?
+102000	103000	I will get the string printed.
+103000	104000	So here in the output window,
+104000	106000	I will get 0, 0, 0 printed.
+106000	107000	After that, what will I do?
+107000	109000	I will do it from this level.
+109000	111000	Return back to the lower level.
+111000	113000	As soon as it comes to the lower level,
+113000	115000	the upper level will be empty.
+115000	117000	As soon as I come to the lower level,
+117000	118000	what do I have to do?
+118000	121000	Now I have to put another call on the top.
+121000	122000	After putting another call,
+122000	123000	now instead of 0,
+123000	125000	I have to place 1 on the chair.
+125000	127000	So the last place will be 1.
+127000	129000	And this time I will place 0, 0, 1 on the chair.
+129000	131000	For n is equal to 0.
+131000	132000	As soon as n is equal to 0,
+132000	133000	n is equal to 0,
+133000	136000	I will set this base case and 0, 0, 0, 1.
+136000	140000	0, 0, 1 will be printed on my output screen.
+140000	142000	I will come back to the lower level again.
+142000	144000	When I come back to the lower level,
+144000	146000	the upper level will be empty.
+146000	148000	Now what did I do?
+148000	152000	Now I saw that I have put 0 and 1 here.
+152000	154000	Now I have to come back to another level.
+154000	157000	So the upper level will be empty.
+157000	159000	Now for this level,
+159000	160000	if I talk,
+160000	161000	I have put 0 here.
+161000	162000	Now after that,
+162000	164000	I have put 0 and 1.
+164000	165000	Now I have to put 1.
+165000	167000	So to put 1,
+167000	169000	I will go up for n is equal to 1.
+169000	171000	So now the last place will be my 1.
+171000	173000	And now I will place 0, 1.
+173000	175000	As soon as I have placed 0, 1,
+175000	177000	I have to put one more call.
+177000	178000	Why do I have to put a call?
+178000	180000	Now I can place 0, 1,
+180000	182000	on the third place.
+182000	185000	So I will place 0, 1, 0 first.
+185000	187000	So the last place will be 0.
+187000	189000	And n is equal to 0.
+189000	190000	As soon as n is equal to 0,
+190000	191000	I have set this base case.
+191000	194000	So now I will print 0, 1, 0.
+194000	196000	As soon as I have put 0, 1, 0,
+196000	198000	it will come back to the lower level.
+198000	200000	So the upper level will be empty.
+200000	202000	If the upper level is empty,
+202000	203000	then I will look at this level.
+203000	205000	I have put 0 here.
+205000	207000	Now can I place 1 here?
+207000	209000	No, I can't place 1 here.
+209000	210000	Because if I place 1 here,
+210000	212000	then it will be consecutive 1s.
+212000	214000	So I have placed it here
+214000	217000	for every possible combination.
+217000	219000	I will come back to the lower level.
+219000	221000	In the lower level,
+221000	223000	I have put 0 after 0.
+223000	225000	I have put 1 after 0.
+225000	226000	Now what will I do?
+226000	228000	I can't place it further.
+228000	230000	So from here also,
+230000	232000	I will come back to the lower level.
+232000	234000	And the upper level will be empty.
+234000	236000	In this level,
+236000	238000	I have analyzed all the things by placing 0.
+238000	240000	Now at the first nth place,
+240000	242000	I will place 1 here.
+242000	244000	As soon as I have placed 1,
+244000	245000	what will happen here?
+245000	247000	My string will be equal to 1.
+247000	248000	I will pass it to the last place.
+248000	249000	1 will be value of n.
+249000	251000	Now I can place 0 here
+251000	252000	or place 1 here.
+252000	253000	I can't place 1 here
+253000	254000	because it is 1 in the last place.
+254000	256000	So I will be able to place 0 only.
+256000	257000	If I place 0,
+257000	259000	for n is equal to 1,
+259000	261000	I have passed 0 in the last place
+261000	263000	and the string passed 1, 0, 0.
+263000	264000	Now in 1, 0, 0,
+264000	266000	I can place 1 here as well.
+266000	267000	I can place 0 as well.
+267000	268000	I will place 0 first.
+268000	271000	So for n is equal to 0,
+271000	273000	I passed 0 in the last place
+273000	276000	and the string became 1, 0, 0.
+276000	277000	So what will happen here?
+277000	279000	My base case will be set here.
+279000	281000	So I will print it to 1, 0, 0.
+281000	282000	Then what will I do?
+282000	284000	I will come back to a level below
+284000	286000	and the upper level will be empty.
+286000	287000	In this level,
+287000	289000	I have placed 0 here.
+289000	291000	Now I will place 1 here.
+291000	292000	I will place 1 here.
+292000	293000	I will place 1 here.
+293000	294000	I will place 1 here.
+294000	295000	I will place 1 here.
+295000	297000	I will place 1 here.
+297000	300000	So this string will become 1, 0, 1.
+300000	302000	I have reached the last place.
+302000	303000	For n is equal to 0.
+303000	304000	As soon as n is equal to 0,
+304000	306000	I have reached the base case.
+306000	307000	When I have reached the base case,
+307000	309000	I will get the string printed.
+309000	310000	This is 1, 0, 1.
+310000	312000	After this, what will I do?
+312000	313000	After this, I will see that
+313000	314000	the base case is hit.
+314000	315000	So I will return from here.
+315000	316000	As soon as I return,
+316000	318000	I will come to this function call.
+318000	320000	As soon as I come to this function call,
+320000	322000	I will see that I have placed 0 here.
+322000	324000	I have placed 1 here.
+324000	326000	So I have to return from here.
+326000	328000	So this will be my stack frame empty.
+328000	330000	After this, I will come here.
+330000	332000	I have placed 0 here.
+332000	333000	I have placed 1 here.
+333000	335000	So this will be empty for me.
+335000	336000	I will come to the lower level.
+336000	337000	Here too,
+337000	340000	I have seen all the combinations of 0
+340000	341000	and all combinations of 1.
+341000	343000	So now I will return to the main function.
+343000	345000	If I return to the main function,
+345000	347000	this stack frame will also be empty.
+347000	349000	In the main function,
+349000	350000	I will return from here.
+350000	351000	And my program will be over.
+351000	352000	And at the end,
+352000	354000	I will see that the output window
+354000	355000	has the same things.
+355000	357000	It is printed in the same sequence.
+357000	359000	First, it has printed 0, 0, 0.
+359000	361000	In the first line,
+361000	363000	it has printed 0, 0, 1.
+363000	365000	After that, it has printed 0, 1, 0.
+365000	367000	After that, it has printed 1, 0, 0.
+367000	370000	And at the end, it has printed 1, 0, 1.
+370000	371000	So in this way,
+371000	374000	we print binary numbers and binary strings
+374000	376000	without consecutive 1s.
+376000	378000	Now you can also change this question.
+378000	380000	It is possible that in the interview,
+380000	381000	instead of consecutive 1s,
+381000	383000	there should be no consecutive 0s.
+383000	384000	So what to do in that?
+384000	385000	In the last place,
+385000	386000	when I have placed 0,
+386000	388000	then I will not place the other 0.
+388000	390000	If I have placed 1,
+390000	392000	then I can place any of the 0 or 1.
+392000	394000	So that question changes in this way.
+394000	396000	Conditions will change slightly.
+396000	397000	So by changing the form,
+397000	399000	we can come into the same interview.
+399000	401000	I hope that many of you
+401000	403000	have asked the basic questions of recursion
+403000	404000	or I have understood it well.
+404000	406000	If there is a small doubt in any question,
+406000	408000	then you have to write the code
+408000	410000	and see the logic again.
+410000	411000	You have to see the video again.
+411000	412000	And what to do?
+412000	413000	You have to do the stack analysis
+413000	415000	by yourself, line by line.
+415000	417000	So we will have clear those things.
+417000	419000	Now in the next chapters,
+419000	422000	we will read the recursion in more detail.
+422000	424000	Now we have seen simple recursion.
+424000	427000	We will see more different types of recursion.
+427000	430000	Once our hands have become very strong on recursion,
+430000	433000	then we will move towards our advanced data structures.

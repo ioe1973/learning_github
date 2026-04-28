@@ -1,0 +1,80 @@
+What will I do for the code? First, I will make a function. I will give the name of the function
+Public static. It has a return type int. Why int? Because I am going to return the total number of ways.
+I will give the name of this function. Tiling problem. There will be one parameter in it, my integer n.
+Why is this integer n? Because my size of the floor is equal to 2xn. 2xn is my floor size.
+So, n is the sign that the length of my floor is going to be equal to the length of my floor.
+Now, what I have to do first? First of all, I will do my work.
+What is the work in my recursive function? The work is to take a choice.
+Let us assume that first of all, I have taken a vertical choice.
+As soon as I have taken a vertical choice, what do I have to calculate?
+I have taken a vertical choice and sold one tile. Now, I just have to calculate this.
+How many tiles will be in n minus 1? Int vertical tiles is equal to...
+I will call this same function to the tiling problem for n minus 1.
+So, I have taken a choice here. After placing the vertical, how many tiles will be in n minus 1?
+I have stored this in vertical tiles. In fact, instead of vertical tiles, I will write fn minus 1.
+That means, I will get so many choices. Now, what will I do? I will take a horizontal choice.
+Horizontal choice. As soon as I have taken a horizontal choice, I will have to calculate fn minus 2.
+What will happen? This will be the tiling problem for n minus 2.
+So, the horizontal choice will be left here and the vertical choice will be left here.
+What will be my total ways? Int total ways is equal to...
+My fn minus 1 will return and fn minus 2 will return.
+And finally, with the same function, I will return my total ways.
+What can I do on top? I can write my base case on top.
+My base case will be that if my value of n is 0 or my value of n is 1, then I have only one way left.
+So, I will return 1. I hope this thing will be clear.
+We discussed this in the base case first.
+The work is to make a choice. As soon as we make a choice, then the tiling problem for n minus 1 will be solved.
+The tiling problem for n minus 2 will be solved.
+Here, I am faith that n minus 1 and n minus 2 will be the right answer.
+I will calculate the total ways and then I will return the total ways.
+Let's do this safely. We will put a call from the main function.
+I will pass the tiling problem and here I will pass my n as 3.
+I know that the answer I should get for 3 should be equal to 3.
+Now, if I put a call for n is equal to 2, then the answer should be equal to 2.
+One is that we will place both horizontally and one is that we will place both vertically.
+If I put a call for n is equal to 4, then what should happen?
+I will get the answer 5.
+This is a homework problem for you to figure out.
+You have to solve it on a paper pen.
+If the size of the floor is equal to 2 cross 4, then how do I get 5 ways?
+What are the 5 ways in which I am placing my tiles?
+We have to solve this right now.
+The most important thing about this question is that it will not come only for 2 cross 1.
+What will happen in the question?
+This question can also come for 4 cross 1.
+How will I get the question?
+I will get the question that the size of the floor is equal to 4 cross n.
+So, my floor will look something like this.
+This side will always be 4 and this side will always be n.
+After that, what will be the size of the tile?
+We will get the size of the tile equal to 4 cross 1.
+So, there is no need to apply the same formula.
+The formula will look exactly the same.
+If you have this question for 4 cross 1, then it will also come.
+Along with this, there will be a lot of questions in the recursion,
+in which one thing is used called DP.
+DP means Dynamic Programming.
+Dynamic Programming means that we are solving the same question again and again.
+Instead of calculating the same thing again and again,
+what do we do?
+We store the answer somewhere.
+So, here, because we have only learned basic recursion,
+then there will be some questions that we will solve from the recursion app,
+but it will not have the most optimized solution.
+Its time complexity will be quite large.
+So, when we go to the end and learn Dynamic Programming,
+after that we can solve all these questions in a maximum optimized way.
+Till then, we have to wait a little because we are only working on the logic building,
+we are building the logic of the recursion.
+So, we are not doing the most optimized solution.
+We are learning the recursion now that how is the recursion working?
+We have understood the logic of the recursion.
+So, the questions of the graph will be very easy.
+The questions of the linked list will be very easy.
+There will be a lot more things that will be easy.
+In fact, the concept of Dynamic Programming,
+we will be understanding that very well in the end.
+So, right now, the most optimized solution may not be available to you.
+There are a lot of problems.
+But yes, you will get the most logical solution.
+How to understand them, how to visualize them.

@@ -1,0 +1,1824 @@
+1
+00:00:00,000 --> 00:00:04,000
+Next question we will be talking about is Friends Pairing Problem.
+
+2
+00:00:04,000 --> 00:00:06,500
+This is also a very classical problem of recursion.
+
+3
+00:00:06,500 --> 00:00:10,000
+This problem has come in the company of Goldman Sachs.
+
+4
+00:00:10,000 --> 00:00:12,500
+The problem is that I have n friends.
+
+5
+00:00:12,500 --> 00:00:14,500
+I mean I have n friends.
+
+6
+00:00:14,500 --> 00:00:16,500
+I have n number of friends.
+
+7
+00:00:16,500 --> 00:00:17,500
+So many friends.
+
+8
+00:00:17,500 --> 00:00:20,500
+Now all those friends go to a party.
+
+9
+00:00:20,500 --> 00:00:22,000
+And what happens in a party?
+
+10
+00:00:22,000 --> 00:00:25,000
+Either you can stay alone, eat something,
+
+11
+00:00:25,000 --> 00:00:27,000
+or you can talk to someone.
+
+12
+00:00:27,000 --> 00:00:29,000
+As soon as we go and talk to someone,
+
+13
+00:00:29,000 --> 00:00:32,000
+I give the name of that thing as Pairing.
+
+14
+00:00:32,000 --> 00:00:36,000
+Pairing means when two people are connected and when they are talking.
+
+15
+00:00:36,000 --> 00:00:39,000
+So either you can stay alone in a party,
+
+16
+00:00:39,000 --> 00:00:42,000
+or you can stay with a friend.
+
+17
+00:00:42,000 --> 00:00:44,000
+So when you will be standing with a friend,
+
+18
+00:00:44,000 --> 00:00:45,000
+then your leg will be formed.
+
+19
+00:00:45,000 --> 00:00:47,000
+When you will be standing alone,
+
+20
+00:00:47,000 --> 00:00:49,000
+then you will be standing alone.
+
+21
+00:00:49,000 --> 00:00:51,000
+So this is the problem.
+
+22
+00:00:51,000 --> 00:00:54,000
+It is given that n friends are either
+
+23
+00:00:54,000 --> 00:00:57,000
+friends, everyone can be standing alone,
+
+24
+00:00:57,000 --> 00:01:00,000
+or they can pair up with some other friend.
+
+25
+00:01:00,000 --> 00:01:03,000
+Every friend can make one pair.
+
+26
+00:01:03,000 --> 00:01:05,000
+Suppose in a party,
+
+27
+00:01:05,000 --> 00:01:07,000
+three people have gone.
+
+28
+00:01:07,000 --> 00:01:09,000
+This is called A, this is called C.
+
+29
+00:01:09,000 --> 00:01:12,000
+If A and B have started talking to each other,
+
+30
+00:01:12,000 --> 00:01:14,000
+then they can only talk to each other.
+
+31
+00:01:14,000 --> 00:01:16,000
+B cannot talk to C now.
+
+32
+00:01:16,000 --> 00:01:19,000
+If we are observing at one time,
+
+33
+00:01:19,000 --> 00:01:23,000
+then A cannot pair up with someone else.
+
+34
+00:01:23,000 --> 00:01:25,000
+A cannot do it with anyone else.
+
+35
+00:01:25,000 --> 00:01:27,000
+Both of these pair up are final.
+
+36
+00:01:27,000 --> 00:01:29,000
+So there are some problems like this,
+
+37
+00:01:29,000 --> 00:01:31,000
+in which once you have made a pair,
+
+38
+00:01:31,000 --> 00:01:34,000
+then you can only pair with one person at a time.
+
+39
+00:01:34,000 --> 00:01:36,000
+Find out the total number of ways in which friends
+
+40
+00:01:36,000 --> 00:01:38,000
+can remain single or paired up.
+
+41
+00:01:38,000 --> 00:01:40,000
+Now I have to take out total ways
+
+42
+00:01:40,000 --> 00:01:44,000
+in which our n friends can be standing in a party.
+
+43
+00:01:44,000 --> 00:01:47,000
+That is, there will be single ways in it,
+
+44
+00:01:47,000 --> 00:01:49,000
+there will be pairs of ways in it.
+
+45
+00:01:49,000 --> 00:01:51,000
+I have to take out total
+
+46
+00:01:51,000 --> 00:01:53,000
+ways in which I can send n people to a party.
+
+47
+00:01:53,000 --> 00:01:56,000
+And I have told them that either you are standing single,
+
+48
+00:01:56,000 --> 00:01:58,000
+or you are standing paired up with someone else.
+
+49
+00:01:58,000 --> 00:02:00,000
+So there are so many ways in which
+
+50
+00:02:00,000 --> 00:02:02,000
+n people can be standing in that party.
+
+51
+00:02:02,000 --> 00:02:05,000
+First of all, let's analyze for n is equal to 1.
+
+52
+00:02:05,000 --> 00:02:08,000
+In a party, if only one person has gone,
+
+53
+00:02:08,000 --> 00:02:10,000
+then how will that one person stand?
+
+54
+00:02:10,000 --> 00:02:13,000
+That one person will stand in a single way.
+
+55
+00:02:13,000 --> 00:02:15,000
+If he stands in a single way,
+
+56
+00:02:15,000 --> 00:02:17,000
+then what can I say that my ways will be one.
+
+57
+00:02:17,000 --> 00:02:19,000
+There is only one way,
+
+58
+00:02:19,000 --> 00:02:22,000
+stand alone because there is no one to make a pair.
+
+59
+00:02:22,000 --> 00:02:25,000
+Next, what can I say, if my value of n is 2,
+
+60
+00:02:25,000 --> 00:02:27,000
+then I have two people.
+
+61
+00:02:27,000 --> 00:02:29,000
+I give this a name for both of them,
+
+62
+00:02:29,000 --> 00:02:31,000
+I give this b name for them.
+
+63
+00:02:31,000 --> 00:02:33,000
+What can these people stand in?
+
+64
+00:02:33,000 --> 00:02:36,000
+The first way can be that a is standing alone
+
+65
+00:02:36,000 --> 00:02:38,000
+and b is standing alone.
+
+66
+00:02:38,000 --> 00:02:40,000
+The second way can be that a and b are standing together
+
+67
+00:02:40,000 --> 00:02:41,000
+by making pairs.
+
+68
+00:02:41,000 --> 00:02:43,000
+So where I have put this bracket,
+
+69
+00:02:43,000 --> 00:02:45,000
+parenthesis, here it will be paired up
+
+70
+00:02:45,000 --> 00:02:47,000
+and where it is not, here these people are standing alone.
+
+71
+00:02:47,000 --> 00:02:50,000
+The total number of ways here will be equal to 2.
+
+72
+00:02:50,000 --> 00:02:52,000
+There are two ways to stay in their party.
+
+73
+00:02:52,000 --> 00:02:54,000
+One is to stand alone if you are eating,
+
+74
+00:02:54,000 --> 00:02:57,000
+drinking your juice or anything else.
+
+75
+00:02:57,000 --> 00:03:00,000
+And the second way is that a and b are making pairs
+
+76
+00:03:00,000 --> 00:03:02,000
+and talking to each other.
+
+77
+00:03:02,000 --> 00:03:04,000
+Talking to each other while drinking juice.
+
+78
+00:03:04,000 --> 00:03:06,000
+They have made pairs with each other.
+
+79
+00:03:06,000 --> 00:03:09,000
+If a is paired with b, then b is automatically paired with a.
+
+80
+00:03:09,000 --> 00:03:12,000
+So for n is equal to 2, my ways are equal to 2.
+
+81
+00:03:12,000 --> 00:03:15,000
+Now let me talk about n is equal to 3.
+
+82
+00:03:15,000 --> 00:03:20,000
+For n is equal to 3, I have one a, one b
+
+83
+00:03:20,000 --> 00:03:22,000
+and I have one c.
+
+84
+00:03:22,000 --> 00:03:25,000
+So what are the ways to pair them up?
+
+85
+00:03:25,000 --> 00:03:30,000
+The first way would be that a is empty, b is empty, c is empty.
+
+86
+00:03:30,000 --> 00:03:33,000
+The second way would be that a is empty
+
+87
+00:03:33,000 --> 00:03:35,000
+but b and c made pairs.
+
+88
+00:03:35,000 --> 00:03:38,000
+The third way would be that b is empty
+
+89
+00:03:38,000 --> 00:03:40,000
+but a and c made pairs.
+
+90
+00:03:40,000 --> 00:03:43,000
+The third way would be that c is empty
+
+91
+00:03:43,000 --> 00:03:45,000
+but a and b made pairs.
+
+92
+00:03:45,000 --> 00:03:48,000
+Can there be any other way except this?
+
+93
+00:03:48,000 --> 00:03:50,000
+There can't be any other way except this.
+
+94
+00:03:50,000 --> 00:03:52,000
+Because either they can be empty.
+
+95
+00:03:52,000 --> 00:03:55,000
+If they are not standing alone,
+
+96
+00:03:55,000 --> 00:03:57,000
+then what are the pairs made?
+
+97
+00:03:57,000 --> 00:04:00,000
+Either b and c can be made or a and c can be made
+
+98
+00:04:00,000 --> 00:04:02,000
+or a and b can be made.
+
+99
+00:04:02,000 --> 00:04:04,000
+And the rest, because the number is odd,
+
+100
+00:04:04,000 --> 00:04:06,000
+then one has to be standing alone.
+
+101
+00:04:06,000 --> 00:04:08,000
+Either a will stand alone, the rest will be made.
+
+102
+00:04:08,000 --> 00:04:10,000
+b will stand alone, the rest will be made.
+
+103
+00:04:10,000 --> 00:04:12,000
+c will stand alone, the rest will be made.
+
+104
+00:04:12,000 --> 00:04:16,000
+In this case, my total number of ways are equal to 4.
+
+105
+00:04:16,000 --> 00:04:18,000
+Now whenever I do recursion,
+
+106
+00:04:18,000 --> 00:04:22,000
+in recursion, can I say that I have figured out my base case?
+
+107
+00:04:22,000 --> 00:04:25,000
+My base case is for n is equal to 1.
+
+108
+00:04:25,000 --> 00:04:27,000
+My ways are 1.
+
+109
+00:04:27,000 --> 00:04:30,000
+For n is equal to 2, my ways are 2.
+
+110
+00:04:30,000 --> 00:04:32,000
+Can I say that my base case would be
+
+111
+00:04:32,000 --> 00:04:35,000
+that if the value of n is 1 or my value of n is 2,
+
+112
+00:04:35,000 --> 00:04:37,000
+then what would be my ways?
+
+113
+00:04:37,000 --> 00:04:39,000
+My ways would be equal to n.
+
+114
+00:04:39,000 --> 00:04:41,000
+If n is equal to 1, then my ways would be 1.
+
+115
+00:04:41,000 --> 00:04:43,000
+If n is equal to 2, then my ways would be 2.
+
+116
+00:04:43,000 --> 00:04:45,000
+So this is my base case.
+
+117
+00:04:45,000 --> 00:04:48,000
+Now I have to figure out what I have to do in recursion.
+
+118
+00:04:48,000 --> 00:04:50,000
+To work, let's look at it logically.
+
+119
+00:04:50,000 --> 00:04:53,000
+Do I have a choice at every level?
+
+120
+00:04:53,000 --> 00:04:55,000
+Do I have a choice for every friend?
+
+121
+00:04:55,000 --> 00:04:56,000
+What is the choice?
+
+122
+00:04:56,000 --> 00:04:58,000
+Either he can be standing alone
+
+123
+00:04:58,000 --> 00:05:01,000
+or he can make a pair with someone.
+
+124
+00:05:01,000 --> 00:05:03,000
+And I will give you a special tip that
+
+125
+00:05:03,000 --> 00:05:05,000
+in math, in 11th and 12th,
+
+126
+00:05:05,000 --> 00:05:07,000
+because the majority of the students
+
+127
+00:05:07,000 --> 00:05:09,000
+will be from the same background.
+
+128
+00:05:09,000 --> 00:05:11,000
+You will be from the engineering background.
+
+129
+00:05:11,000 --> 00:05:13,000
+Those who are from B.C.A., B.A.
+
+130
+00:05:13,000 --> 00:05:15,000
+or those who are coming from any other background
+
+131
+00:05:15,000 --> 00:05:17,000
+don't have to worry at all.
+
+132
+00:05:17,000 --> 00:05:19,000
+I am not telling you an extreme advantage here.
+
+133
+00:05:19,000 --> 00:05:21,000
+I am telling you a small thing.
+
+134
+00:05:21,000 --> 00:05:23,000
+If you have studied
+
+135
+00:05:23,000 --> 00:05:25,000
+permutation and combination
+
+136
+00:05:25,000 --> 00:05:27,000
+in math,
+
+137
+00:05:27,000 --> 00:05:29,000
+those who had math,
+
+138
+00:05:29,000 --> 00:05:31,000
+if you are from B.A. background,
+
+139
+00:05:31,000 --> 00:05:33,000
+B.S.C. background or from any other background,
+
+140
+00:05:33,000 --> 00:05:35,000
+and if you have studied permutation
+
+141
+00:05:35,000 --> 00:05:37,000
+in math,
+
+142
+00:05:37,000 --> 00:05:39,000
+if your topic is strong,
+
+143
+00:05:39,000 --> 00:05:41,000
+then the logic of these questions
+
+144
+00:05:41,000 --> 00:05:43,000
+will be a little easier to clear.
+
+145
+00:05:43,000 --> 00:05:45,000
+I am explaining to the rest of the students
+
+146
+00:05:45,000 --> 00:05:47,000
+that you don't have to understand
+
+147
+00:05:47,000 --> 00:05:49,000
+so much.
+
+148
+00:05:49,000 --> 00:05:51,000
+People who have permutation and combination
+
+149
+00:05:51,000 --> 00:05:53,000
+are strong in math.
+
+150
+00:05:53,000 --> 00:05:55,000
+Because these questions are
+
+151
+00:05:55,000 --> 00:05:57,000
+questions of permutation and combination.
+
+152
+00:05:57,000 --> 00:05:59,000
+If you think a little bit.
+
+153
+00:05:59,000 --> 00:06:01,000
+But it is a completely different thing.
+
+154
+00:06:01,000 --> 00:06:03,000
+It is not related to this.
+
+155
+00:06:03,000 --> 00:06:05,000
+I have made each and every example
+
+156
+00:06:05,000 --> 00:06:07,000
+very well.
+
+157
+00:06:07,000 --> 00:06:09,000
+I have made these things in detail.
+
+158
+00:06:09,000 --> 00:06:11,000
+These things are usually being taught
+
+159
+00:06:11,000 --> 00:06:13,000
+during the preparation of JEE.
+
+160
+00:06:13,000 --> 00:06:15,000
+Whenever the questions of permutation and PNC are going on.
+
+161
+00:06:15,000 --> 00:06:17,000
+On every level, I have a choice
+
+162
+00:06:17,000 --> 00:06:19,000
+that either I can stand alone
+
+163
+00:06:19,000 --> 00:06:21,000
+or stand alone in a party
+
+164
+00:06:21,000 --> 00:06:23,000
+or stand in a pair.
+
+165
+00:06:23,000 --> 00:06:25,000
+I will minimize this
+
+166
+00:06:25,000 --> 00:06:27,000
+and I will bring it here.
+
+167
+00:06:27,000 --> 00:06:29,000
+Can I say that
+
+168
+00:06:29,000 --> 00:06:31,000
+if I have a choice
+
+169
+00:06:31,000 --> 00:06:33,000
+then I have taken a single choice.
+
+170
+00:06:33,000 --> 00:06:35,000
+As soon as I have taken a single choice
+
+171
+00:06:35,000 --> 00:06:37,000
+then what did I do?
+
+172
+00:06:37,000 --> 00:06:39,000
+My only friend is different.
+
+173
+00:06:39,000 --> 00:06:41,000
+Now how many friends are left?
+
+174
+00:06:41,000 --> 00:06:43,000
+Now N-1 friends are left.
+
+175
+00:06:43,000 --> 00:06:45,000
+If I had to stand in a party
+
+176
+00:06:45,000 --> 00:06:47,000
+for N friends first.
+
+177
+00:06:47,000 --> 00:06:49,000
+I had to see how they can
+
+178
+00:06:49,000 --> 00:06:51,000
+stay in a party.
+
+179
+00:06:51,000 --> 00:06:53,000
+One of them chose that they would
+
+180
+00:06:53,000 --> 00:06:55,000
+only be single.
+
+181
+00:06:55,000 --> 00:06:57,000
+So now my problem has become
+
+182
+00:06:57,000 --> 00:06:59,000
+that I have to stand in N-1 friends.
+
+183
+00:06:59,000 --> 00:07:01,000
+FN was my function
+
+184
+00:07:01,000 --> 00:07:03,000
+in which I had to pair friends
+
+185
+00:07:03,000 --> 00:07:05,000
+with N friends.
+
+186
+00:07:05,000 --> 00:07:07,000
+Now FN-1 is my function
+
+187
+00:07:07,000 --> 00:07:09,000
+in which I have to pair friends
+
+188
+00:07:09,000 --> 00:07:11,000
+with N-1 friends.
+
+189
+00:07:11,000 --> 00:07:13,000
+So I have to call the same function
+
+190
+00:07:13,000 --> 00:07:15,000
+but this time I will pass the parameter
+
+191
+00:07:15,000 --> 00:07:17,000
+as N-1.
+
+192
+00:07:17,000 --> 00:07:19,000
+So my first choice came from here.
+
+193
+00:07:19,000 --> 00:07:21,000
+What was the second choice?
+
+194
+00:07:21,000 --> 00:07:23,000
+The second choice was that you can make a pair.
+
+195
+00:07:23,000 --> 00:07:25,000
+As soon as you make a pair,
+
+196
+00:07:25,000 --> 00:07:27,000
+two people moved aside.
+
+197
+00:07:27,000 --> 00:07:29,000
+You can't make a pair with each other.
+
+198
+00:07:29,000 --> 00:07:31,000
+You can't be single.
+
+199
+00:07:31,000 --> 00:07:33,000
+Now you have to make a pair with me.
+
+200
+00:07:33,000 --> 00:07:35,000
+So as soon as the pair of two friends
+
+201
+00:07:35,000 --> 00:07:37,000
+was made, what happened?
+
+202
+00:07:37,000 --> 00:07:39,000
+Two friends moved away from N.
+
+203
+00:07:39,000 --> 00:07:41,000
+As soon as the pair of two friends
+
+204
+00:07:41,000 --> 00:07:43,000
+was made, what was made?
+
+205
+00:07:43,000 --> 00:07:45,000
+Now my N-2 friends are left.
+
+206
+00:07:45,000 --> 00:07:47,000
+So now how will my problem be converted?
+
+207
+00:07:47,000 --> 00:07:49,000
+Now my problem will be converted
+
+208
+00:07:49,000 --> 00:07:51,000
+that I have to call FN-2.
+
+209
+00:07:51,000 --> 00:07:53,000
+But how many people can I make this pair with?
+
+210
+00:07:53,000 --> 00:07:55,000
+I also have a choice in pairs.
+
+211
+00:07:55,000 --> 00:07:57,000
+I am alone.
+
+212
+00:07:57,000 --> 00:07:59,000
+If I take one out of N,
+
+213
+00:07:59,000 --> 00:08:01,000
+then how many are left? N-1 is left.
+
+214
+00:08:01,000 --> 00:08:03,000
+Now one of these N-1
+
+215
+00:08:03,000 --> 00:08:05,000
+can pick any one of them
+
+216
+00:08:05,000 --> 00:08:07,000
+and make a pair with it.
+
+217
+00:08:07,000 --> 00:08:09,000
+So how many choices did I have
+
+218
+00:08:09,000 --> 00:08:11,000
+to make a pair?
+
+219
+00:08:11,000 --> 00:08:13,000
+I have N-1 choices to make a pair.
+
+220
+00:08:13,000 --> 00:08:15,000
+How many people can a person make a pair
+
+221
+00:08:15,000 --> 00:08:17,000
+with?
+
+222
+00:08:17,000 --> 00:08:19,000
+One person can make a pair with N-1.
+
+223
+00:08:19,000 --> 00:08:21,000
+What does this mean?
+
+224
+00:08:21,000 --> 00:08:23,000
+Suppose I had A, A,
+
+225
+00:08:23,000 --> 00:08:25,000
+and B was a C.
+
+226
+00:08:25,000 --> 00:08:27,000
+A is here.
+
+227
+00:08:27,000 --> 00:08:29,000
+And B and C are here.
+
+228
+00:08:29,000 --> 00:08:31,000
+This is my N-1.
+
+229
+00:08:31,000 --> 00:08:33,000
+Now A can make a pair with B
+
+230
+00:08:33,000 --> 00:08:35,000
+or A can make a pair with C.
+
+231
+00:08:35,000 --> 00:08:37,000
+So how many choices do A have?
+
+232
+00:08:37,000 --> 00:08:39,000
+A has two choices.
+
+233
+00:08:39,000 --> 00:08:41,000
+2 is equal to N-1.
+
+234
+00:08:41,000 --> 00:08:43,000
+Because here my N was equal to 3.
+
+235
+00:08:43,000 --> 00:08:45,000
+So can I say that
+
+236
+00:08:45,000 --> 00:08:47,000
+how many people make a pair
+
+237
+00:08:47,000 --> 00:08:49,000
+with?
+
+238
+00:08:49,000 --> 00:08:51,000
+When A makes a pair with B
+
+239
+00:08:51,000 --> 00:08:53,000
+then B will be different.
+
+240
+00:08:53,000 --> 00:08:55,000
+So here I have my choice
+
+241
+00:08:55,000 --> 00:08:57,000
+and here the other people
+
+242
+00:08:57,000 --> 00:08:59,000
+can make a pair with.
+
+243
+00:08:59,000 --> 00:09:01,000
+So my problem is
+
+244
+00:09:01,000 --> 00:09:03,000
+that I have N-1 choices.
+
+245
+00:09:03,000 --> 00:09:05,000
+And as soon as I have selected
+
+246
+00:09:05,000 --> 00:09:07,000
+one of the N-1
+
+247
+00:09:07,000 --> 00:09:09,000
+to make a pair,
+
+248
+00:09:09,000 --> 00:09:11,000
+the other N-2 friends
+
+249
+00:09:11,000 --> 00:09:13,000
+will have to calculate
+
+250
+00:09:13,000 --> 00:09:15,000
+the ways for them.
+
+251
+00:09:15,000 --> 00:09:17,000
+So here I have
+
+252
+00:09:17,000 --> 00:09:19,000
+a multiply.
+
+253
+00:09:19,000 --> 00:09:21,000
+Because let's say A
+
+254
+00:09:21,000 --> 00:09:23,000
+if B, C, D,
+
+255
+00:09:23,000 --> 00:09:25,000
+E, F, G, H
+
+256
+00:09:25,000 --> 00:09:27,000
+have so many choices.
+
+257
+00:09:27,000 --> 00:09:29,000
+And A decides that I have to
+
+258
+00:09:29,000 --> 00:09:31,000
+make a pair with D.
+
+259
+00:09:31,000 --> 00:09:33,000
+So A and D can make a pair
+
+260
+00:09:33,000 --> 00:09:35,000
+and here B, C, E, F,
+
+261
+00:09:35,000 --> 00:09:37,000
+G, H can be made.
+
+262
+00:09:37,000 --> 00:09:39,000
+So as soon as A and D
+
+263
+00:09:39,000 --> 00:09:41,000
+make a pair, I have to calculate
+
+264
+00:09:41,000 --> 00:09:43,000
+so many ways.
+
+265
+00:09:43,000 --> 00:09:45,000
+I call this FN-2.
+
+266
+00:09:45,000 --> 00:09:47,000
+But this pair can only be made
+
+267
+00:09:47,000 --> 00:09:49,000
+with C, F,
+
+268
+00:09:49,000 --> 00:09:51,000
+G, H.
+
+269
+00:09:51,000 --> 00:09:53,000
+So all the ways
+
+270
+00:09:53,000 --> 00:09:55,000
+meaning FN-2
+
+271
+00:09:55,000 --> 00:09:57,000
+which will come from here
+
+272
+00:09:57,000 --> 00:09:59,000
+will not be the same.
+
+273
+00:09:59,000 --> 00:10:01,000
+I have to multiply it
+
+274
+00:10:01,000 --> 00:10:03,000
+with N-1. Because the same way
+
+275
+00:10:03,000 --> 00:10:05,000
+even if you pick C,
+
+276
+00:10:05,000 --> 00:10:07,000
+the same way comes.
+
+277
+00:10:07,000 --> 00:10:09,000
+Even if you pick F,
+
+278
+00:10:09,000 --> 00:10:11,000
+the same way comes.
+
+279
+00:10:11,000 --> 00:10:13,000
+This is a very basic thing.
+
+280
+00:10:13,000 --> 00:10:15,000
+If I have N-1
+
+281
+00:10:15,000 --> 00:10:17,000
+I will multiply it with N-1
+
+282
+00:10:17,000 --> 00:10:19,000
+and this will be FN-2.
+
+283
+00:10:19,000 --> 00:10:21,000
+Because if I have made a pair with A
+
+284
+00:10:21,000 --> 00:10:23,000
+then all the ways
+
+285
+00:10:23,000 --> 00:10:25,000
+can come to make a pair with others.
+
+286
+00:10:25,000 --> 00:10:27,000
+So how many ways will come?
+
+287
+00:10:27,000 --> 00:10:29,000
+All the ways I can make pairs
+
+288
+00:10:29,000 --> 00:10:31,000
+will be multiplied by one pair.
+
+289
+00:10:31,000 --> 00:10:33,000
+I will tell this a little more.
+
+290
+00:10:33,000 --> 00:10:35,000
+This is
+
+291
+00:10:35,000 --> 00:10:37,000
+how many pairs I can make.
+
+292
+00:10:37,000 --> 00:10:39,000
+Pair choices
+
+293
+00:10:39,000 --> 00:10:41,000
+which pairs I can make
+
+294
+00:10:41,000 --> 00:10:43,000
+and this is
+
+295
+00:10:43,000 --> 00:10:45,000
+after that how many ways will come?
+
+296
+00:10:45,000 --> 00:10:47,000
+One pair is formed
+
+297
+00:10:47,000 --> 00:10:49,000
+and after that
+
+298
+00:10:49,000 --> 00:10:51,000
+a pair of ways.
+
+299
+00:10:51,000 --> 00:10:53,000
+So I have to multiply these two.
+
+300
+00:10:53,000 --> 00:10:55,000
+So here I will have two choices
+
+301
+00:10:55,000 --> 00:10:57,000
+on every level. What choice will I have?
+
+302
+00:10:57,000 --> 00:10:59,000
+If I have a single rail then I have to calculate
+
+303
+00:10:59,000 --> 00:11:01,000
+FN-1. If I make a pair
+
+304
+00:11:01,000 --> 00:11:03,000
+then how many people can I make
+
+305
+00:11:03,000 --> 00:11:05,000
+with N-1?
+
+306
+00:11:05,000 --> 00:11:07,000
+And I will multiply it with FN-2
+
+307
+00:11:07,000 --> 00:11:09,000
+because this is the total number of ways
+
+308
+00:11:09,000 --> 00:11:11,000
+which will come after making a pair.
+
+309
+00:11:11,000 --> 00:11:13,000
+So how many total ways will come?
+
+310
+00:11:13,000 --> 00:11:15,000
+My total ways
+
+311
+00:11:15,000 --> 00:11:17,000
+will come.
+
+312
+00:11:17,000 --> 00:11:19,000
+Total ways
+
+313
+00:11:19,000 --> 00:11:21,000
+is equal to FN-1
+
+314
+00:11:21,000 --> 00:11:23,000
+i.e. these ways
+
+315
+00:11:23,000 --> 00:11:25,000
+plus
+
+316
+00:11:25,000 --> 00:11:27,000
+N-1 multiplied by FN-2
+
+317
+00:11:27,000 --> 00:11:29,000
+i.e. these ways.
+
+318
+00:11:29,000 --> 00:11:31,000
+So this is my
+
+319
+00:11:31,000 --> 00:11:33,000
+complete formula
+
+320
+00:11:33,000 --> 00:11:35,000
+which will control my recursion.
+
+321
+00:11:35,000 --> 00:11:37,000
+First I will call for N-1
+
+322
+00:11:37,000 --> 00:11:39,000
+and after that I will multiply N-1
+
+323
+00:11:39,000 --> 00:11:41,000
+by calling for N-2.
+
+324
+00:11:41,000 --> 00:11:43,000
+And if I take the sum of all these
+
+325
+00:11:43,000 --> 00:11:45,000
+then these will be my total ways.
+
+326
+00:11:45,000 --> 00:11:47,000
+This recursion is written
+
+327
+00:11:47,000 --> 00:11:49,000
+so I have to work here.
+
+328
+00:11:49,000 --> 00:11:51,000
+And here the inner functions are called
+
+329
+00:11:51,000 --> 00:11:53,000
+with parameter N-1 and N-2.
+
+330
+00:11:53,000 --> 00:11:55,000
+So I have to do this whole work
+
+331
+00:11:55,000 --> 00:11:57,000
+in my function.
+
+332
+00:11:57,000 --> 00:11:59,000
+So now I will write my function.
+
+333
+00:11:59,000 --> 00:12:01,000
+I will name the function public
+
+334
+00:12:01,000 --> 00:12:03,000
+static
+
+335
+00:12:03,000 --> 00:12:05,000
+int friend
+
+336
+00:12:05,000 --> 00:12:07,000
+friend sparing
+
+337
+00:12:07,000 --> 00:12:09,000
+integer N.
+
+338
+00:12:09,000 --> 00:12:11,000
+I.e. my N friends
+
+339
+00:12:11,000 --> 00:12:13,000
+for which I have to find out the ways.
+
+340
+00:12:13,000 --> 00:12:15,000
+So first of all I will do my work.
+
+341
+00:12:15,000 --> 00:12:17,000
+I have to take a choice here.
+
+342
+00:12:17,000 --> 00:12:19,000
+I have to take a choice that I can be single.
+
+343
+00:12:19,000 --> 00:12:21,000
+To be single I have to calculate
+
+344
+00:12:21,000 --> 00:12:23,000
+int FN-1.
+
+345
+00:12:23,000 --> 00:12:25,000
+To calculate this I will call friend sparing
+
+346
+00:12:25,000 --> 00:12:27,000
+for N-1.
+
+347
+00:12:27,000 --> 00:12:29,000
+I can take a second choice that I can make a pair.
+
+348
+00:12:29,000 --> 00:12:31,000
+To make a pair
+
+349
+00:12:31,000 --> 00:12:33,000
+FN-2
+
+350
+00:12:33,000 --> 00:12:35,000
+will come.
+
+351
+00:12:35,000 --> 00:12:37,000
+For N-2
+
+352
+00:12:37,000 --> 00:12:39,000
+I.e. from here
+
+353
+00:12:39,000 --> 00:12:41,000
+the ways of the pair will come.
+
+354
+00:12:41,000 --> 00:12:43,000
+That will be equal to
+
+355
+00:12:43,000 --> 00:12:45,000
+how many people I can make a pair with.
+
+356
+00:12:45,000 --> 00:12:47,000
+Multiply and make a pair with each other.
+
+357
+00:12:47,000 --> 00:12:49,000
+Then how many ways are there.
+
+358
+00:12:49,000 --> 00:12:51,000
+After that there are ways of FN-2.
+
+359
+00:12:51,000 --> 00:12:53,000
+And what will be my total ways?
+
+360
+00:12:53,000 --> 00:12:55,000
+I will have
+
+361
+00:12:55,000 --> 00:12:57,000
+int total ways.
+
+362
+00:12:57,000 --> 00:12:59,000
+FN-1
+
+363
+00:12:59,000 --> 00:13:01,000
+plus
+
+364
+00:13:01,000 --> 00:13:03,000
+pair
+
+365
+00:13:03,000 --> 00:13:05,000
+and from here I will return
+
+366
+00:13:05,000 --> 00:13:07,000
+my total ways.
+
+367
+00:13:07,000 --> 00:13:09,000
+So here I have taken the choice of being single
+
+368
+00:13:09,000 --> 00:13:11,000
+or making a pair.
+
+369
+00:13:11,000 --> 00:13:13,000
+And what will be the base case?
+
+370
+00:13:13,000 --> 00:13:15,000
+The base case will be that if the value of N is 1
+
+371
+00:13:15,000 --> 00:13:17,000
+or the value of N is 2
+
+372
+00:13:17,000 --> 00:13:19,000
+then in this case my total number of
+
+373
+00:13:19,000 --> 00:13:21,000
+ways will be equal to N.
+
+374
+00:13:21,000 --> 00:13:23,000
+From here I will return my N.
+
+375
+00:13:23,000 --> 00:13:25,000
+Let's do this safe.
+
+376
+00:13:25,000 --> 00:13:27,000
+We will pass in the main function.
+
+377
+00:13:27,000 --> 00:13:29,000
+For friend sparing N is equal to 3.
+
+378
+00:13:29,000 --> 00:13:31,000
+For N is equal to 3 I know
+
+379
+00:13:31,000 --> 00:13:33,000
+that I have 4 ways.
+
+380
+00:13:33,000 --> 00:13:35,000
+Let's see the output of this.
+
+381
+00:13:35,000 --> 00:13:37,000
+Friend sparing in here
+
+382
+00:13:37,000 --> 00:13:39,000
+semicolon.
+
+383
+00:13:39,000 --> 00:13:41,000
+I had to get this in the answer.
+
+384
+00:13:41,000 --> 00:13:43,000
+I had to get this in the answer.
+
+385
+00:13:43,000 --> 00:13:45,000
+There are 4 ways.
+
+386
+00:13:45,000 --> 00:13:47,000
+Now I can change this function
+
+387
+00:13:47,000 --> 00:13:49,000
+a little bit.
+
+388
+00:13:49,000 --> 00:13:51,000
+I can make it a little more beautiful.
+
+389
+00:13:51,000 --> 00:13:53,000
+In fact the top function
+
+390
+00:13:53,000 --> 00:13:55,000
+which is our tiling problem.
+
+391
+00:13:55,000 --> 00:13:57,000
+We can write this in very small size.
+
+392
+00:13:57,000 --> 00:13:59,000
+I will show you how to write in small size.
+
+393
+00:13:59,000 --> 00:14:01,000
+How to write in small size.
+
+394
+00:14:01,000 --> 00:14:03,000
+The base case will remain the same.
+
+395
+00:14:03,000 --> 00:14:05,000
+If I remove my comments
+
+396
+00:14:05,000 --> 00:14:07,000
+or if I don't remove the comments
+
+397
+00:14:07,000 --> 00:14:09,000
+what should I do here?
+
+398
+00:14:09,000 --> 00:14:11,000
+Here I can write a return statement.
+
+399
+00:14:11,000 --> 00:14:13,000
+What will return statement do?
+
+400
+00:14:13,000 --> 00:14:15,000
+First I will call friend sparing
+
+401
+00:14:15,000 --> 00:14:17,000
+for N minus 1.
+
+402
+00:14:17,000 --> 00:14:19,000
+Here I have taken the choice of being single.
+
+403
+00:14:19,000 --> 00:14:21,000
+Plus here I will
+
+404
+00:14:21,000 --> 00:14:23,000
+multiply from N minus 1
+
+405
+00:14:23,000 --> 00:14:25,000
+by calling friend sparing
+
+406
+00:14:25,000 --> 00:14:27,000
+for N minus 2.
+
+407
+00:14:27,000 --> 00:14:29,000
+This is the choice of being single.
+
+408
+00:14:29,000 --> 00:14:31,000
+If I comment out this whole part
+
+409
+00:14:31,000 --> 00:14:33,000
+then this is the choice of being single.
+
+410
+00:14:33,000 --> 00:14:35,000
+Here I can make
+
+411
+00:14:35,000 --> 00:14:37,000
+total number of pairs.
+
+412
+00:14:37,000 --> 00:14:39,000
+Here I have the choice of making pairs.
+
+413
+00:14:39,000 --> 00:14:41,000
+I have written the whole code
+
+414
+00:14:41,000 --> 00:14:43,000
+in single line.
+
+415
+00:14:43,000 --> 00:14:45,000
+In fact I can remove the top one
+
+416
+00:14:45,000 --> 00:14:47,000
+completely.
+
+417
+00:14:47,000 --> 00:14:49,000
+Now look at my function recursion.
+
+418
+00:14:49,000 --> 00:14:51,000
+The function recursion is so small
+
+419
+00:14:51,000 --> 00:14:53,000
+of 3 lines.
+
+420
+00:14:53,000 --> 00:14:55,000
+There are literally 3-4 lines in it.
+
+421
+00:14:55,000 --> 00:14:57,000
+I have given total number of pairs.
+
+422
+00:14:57,000 --> 00:14:59,000
+How can I pair my friends
+
+423
+00:14:59,000 --> 00:15:01,000
+in this way?
+
+424
+00:15:01,000 --> 00:15:03,000
+Now you have to do the same thing
+
+425
+00:15:03,000 --> 00:15:05,000
+for the dialing problem.
+
+426
+00:15:05,000 --> 00:15:07,000
+You have to compact that function.
+
+427
+00:15:07,000 --> 00:15:09,000
+You have to calculate all things
+
+428
+00:15:09,000 --> 00:15:11,000
+in a single return statement.
+
+429
+00:15:11,000 --> 00:15:13,000
+And that can happen.
+
+430
+00:15:13,000 --> 00:15:15,000
+Literally such a big statement will come.
+
+431
+00:15:15,000 --> 00:15:17,000
+I hope that we have understood
+
+432
+00:15:17,000 --> 00:15:19,000
+friend sparing well.
+
+433
+00:15:19,000 --> 00:15:21,000
+We can also do stack analysis.
+
+434
+00:15:21,000 --> 00:15:23,000
+But if we have done old remove duplicates
+
+435
+00:15:23,000 --> 00:15:25,000
+then it will be emotionally clear.
+
+436
+00:15:25,000 --> 00:15:27,000
+There is a doubt here.
+
+437
+00:15:27,000 --> 00:15:29,000
+So we have to look at the explanation again.
+
+438
+00:15:29,000 --> 00:15:31,000
+We have to relate things with the code
+
+439
+00:15:31,000 --> 00:15:33,000
+to see how to take the code internally.
+
+440
+00:15:33,000 --> 00:15:35,000
+Mostly recursion is like
+
+441
+00:15:35,000 --> 00:15:37,000
+driving.
+
+442
+00:15:37,000 --> 00:15:39,000
+Like in driving, many things come with practice
+
+443
+00:15:39,000 --> 00:15:41,000
+as much as you practice.
+
+444
+00:15:41,000 --> 00:15:43,000
+Then some things come with the feel.
+
+445
+00:15:43,000 --> 00:15:45,000
+Then the day the emergency comes
+
+446
+00:15:45,000 --> 00:15:47,000
+then our pairs automatically
+
+447
+00:15:47,000 --> 00:15:49,000
+practice more then they get stuck on the brake.
+
+448
+00:15:49,000 --> 00:15:51,000
+By the way this is the recursion.
+
+449
+00:15:51,000 --> 00:15:53,000
+Intuition starts building itself.
+
+450
+00:15:53,000 --> 00:15:55,000
+It starts building itself.
+
+451
+00:15:55,000 --> 00:15:57,000
+Then we will be able to understand the questions
+
+452
+00:15:57,000 --> 00:15:59,000
+properly.
+
+453
+00:15:59,000 --> 00:16:01,000
+The more we practice, the more intuition
+
+454
+00:16:01,000 --> 00:16:03,000
+will be built and we will be able to solve
+
+455
+00:16:03,000 --> 00:16:05,000
+the questions as much as possible.
+
+456
+00:16:05,000 --> 00:16:07,000
+In practice, in contests and in interviews.
+

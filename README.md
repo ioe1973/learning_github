@@ -3,7 +3,7 @@
 mkdir -p videos transcripts
 
 
-rclone copy 'gdrive:Apna College/Sigma 8.0 (DSA with Java)/19' ./videos --progress --transfers 4
+rclone copy 'gdrive:Apna College/Sigma 8.0 (DSA with Java)/20' ./videos --progress --transfers 4
 
    
 // For all file in the videos folder

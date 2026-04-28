@@ -1,0 +1,26 @@
+Hi everyone! In this chapter, we will be solving some questions and we will solve them using a special type of algorithm which is called Divide and Conquer.
+So in this chapter, we will solve all the questions with the help of the Divide and Conquer strategy.
+First of all, let's talk about the Divide and Conquer strategy.
+If I talk about Divide, then Divide means that it happens in English to break something or divide something.
+So what we will do is, whatever big problem we have, sometimes it happens that in coding and in life, big problems get very big and it becomes very difficult to solve them.
+So what we will do is, we divide our problems into small parts, small parts and small parts.
+So what I will do is, I will divide my big problem into small parts and then I will solve these small problems first.
+Because it is easier to solve a small problem than a big problem.
+So as soon as I solve these small problems, more than half of my work will be completed.
+So this will be the strategy whenever we will talk about Divide.
+After that, the second step is always Conquer. Conquer means that it happens in English to break something.
+So as soon as I have taken out the solution of these small problems, what I will do is, I will connect those solutions and take out the solution of my big problem.
+So what I did is, I divided my big problem into small parts and then I converted their small solution into a big solution.
+So in this way, I took out a big solution of a big problem in a different way.
+If you are interested in the history and social sciences, then we had read a strategy about the Britishers.
+What the Britishers used to do in the beginning of India was, they used something called Divide and Rule Strategy.
+What the Britishers used to do was, they used the strategy of the King or the rest of the Indians.
+They first divided us here and there, then put the foot and then put the rule strategy.
+So putting the foot was basically dividing and after that, rule and rule, when people start fighting themselves.
+After that, it will be easier to rule on them.
+So there, they used Divide and Conquer in an evil way.
+Here we are not using it to do any bad things or we are using it to solve problems.
+It is a very same strategy.
+There is a problem in front of you, you have to divide it into small parts and it is very easy to get the solution out of small parts.
+So we will take out their solution and when we combine their solutions, we will see that our big problem is automatically solved.
+So now let's solve some problems in our Divide and Conquer chapter.

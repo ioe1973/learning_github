@@ -1,0 +1,119 @@
+start	end	text
+0	6600	For the code, I have already written my array, along with it, I have made a function called printArray, which will print my array.
+6600	10400	Let's write a function, the name of the function is publicStatic,
+10400	14000	give it a return type void and give it a name, quickSort.
+14000	20200	In quickSort, I have my array, apart from that, I have my starting index and my ending index.
+20200	25400	From the main function, I know that if I am calling quickSort, then my starting index will go as 0
+25400	30800	and my ending index will go as my array length minus 1.
+30800	36000	In my quickSort, what was step 1? Step 1 was to find out the pivot.
+36000	39400	So, I have found out the pivot as my last element.
+39400	43600	Now, on the basis of the pivot, I have to partition.
+43600	47600	To partition, let me assume that I have a different function that gives me a partition.
+47600	52400	In this, I am passing my array, I am passing my starting index and ending index.
+52400	56400	Partition function, I assume that it will do my magic.
+56400	59400	What magic will it do? Partition function will take the pivot.
+59400	63400	Before that, it will take the small elements, after that, it will take the big elements.
+63400	66400	It will also give me the right index by bringing the pivot to the right place.
+66400	70400	So, this partition function gives me the index of the pivot.
+70400	76400	So, I will make an integer variable, p index, pivot index, which will bring me the partition function.
+76400	81400	How will the partition function look like? Partition function will look like a public static void.
+81400	87400	Partition, int array, apart from that, I have the starting index, I have the ending index.
+87400	92400	And here, I keep its return type as int.
+92400	96400	So, this is my partition. Now, what I have to do is the third step.
+96400	104400	I will call a quickSort for array, for starting index, and for what? Partition index minus 1.
+104400	108400	The partition on the index, this pivot is on the right index.
+108400	111400	What I have to do? I have to sort the left part of it.
+111400	115400	So, from the starting index to the pivot index minus 1 is my left part.
+115400	118400	Then, where will my right part be?
+118400	122400	My right part will be from the pivot index to the pivot index plus 1.
+122400	126400	Pivot index is right. Pivot index plus 1 is my ending index.
+126400	128400	This will be my right part.
+128400	134400	What will be the base case for this? The base case will be that if the starting index value is greater than or equal to the ending index,
+134400	137400	there is nothing to do in that case. In that case, I simply have to return.
+137400	139400	So, this is my full recursion.
+139400	143400	Now, I have to solve my most important problem, which is to write the partition function.
+143400	146400	What will the partition function do? First of all, we take the pivot.
+146400	152400	What will be the pivot? The pivot will be the last element of my array, that is, the ending index.
+152400	155400	Now, what I have to do? I have to make two variables.
+155400	159400	The first is my i. I will initialize the i from the starting index minus 1.
+159400	171400	The work of this i is to make a place or to make a place for elements smaller than the pivot.
+171400	174400	After that, what I will do? I will run a loop.
+174400	176400	The loop will start from j is equal to 0.
+176400	179400	Where will the loop go until the value of j is less than the ending index.
+179400	183400	That means, it is less than the pivot until the value of j is plus plus.
+183400	191400	I will compare every time that my element, that is, j is less than equal to my pivot.
+191400	194400	If it is less than equal to, then I have to make a place in that case.
+194400	198400	And how do we make a place? First we do the i plus plus, then we do the swap.
+198400	200400	So, how will we do the swap? We will take the temporary variable.
+200400	203400	I will store the value of j in the array of j.
+203400	208400	Then I will store the value of i in the array of j.
+208400	212400	After that, I will store the value of j in the array of i.
+212400	216400	So, I have compared every time that the value of the current element is less than the pivot.
+216400	218400	If it is less, then I will have to make a place.
+218400	221400	To make a place, there will be i plus plus and after that, we will swap.
+221400	226400	That means, the value on the index i and the value on the index j will be swapped.
+226400	230400	In this way, I have analyzed all the elements that are smaller than my pivot.
+230400	232400	Now, let's put the pivot at the right place.
+232400	236400	To put the pivot at the right place, I will have to do this work only one last time.
+236400	239400	That means, I will do the same work here.
+239400	244400	i plus plus, then my swap logic.
+244400	246400	What will I store in the temporary here?
+246400	249400	I will store the value of the pivot in the temporary here.
+249400	255400	And what is the pivot? My pivot is the array of the ending index in which I will store the value of the array of i.
+255400	257400	The array of i is the temporary.
+257400	260400	Now, the right index of the pivot is equal to the index i.
+260400	263400	Where is the pivot stored? I have stored the pivot in the i.
+263400	267400	So, the right index i of the pivot will return the partition function.
+267400	270400	Who will return my quicksort value function?
+270400	272400	And here, we have to pay attention.
+272400	276400	Instead of this line, I don't want to write the pivot is equal to the array of i.
+276400	279400	Why? Because if I write the pivot, the pivot is a variable.
+279400	282400	I have to change the array on the index.
+282400	286400	We don't reflect the variables' change functions because there is a call by value in the functions.
+286400	289400	Call by reference is indirectly implemented.
+289400	291400	How to change the pivot in the array?
+291400	292400	Only in arrays.
+292400	293400	The object is also in it.
+293400	295400	But here, we are talking about the array.
+295400	298400	So, here, through the index, we have to change the pivot index.
+298400	300400	We don't have to change the pivot in the variable.
+300400	302400	So, my partition function is completed.
+302400	304400	This is my quicksort completed.
+304400	307400	I had called the quicksort from the main function.
+307400	309400	I will also call the print array.
+309400	311400	Let's do it. Save and run.
+311400	313400	Where is the error?
+313400	315400	The error is in line number 29.
+315400	318400	29 means the error is here.
+318400	321400	What is the error in the j?
+321400	323400	I have started this loop from 0.
+323400	325400	But should my loop start from 0?
+325400	327400	No, my loop should start from the starting index.
+327400	330400	Because the problem will be divided in small parts.
+330400	331400	So, what will happen?
+331400	334400	My starting index can be 0, it can be 1, it can be 5.
+334400	335400	So, it will not always start from 0.
+335400	337400	It will start from the starting index.
+337400	338400	Let's do it. Save.
+338400	340400	Let's run it again.
+340400	344400	Now, my final array is sorted.
+344400	347400	This array is completely sorted by my quicksort.
+347400	351400	Rabia, we also found out that if there are exceptions and errors,
+351400	352400	how to find out?
+352400	353400	I had an exception.
+353400	355400	My index 6 out of bounds.
+355400	356400	Out of bounds.
+356400	359400	The size of my array is more than that of an index.
+359400	360400	I am accessing it.
+360400	363400	For that, I have seen that the j is equal to 0.
+363400	364400	It was wrong.
+364400	365400	It should have started from the starting index.
+365400	367400	So, the line number also comes in this way.
+367400	368400	If we are coding in this code,
+368400	369400	or if we are coding somewhere else,
+369400	372400	then many editors will tell us where the error came.
+372400	375400	So, here I did it for an even length.
+375400	377400	If we take it to minus 5,
+377400	380400	then how did we get the answer for the order length?
+380400	382400	Quicksort has also sorted for order length.
+382400	383400	Sort.

@@ -1,0 +1,435 @@
+The first question we are solving is called Merge Sort.
+We have read a lot of basic sorting algorithms.
+What have we read so far?
+We have read our bubble sort.
+After that, we have read the selection sort.
+After that, we have read the insertion sort.
+After that, we have read our counting sort.
+Apart from this, we have read an inbuilt sort as well.
+That is, if I have an array that I want to sort,
+then what can I do?
+I can use a simple function for that.
+All these sorting comes into our basic sorting.
+Inbuilt sort is always optimized sorting.
+But today, we will read about another different sorting technique
+which is called Merge Sort.
+Now, you can directly ask the interviewers about Merge Sort.
+The logic behind Merge Sort is very important,
+which is also used in other problems.
+The algorithm, the process of learning,
+the divide and conquer is used in many algorithms.
+And the individual logic of Merge Sort is also very important.
+So, this can be asked in interviews,
+or in your college exams.
+And you can directly ask questions to implement it
+by some companies.
+That is why Merge Sort is very important.
+Now, the time complexity of Merge Sort
+comes as much as an inbuilt sort,
+that is, it comes equal to n log n.
+When we read the time complexity chapter,
+then we will discuss in detail
+why the time complexity of Merge Sort comes to n log n.
+So, we will not take any tension about it now.
+We already know that sorting means
+arranging elements in a particular order.
+That particular order can be an ascending order,
+or a descending order.
+In fact, there are more orders.
+But here, we will assume that in ascending-descending order,
+we sort our elements.
+So, what will be useful for us?
+Today, we are taking an example of ascending.
+We have given an unsorted array
+in which some random elements are stored.
+That is, 6, 3, 9, 5, 2, 8.
+We have to convert this unsorted array
+into this sorted array.
+And all the elements in the sorted array
+are arranged in our ascending order.
+Now, there is an ascending order here,
+but we will change the condition a little bit.
+So, we can write the same algorithm for descending.
+To solve our array, we will use Merge Sort.
+Now, there are three steps in Merge Sort
+that we have to follow.
+So, the first step in the approach
+is called to divide.
+That is, we have to divide the pieces of our problem
+into small problems.
+For that, we will take out the mid of our array.
+For example, if I have this array,
+what will be its mid?
+I can either take this index or this index.
+So, if my array has my starting index 0
+and my ending index is its length minus 1,
+which is 0, 1, 2, 3, 4, 5.
+So, I have the ending index 5.
+So, for this array, I will have the middle index.
+I can select any of these two.
+Let's assume that the middle index I selected for my array
+is this index.
+That is, here, I want to partition my array.
+So, my problem will be divided into two parts.
+Which part will be the first part of my left part?
+The left part will say that I don't want to sort the big array.
+Now, I only want to sort 6, 3 and 9.
+And the second part will be my right part.
+The right part will say that I don't want to sort the big array.
+I only want to sort 5, 2 and 8.
+I want to sort this small array.
+So, I have divided my big problem into two parts.
+How did I divide it?
+First, I have found out the middle of my array.
+After that, I have partitioned it from here.
+I have partitioned it or divided it into two parts.
+Now, I will divide this array into smaller and smaller parts
+and how long I will divide it
+until I get my smallest problem
+or the easiest to solve problem.
+For example, if I have a problem to sort these three numbers of the array
+then what will I do? I will find out the middle of it.
+What will the middle of it have?
+In this, I can say that the starting index is 0
+and my ending index is going to be 2.
+So, the middle element of it will be coming here.
+So, this problem will also be divided into two parts.
+One will be my left part.
+The left part will say that you don't want to solve the big array.
+You only want to solve the big array of 6 and 3.
+The first part will be my right side part.
+The right side part will say that we don't want to solve the big array.
+We only want to solve the 9th array.
+Similarly, I can also partition here.
+For partitioning here, the middle will come here.
+If the middle comes, then one will come.
+The left part will say that you don't want to solve the big problem.
+I have to divide the problem into five and two
+and divide it to the right side to this single 8.
+Now, can I say that I cannot divide this problem any more?
+Because if there is a single element in an array,
+then doesn't it already have a sorted array?
+So, it doesn't need to sort it.
+So, this part here is already sorted.
+This part here is already sorted.
+I still have to solve this small problem.
+This is my problem already solved.
+So, what I will do for this small problem?
+I will make it smaller.
+I will keep making it smaller until it is already solved.
+So, I will take out its middle again
+and partition it and divide it to a smaller problem.
+The smaller problem will be that you solve only the 6th array.
+Now, you just sort the 3rd array.
+I can do the same thing here.
+I will partition it in the middle here
+and say that we have to solve only the left problem.
+That is, we have to sort the 5th one
+and in the right one, I have to sort the 2nd one.
+Now, do I need to divide these problems as well?
+No, why?
+Because now, I have a small problem in the last one.
+I have single elements in it.
+And what are single elements?
+They are already sorted.
+So, this array here will be sorted.
+This will also be sorted.
+This will also be sorted.
+This will also be sorted.
+So, what did I do?
+I took out my big problem and divided it into small parts.
+Until then, I don't have the smallest part.
+And as soon as I got this smallest part,
+the smallest problem that was divided,
+it is already sorted.
+So, here I did my first step.
+The first step was to divide my problem into smaller subparts.
+Now, another thing to note here is that
+every time I have to solve the part of my array,
+if I know the starting index of that part
+and know the ending index,
+as I knew at first, my array's starting index is 0
+and my ending index is 5.
+Can I take out the middle element from the starting index
+and the ending index as I did in my binary search?
+How do we take out the middle element from the starting and the ending?
+There are two ways.
+Either I write the starting index plus the ending index divided by 2.
+Or I write the second way.
+The starting index plus the ending index minus the starting index
+divided by 2.
+I will return the correct answer in both the ways.
+But I will not use this method.
+We can also use this method.
+The answer will be correct.
+But the problem will be solved when we have a very big array.
+What happens in a very big array?
+Sometimes, if I talk about the starting index and the ending index,
+then these two can be big integer values.
+And the value of these two can sometimes be bigger than the size of the total integer.
+So, the size of the integer overflows with that value.
+In that case, we either have to take out the big data types
+or we can use this formula.
+I am talking about the basic math here.
+I can also convert this formula and bring it here.
+How?
+If I divide the starting index, then this will be
+the ending index divided by 2 minus the starting index divided by 2.
+The value of this will be the ending index divided by 2.
+And if I add this with this, then this will be
+plus the starting index divided by 2.
+This is equal to the ending index plus the starting index divided by 2.
+So, this formula and this formula are the same thing.
+In this thing, I do not have two big, big sizes of integers
+and they are not overflowing with my data types.
+So, the clarity of two or three things came to me in this step.
+First of all, I have to divide my problem
+until I get sorted in my small problem.
+And the smallest problem that has been sorted,
+I can say that this is going to be my base case.
+The base case for which I already know the solution.
+I know that if I get a single size area,
+then what will be the solution for that?
+In the solution, I do not have to do anything.
+I already have sorted it.
+Second thing, I analyzed that if I know the starting index
+and the ending index of any area,
+then I can get the middle of this formula.
+I have covered this step one.
+Now, let's talk about step two.
+Step two tells me that as soon as I took out my problem,
+my big problem,
+I took out the left part of it by dividing it from the middle
+and I took out the right part of it.
+So, what do I do?
+Recursively, now I call this left part and sort it
+and I call this right part and sort it.
+So, what do I have to do in step two?
+For my merge sort,
+first, I have to get the left part sorted.
+Then what do I have to do?
+I have to apply the merge sort to the right part.
+If I take an example of this,
+then if I have an array of 639528,
+then what do I have to do?
+First of all, I have to partition it from the middle.
+After partitioning from the middle,
+I will get some left part which will be 639
+and I will get some right part which will be 528.
+Now, what do I have to do?
+I have to convert it into a sorted way by merging it.
+That is, I have to convert it into 369,
+and I have to convert it into 258.
+I don't have the logic to see how I will convert it into a merge sort.
+But I have to get this part sorted and get this part sorted.
+Do you know how I will get that sorted?
+I will get it from the recursion.
+I will divide it into small parts.
+This will be the way of my recursion.
+But yes, I will get it sorted in some way.
+And then I will apply my step 3.
+Step 3 is to merge.
+That is, if my left part is sorted and the right part is sorted,
+then I will make a big solution by combining the solution of left and right.
+Let's see how I will make a big solution.
+This was my array.
+I divided it into two parts.
+Step 1 was to divide.
+What did I do in step 2?
+In step 2, I converted it into 369 by sorting the left part.
+And I converted my right part into 258 by sorting the right part.
+Now my job is to merge the third step.
+What will I do to merge?
+To merge, I will make a temporary array.
+I can name this temporary array.
+I will make the temporary array of the same size,
+in which all the elements on the left and all the elements on the right come.
+What will be its size?
+Its size will be left elements plus right elements.
+The total number of left elements plus right elements will be the total combined size.
+That will be the size of this temporary array.
+Now in the temporary array, I can say that I should have the space of 6 elements.
+Now I know that my left part is sorted.
+And my right part is also sorted.
+Now I have to merge this sorted part and make a big sorted array.
+What will I do for that?
+I will take two iterators for that.
+The first iterator will go to 369.
+Or I will write 369.
+The second iterator will go to 258.
+That is, I have taken an index that will track this small part.
+I have taken an index that will track this big part.
+Can I say that because this part is also sorted and this part is also sorted.
+So the smallest element of these two will be the front.
+So if I compare these two and take out the smaller one,
+then should I place the smaller element on its first index?
+So I will have a third iterator that will track this.
+Now my 0th index of my temporary array is empty.
+What will I do? I will compare these two.
+That is, the beginning parts are sorted.
+So compare the beginning parts.
+When I compared the three and two, I came to know that I have two smaller ones from the three and two.
+So what will I do? I will store the two for my temporary array's 0th index.
+And I will increase this index here.
+And what will I do here? If I store two, then this index will come here.
+Now I have to compare if my left part is smaller or my right part is smaller.
+Obviously, my left part is smaller than 3.
+So what will I do? I will write 3 here.
+I will increase my index here and bring it here.
+And I will increase this index here.
+Now I will compare if the left part is smaller or the right part is smaller.
+Obviously, the right part is smaller.
+Now what will I do? I will write my 5 here.
+I will increase this index and bring it here and from here I have already written 5, so I will bring this index here
+Now I have to compare whether my left part is 6 or my right part is 8
+Obviously my left part is 6
+So what will I do? I will write this 6 in my temporary area and I will increase this index and bring it here
+Now I will compare, I have increased this index and brought it here
+Now I will compare whether my 9 is small or my 8 is small
+Obviously 8 is small, so I will bring 8 here
+All the small elements are coming first so that we can arrange the elements in our final temporary
+That is sorted in ascending order
+So I will bring 8 here and I will increase this index
+After that 8 will be completely removed from here and my second part will be completed
+Now what is left in my right part? This is my 9
+So what will I do? I will bring this 9 in the last empty space
+So I have made a temporary area and what did I do?
+My left sorted part and my right sorted part
+I kept comparing these two
+I arranged the small elements one after the other
+And you will notice that my final answer will be sorted in ascending order
+How did I get sorted? I did not directly sort it
+I first divided the small parts
+I solved the small parts and merged the solved parts
+This is called my merge step
+That is to merge the parts
+So this is the logic of merge sort
+First we divide and then merge
+So we sort the left and right parts and then merge the small parts
+To form a bigger solution
+Now I will summarize it a little more
+How will I summarize it a little?
+Here my initial area will look something like this
+I can say that my starting index will be 0
+And my ending index will be equal to 5
+From here I will take out my first mid
+My mid will be equal to 2
+So here I will perform my divide step
+This will be my left division and this will be my right division
+My starting index will be 0 in the left division
+And for this area my ending index will be equal to 2
+Can I say that my ending index will be equal to my mid
+Why? Because the last element that came out
+In this left area is my mid
+So my ending index will take the value of mid
+And here the starting index will come
+Here the starting index will be mid plus 1
+Because this is the next element of mid
+So here the starting index will be equal to 3
+Which is also equal to mid plus 1
+And here the ending index will be equal to 5
+Now I have a small problem
+But this problem is still not that small
+It can be divided into more
+So I will divide this problem more
+Here I will take out my starting index equal to 0
+From here I will divide
+This will become my mid
+And this will become my mid
+This will become my mid plus 1
+And this will become my ending index
+Here in the same way
+This will remain as the starting index
+This will become mid
+This will become mid plus 1
+And this will become my ending index
+This is a single element
+So this is already sorted
+So here I will basically
+Hit my base case
+This is my base case
+This is also my base case
+I can divide this further
+So this is my starting index
+This is my mid
+This is my mid plus 1
+This is my ending index
+We cannot divide this more
+So what we will do here
+We will also hit our base case
+I have my base case
+So this is my entire line
+This is equal to my base case
+So what I have done till here
+I have divided my problem
+Now I will sort
+And merge my problem
+First we will sort it
+To combine these two parts
+I will need a temporary array
+So I have made a temporary array
+First I will compare
+Which one is smaller than 6 and 3
+Obviously 3 is smaller
+So I will write here
+After that I will write the remaining part
+Now the sorted sequence of 3 and 6
+Is in temporary array
+I will have to copy this array
+Where I will have to copy it
+In my original array
+I will copy it after 3
+In the same way
+If I have 3 6 and 9
+How to combine them
+How to merge them
+I will make a temporary array
+Which will be 3 size
+3 will be smaller
+6 and 9 will be smaller
+6 will be smaller
+Now this is my temporary array
+I will copy this temporary array
+So in the original there will be a sorted sequence
+While merging the same thing
+We will do it till here
+And then we will merge both
+And bring the final array
+My sorted array of my original
+Unsorted array
+Now let's clear three things in recursion
+First of all what will be my base case
+When my starting index
+Will be bigger than my ending index
+Or it will be equal
+When the ending index is equal
+I have a single element
+When I talk about this case
+My starting index is equal to my ending index
+I don't want to do any work in that case
+And if my starting index is bigger than the ending index
+Then this is an invalid case
+I don't want to do any work in this case
+Second, let's discuss
+What I did in my recursion
+First of all I divided my arrays
+After dividing
+I called them merge sort
+The same function for them
+This is my inner function call
+Third work is also discussed here
+First I will sort the left part
+Then I will sort my right part
+Then I have to do one thing
+I have to merge my parts
+So these three steps will be in my recursion
+Third thing in recursion is
+When should I call the inner function
+I called the inner function here
+I called the merge sort function
+I called the left part to solve
+I called the right part to solve
+We will do the same thing
+We will do coding
+By coding our problem solution
+We will be able to understand it better

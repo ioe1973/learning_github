@@ -1,0 +1,306 @@
+Now for the code or the main function, I have already defined my array
+and along with that, I have made a function called printArray.
+What does printArray do? It doesn't do anything.
+I have put a single loop on my array.
+I have printed my elements in it.
+I have to write a function for merge sort.
+So I will write a recursive function which I will give the name public static void type.
+And within this function, we will sort the elements here and there.
+So I don't need to return anything because
+all the changes will reflect directly in the array.
+So I give the name merge sort.
+In merge sort, I will have an array of integer type.
+Along with that, I will have a starting index and an ending index.
+That is, in the beginning, the array I have to sort, the part of it,
+I will have to send the total array to the starting index and the ending index.
+So if I have to call this function from the main function,
+what will I do? I will call the merge sort.
+I will pass the array. I will pass the starting index to zero.
+What is the ending index? The length of the array is equal to minus one.
+Now, what do we do first? First of all, we do our work.
+What is my work?
+My work is first, I will take out the mid.
+What help will I get from mid?
+I will be able to find out from mid how much is my left and how much is my right.
+So my mid becomes starting index plus ending index minus starting index by two.
+This can also be written as starting index plus ending index by two.
+Even if you write it, this code will also work.
+Now, what will we do? We will take out our left part.
+What is going to happen with the left part?
+My left part will start with my starting index and end with my mid.
+So what will I do? I will call the merge sort for the array starting index to mid.
+After that, I will call the merge sort for mid plus one.
+This is my right part and the ending index.
+Here, I have assumed that my same function recursively will sort my small left part.
+This is my left part.
+Here, I have assumed that my same function recursively will solve my right part.
+This is my right part.
+After that, the left part is sorted and the right part is sorted.
+Then what do I do? Then I have to merge both.
+To merge, I will write a different function.
+In which I can pass my array, the starting index, the mid part and the ending index.
+Let's assume that this function already exists.
+We will also make a header for it.
+Public static void.
+Let's call it merge.
+It will come in the integer arrays.
+Along with it, I will have my starting index, middle index and ending index.
+So, this is my recursion work.
+Now, what do I have to do? I have to write a base case.
+If my starting index is bigger or equal to my ending index,
+then I don't have to do anything in that case.
+In that case, I have to simply return.
+This is my base case. This is my work.
+Now, let's complete the merge.
+What I have to do first in the merge?
+First of all, I have to make a temporary array to merge both the left part and the right part.
+So, what will be the size of my temporary array?
+The size of my temporary array will be ending index minus starting index plus 1.
+Why did this happen?
+Let's assume that my left goes from 0 to 3.
+And my right goes from 4 to 6.
+Now, from 0 to 3, how many elements do I have?
+0, 1, 2, 3. I have 4 elements.
+How many elements do I have from 4 to 6?
+4, 5, 6. I have 3 elements.
+If there are 4 elements in my left part,
+if there are 3 elements in my right part,
+then how many places do I need for my temporary array?
+I need 7 places for my temporary array.
+4 plus 3.
+So, how will 7 come along?
+It will come along with the last index, which is 6.
+I will minus the starting index from that, which is 0.
+It is not necessary.
+This starting index will always be 0.
+It can be 2 or 4 or 8 in some cases.
+So, what will be the size of 6 minus 0?
+This will be the size of 6.
+But I need 7th array.
+So, in this case, I will plus 1.
+Because my array's indexes are 0 based.
+So, that's why I have to do plus 1 in the size.
+So, I have to remember this little thing.
+Here, I don't have to write the ending index minus the starting index.
+I always have to add plus 1 if I want the right answer.
+What will be the next step for me?
+The next step will be that I have made the temporary array.
+Now, I am looking at my indexes.
+I will make an iterator.
+I will initialize this with the starting index.
+This is my iterator for the left part.
+Then I will make an iterator.
+I will initialize this with mid plus 1.
+This is my iterator for the right part.
+So, I have made an iterator for the left part to traverse.
+I have made an iterator for the right part.
+I have made an iterator for a temporary part.
+So, I will initialize this with int k.
+This is my iterator for the temporary array.
+Now, what I have to do?
+I have to run a loop.
+Till the time my i value is less than equal to mid.
+And till the time my j value is less than equal to ending index.
+In the first part, the i value will go from the starting index to mid.
+In the second part, the j value will go from mid plus 1 to the ending index.
+Now, I have to compare the elements.
+I have to compare the first left part element with the right part element.
+So, if my array of i, that is, my left part element is less than array of j.
+This is my left part element because i is my left iterator.
+This is my right part element because j is my right iterator.
+So, if the left part element is less,
+I have to store it in the temporary.
+So, temporary of k is equal to array of i.
+Now, what I will do? I will do plus plus.
+Because this i is used, now I will reach to the next index.
+In this case, I will do k also plus plus.
+So, i and k will be plus plus because I have changed something in both.
+Now, I have to move them forward.
+If this condition is not true, I have to add elements from the right part to the temporary.
+So, what I will do?
+Temporary of k is equal to my array of j.
+And now, I will do plus plus to j and then I will do plus plus to k.
+I will summarize this a little.
+I have assumed both the left part and the right part.
+Both of them have been sorted.
+From where they have been sorted?
+In this function.
+Now, I have to merge them.
+To merge, I have made a temporary area.
+Which can store both the elements.
+Then, I have made an iterator for the left part.
+And the second one for the right part.
+And the third one for the temporary.
+Now, I am checking.
+Until my two parts are finished.
+Is the first part element smaller than the second part?
+Then, add it to the temporary.
+Otherwise, add the second part to the temporary.
+Now, k plus plus can be in both the conditions.
+So, I will write this k plus plus here.
+That k plus plus.
+Whether it is i or j, if it has to be, then k plus plus is here.
+Now, all the elements will be copied here.
+But as soon as one part is finished.
+Suppose, my left part is completely finished.
+But j is still left because it is in the AND condition.
+So, I will have to write a while loop for the leftover left over elements.
+For my first part, I have copied all the elements in the temporary.
+If there are some left over elements in the second part.
+Then, I will have to write a while loop for them.
+And if the second part is completely finished.
+Then, I will have to write a while loop for them.
+First, I will write for the left part.
+If there are some left over elements in the left part.
+So, until my i value is less than or equal to.
+It does not get met.
+Till then, what should I do?
+Till then, temporary of k plus plus is equal to my array of i plus plus.
+What did I do?
+I combined this condition and this condition into the index.
+And I can do this.
+We have read the unary operators.
+What will you do?
+You will take the current value of k and then increment it.
+What will you do?
+You will take the current value of i and then increment it.
+So, this is a very small method to write the same thing.
+I have used it.
+Now, what will I do?
+I will do the same thing for the right part.
+What will I do in the right part?
+While my j is less than or equal to my index index.
+Till then, I have to make temporary of k plus plus equal to array of j plus plus.
+So, I copied the remaining elements here.
+Now, what will I do?
+Copy temporary to my original array.
+So, I will put a loop for int i equals 0.
+I will score it.
+Let k start from 0.
+Till k's value is equal to temporary dot length.
+I will do k every time plus plus.
+And I will take the second iterator.
+I will start the value of i from the starting index.
+And I will do i every time plus plus.
+So, what I have to do?
+I have to copy temporary of k into the array of i.
+With this statement, the value of temporary will be copied into the original array.
+Let's summarize this a little.
+This was my merge.
+I made an iterator in it.
+Then, I kept copying the elements.
+Some elements were saved.
+So, I wrote a loop for them.
+And finally, I copied my temporary into the original array.
+This is my merge function, this function.
+And this is my recursive function, which is my merge sort function.
+I have already called it from the main function.
+In which I have passed the starting index at the beginning.
+I have passed the ending index to the array dot length.
+Now, what will I do at the end?
+I will print my array.
+I have already made the print array here.
+Let's do this save and run.
+So, I have got the output of my sorted array.
+In which first 2, 3, 5, then 6, 8, 9.
+So, the whole array was converted into a sorted array.
+Here, there were even elements.
+That is, I had 6 elements.
+Now, I will add a minus 2 to it.
+So, I will have odd elements.
+So, it is for odd.
+It will give the same answer.
+It will also work for negative.
+It will also work for odd.
+So, in this way, we write code for our merge sort.
+If there is a slight problem in this code,
+then you have to see the explanation a little more.
+Otherwise, you have to try to do the code yourself.
+That is, it is written along with the class.
+Now, you have to close the video.
+You have to do the code yourself.
+After this, let's discuss a few more things about merge sort.
+First of all, let's discuss how things worked.
+Things worked like this.
+First, I had a big array.
+I believe in the big array.
+I passed it 6, 3, 9, 5, 2 and 8.
+So, what happened here?
+In this step, first it was divided.
+So, I made a find out by dividing it here.
+After that, in this step, in the merge sort,
+it was called for the merge sort for both.
+So, I have a call here for 6, 3, 9.
+Here, I have a call for 5, 2 and 8.
+After that, we came here again recursively.
+I mean, if we consider the stack call of this function,
+then we started solving it first.
+This means this part.
+While solving this part, we also divided this problem
+into smaller parts.
+We know how this will be divided.
+It will come here, 9.
+So, it is divided into 9 and this is divided into smaller parts.
+So, I have 6 here.
+I have 3 here.
+Now, what happened?
+As soon as this problem is divided into smaller parts,
+this part is sorted and this part is sorted.
+So, both parts are sorted from here.
+Now, I have to call for the merge for both.
+For these two, when I called for the merge,
+I will make temporary first.
+I have made temporary here.
+I will give its size to 2.
+I have this sorted array and this sorted array.
+I will compare both the elements in this loop.
+I mean, I will compare this with this.
+I know that if 3 is small, then 3 will come first.
+6 is small and 6 will come later.
+But this happened in temporary.
+How is it in the original array?
+For the original array, I will copy the temporary in the original.
+For copying in the original, I have to write 3 here and 6 here.
+So, what happened?
+In the original, such a small part will be sorted for me.
+Now, I have to add 9.
+So, first of all, for these three,
+there will be a temporary array.
+I will sort these three in it.
+Then, this whole part will be sorted completely.
+So, there is so much logic going on.
+I will hope that you will see this by running a little bit.
+For a small array.
+I mean, for n is equal to 3 or n is equal to 5,
+we can sort it and see.
+We can see it by running it.
+Now, some important things.
+The time complexity in the merge sort is equal to n log n.
+This is a very good time complexity when we talk about sorting algorithms.
+Here, the space complexity,
+that is, how much extra space we have used,
+is equal to the temporary array.
+That is, we use the extra space of n size in the merge sort.
+That is why, if you are told that you have to sort the array,
+but I don't have extra space,
+then we cannot use this sorting technique.
+Yes, where we have a place in the sorting,
+we can use the merge sort with extra space.
+Another special thing that we took the process of recursion.
+Here, we must have seen that
+first, we go into one part of the array,
+then we sort it.
+Then we sort the big part of it.
+Then we sort the bigger part of it.
+We call this kind of technique as depth first.
+That is, we first solved a small part in depth.
+Then I solved a big part in depth.
+I mean, I solved the left in one depth.
+I solved the right in one depth.
+Then I combined both of them and got a big solution.
+So here, we go to depth first.
+That is, depth.
+To implement the merge sort.
+Now, we are reading the details of time complexity in the chapter of time complexity.
+So, we don't have to worry about it.
+Yes, for now, we can remember what time and space complexity is.

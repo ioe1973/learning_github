@@ -1,0 +1,287 @@
+start	end	text
+0	4800	The next question we will talk about is the search in a rotated and sorted area.
+4800	6600	This is a question of a medium level.
+6600	9500	It is a question that has been asked in interviews many times.
+9500	10700	It is very important.
+10700	12000	We have to understand it well.
+12000	13400	And this question is not difficult.
+13400	14900	In fact, this question is easy.
+14900	17400	It will feel like a binary search.
+17400	21300	But we have to handle all these cases in it.
+21300	23600	So many cases get done.
+23600	26500	So handling them is the important part.
+26500	27600	It is not difficult to understand.
+27600	29400	We have to think about it easily.
+29400	32400	We will be using binary search as a concept here.
+32400	34100	And just remember the cases.
+34100	36300	We have to handle all the cases.
+36300	37800	The question is something like this.
+37800	40800	We will be given a sorted and rotated area.
+40800	43100	In which there will be distinct elements.
+43100	44800	Distinct elements are not different.
+44800	48200	It is not that one is in the area, one will be twice.
+48200	49600	That is, there will be no duplicate elements.
+49600	51400	One is in the area, one will be twice.
+51400	53200	Two is in the area, two will be twice.
+53200	55800	In this way, there are distinct elements in the area.
+55900	59100	And this area is the ascending order area.
+59100	62000	For example, this area is also given to me.
+62000	64500	This area was originally sorted in ascending order.
+64500	65200	Then what did I do?
+65200	68100	I rotated this around a pivot point.
+68100	70900	For example, I rotate my pencil around a pivot point.
+70900	73900	By the way, I rotated the area around a pivot point.
+73900	76700	What does it mean to rotate the area around a pivot point?
+76700	80300	For example, I have an area 1, 2, 3, 4, 5.
+80300	82100	This is a sorted area.
+82100	84300	This is a sorted area in ascending order.
+84300	86200	There are also distinct elements in it.
+86200	88200	All the properties are matching.
+88200	88900	Now what did I do?
+88900	93900	I took this 3 as a pivot and rotated it around 3.
+93900	95000	After rotating, what will happen?
+95000	99200	This 4 and 5 will come forward.
+99200	101700	So this part will come forward from rotation.
+101700	105000	So this area will be converted to 4, 5.
+105000	106800	Then it will come back to 1, 2, 3.
+106800	109500	So this part has come forward.
+109500	112100	And this part is the same.
+112100	115200	So this is the pivot 3 around rotation.
+115200	117000	3 has come forward at the end.
+117000	118300	My pivot remains at the end.
+118300	121800	I rotate the area around it.
+121800	124800	I have the same thing in my question.
+124800	128200	In my question, I have a sorted and rotated area.
+128200	129200	Now what I have to do?
+129200	131700	I have to find out an element in that area.
+131700	133300	I call it my target element.
+133300	135100	Suppose I have to find out 0.
+135100	137000	0 brings me here.
+137000	140300	So where is my 0 in my area?
+140300	142400	I have to return its index.
+142400	147200	Here, this index is 0, this is 1, this is 2, this is 3, this is 4, this is 5, this is 6.
+147200	150900	So I already know that my 0 is at index number 4.
+150900	152700	So what is my expected output?
+152700	154700	My output should be 4.
+154700	157200	Now this area, how it used to look originally,
+157200	159300	it used to look like this.
+159300	161800	That 0, 1, 2 were here.
+161800	165500	Then I had 4, 5, 6 and 7.
+165500	166700	This is 5.
+166700	167900	Then what did I do?
+167900	172100	I took 2 as a pivot and placed these 4 elements forward.
+172100	173700	So this way it is rotated.
+173700	177400	Now to solve this question, I can also apply linear search.
+177400	179400	What does linear search mean?
+179400	182000	That I can go here and see if my target is here.
+182000	185600	I can go here and see if my target is here.
+185600	189900	I can go to each index and see if my target exists there.
+189900	192200	This question can also be solved in that way.
+192200	196500	You will know that my target exists at index 4, so I will return 4.
+196500	198600	But why won't we solve this with linear search?
+198600	201700	Because linear search time complexity is big O of n.
+201700	204500	We want to solve this in n log n.
+204500	205800	And how will we solve it?
+205800	209700	Using divide and conquer.
+209700	212200	So we want to solve this in less time.
+212200	214900	We want to solve it in a more optimized way.
+214900	219300	So to solve this question, we will use a different approach.
+219300	223800	Which will be a modified binary search.
+223800	227800	Modified binary search means that we will feel something like a binary search.
+227800	229300	But it will be a little different.
+229300	231800	First of all, let's understand some things.
+231800	236500	My array, can I represent this array in the form of a diagram?
+236500	240700	I mean, can I place my elements in the diagram here?
+240700	241700	So what will happen?
+241700	247300	My 4 will be here, my 5 will be here, my 6 will be here and my 7 will be here.
+247300	248200	So what will happen?
+248200	249600	It can be a straight line.
+249600	251900	From where to where? From here to here.
+251900	254400	I can call it my line 1.
+254400	262100	After that, when I plot from 0 to 1, 2, then some of my 0 will come here, some of my 1 will come here, some of my 2 will come here.
+262100	263300	Can I call it this?
+263300	266100	This is my line 2.
+266100	268400	There is one element here, one here and one here.
+268400	270500	And my 4 elements are here.
+270500	275900	So whenever I have a sorted and rotated array, I always have two lines.
+275900	280000	This line is always increasing and this line is always increasing.
+280000	283900	Now these two lines can be met in this case.
+283900	291700	So this line stays like this from here, where this line will go down from here and this one will go down from here.
+291700	298100	And this point, this point will always be above this point or it will be equal.
+298100	301400	So something will be going down here.
+301400	309300	So diagrammatically, I can visualize this problem or this array in this form and this visualization is very important.
+309400	315600	When I visualized it in the form of a diagram, all my cases will come out from here, which I have to handle.
+315600	318600	Now I have any target given to me.
+318600	325200	So can I say that my entire array will have its own starting index and its own ending index.
+325200	328800	Now I have to follow the binary search approach in this question.
+328800	331000	So can I say that I can remove mid?
+331000	336200	Mid is the starting index plus ending index by 2 or then starting plus ending minus.
+336300	338500	The second formula is also to remove mid.
+338500	340000	We can write this as well.
+340000	343500	I always have an array of mid.
+343500	347500	This array of mid, I will have two cases for mid.
+347500	351000	Either my mid line will come on line 1 or my mid line will come on line 2.
+351000	360000	Can I say that either my mid can come here or it can come here or it can come on line 1 or it can come on line 2.
+360000	362000	What will be the value of my mid for this case?
+362000	364500	My mid value will be 7 for this case.
+364500	366200	That is, where will my mid lie?
+366200	368200	My mid will lie on line 1.
+368200	379700	So if I have an array of 2.2, 2.5, 2.8 in this way, 3.4 in this way, then my mid would be 2 or 1.
+379700	381700	So my mid would lie on this line.
+381700	386200	So there can be two cases, either the mid value will lie on line 1 or line 2.
+386200	388200	First let's talk about the case 1.
+388200	391200	Case 1 is the one where my mid value lies on line 1.
+391400	394900	In case 1, i.e. mid value lies on line 1.
+394900	397900	Then I will compare my target with mid.
+397900	405700	If my target is bigger than my starting index or equal and smaller than my mid,
+405700	407200	then where will it lie?
+407200	409700	It will lie on the left side of mid.
+409700	416900	If mid comes here and the target is smaller than this mid but bigger than my starting index,
+416900	420900	then it will lie on the left side of line 1.
+420900	422900	This is the case of line 1.
+422900	425900	Now my target will lie on the left side of line 1.
+425900	429400	What can be the second case in which this value is not true?
+429400	430900	This condition is not true.
+430900	432400	Where will it lie in that case?
+432400	433900	It will lie in that case.
+433900	437900	In the right, where this condition falls.
+437900	440900	So I analyzed this for my line 1.
+440900	442400	Now let's talk about line 2.
+442400	446900	If my mid lies on line 2, then what can I say?
+446900	453900	If my target is bigger than mid and equal and smaller than the ending index,
+453900	459900	then where will it lie?
+459900	463900	It will lie on the right side of line 2.
+463900	467900	Or it will lie on the left side of line 2 if this condition falls.
+467900	471900	I will visualize this in a better way.
+471900	475900	I have a starting index and an ending index in my area.
+475900	477900	What will I do? I will remove the mid of the area.
+477900	480900	Now my mid will lie on line 1 in this area.
+480900	482900	It can lie somewhere else in the other area.
+482900	486900	Here I can plot some of my elements in this way.
+486900	490900	The first of my elements will lie on this line 1.
+490900	492900	This is my line 1.
+492900	495900	The second of the elements will lie on this line 2.
+495900	497900	This is my line.
+497900	503900	If I enlarge it a little, then my line 2 can go up to here.
+503900	507900	I have taken the first case in which my mid lies somewhere else in the area.
+507900	510900	This is my case 1.
+510900	514900	Mid on line 1.
+514900	520900	In this case, I will have a case A and a case B.
+520900	521900	What will be case A?
+521900	528900	Case A is when I have to search for my target from here to here.
+528900	531900	When will I search for my target from here to here?
+531900	536900	When I search for my target value, my mid and my starting index.
+536900	538900	Where is the starting index?
+538900	539900	The starting index is here.
+539900	541900	The ending index is here.
+541900	543900	This is my mid.
+543900	546900	Two parts of line 1 will be done.
+546900	548900	As soon as I have identified the mid,
+548900	549900	two parts of line 1 will be done.
+549900	552900	One will be my left part and one will be my right part.
+552900	554900	When will I have to search for the left part?
+554900	557900	When I have to search for my target value,
+557900	561900	it lies somewhere between the starting index and mid.
+561900	563900	When it lies in this part,
+563900	566900	it will be the left part of line 1.
+566900	572900	My case A will be the left part of line 1.
+572900	573900	What is the condition for this?
+573900	577900	The condition is that the target value is greater than equal to the starting index,
+577900	580900	but less than equal to mid.
+580900	584900	Apart from this, my case B will be in all the other cases.
+584900	589900	Case B will say that we have to search for the right part of line 1.
+589900	591900	If this condition is not true,
+591900	592900	if this is false,
+592900	593900	then where do I have to search?
+593900	596900	I have to search in so many parts.
+596900	597900	Then what I have to do?
+597900	599900	I have to search for the right part of my mid.
+599900	600900	In the right part of that mid,
+600900	602900	this part also comes and this part also comes.
+602900	604900	Either this part will be true,
+604900	605900	the small one,
+605900	607900	or I will have to search in large parts.
+607900	609900	So this is not just the right part of line 1.
+609900	612900	This will be the right part of my mid.
+612900	614900	This will be the right part of my mid.
+614900	617900	Apart from this, I have case 2.
+617900	621900	Case 2 says that my mid lies on line 2.
+621900	625900	What does it mean to lie on line 2?
+625900	627900	That my mid lies here.
+627900	630900	This is the value of my mid.
+630900	631900	Now what can I do?
+631900	633900	Now I can check for this mid that
+633900	635900	do I have to search from here to here?
+635900	637900	From here to here,
+637900	639900	line 2's right part.
+639900	641900	Line 2's right part says that
+641900	643900	if my target value is greater than mid,
+643900	645900	but the ending index value is smaller,
+645900	647900	then it will lie somewhere here.
+647900	651900	So for that, I can make my case C.
+651900	655900	Case C says that we have to go to the right of line 1.
+655900	659900	In that case, my target value will be greater than mid
+659900	662900	and my ending index will be smaller.
+662900	664900	And what will be the case D?
+664900	667900	Case D will be the left case of mid.
+667900	670900	That is where we will be going elsewhere.
+670900	672900	Now the left case of mid,
+672900	674900	we will be searching in so many parts.
+674900	677900	If it comes to the right, then it will be found in so many parts.
+677900	680900	If it goes elsewhere, then I will have to search in this whole part.
+680900	681900	So I have 4 cases.
+681900	682900	What is the case?
+682900	685900	Case 1 is above the value of mid.
+685900	687900	But even within that,
+687900	690900	my target lies in the starting index mid.
+690900	692900	So I have to search in line 1 to the left.
+692900	695900	Otherwise, I will have to search in the mid to the right.
+695900	697900	Case 2 is when my mid line is above the value of 2.
+697900	700900	In that case, I have to search in line 1 to the right.
+700900	702900	That means I have to search here.
+702900	704900	That will be searched in this condition.
+704900	709900	Otherwise, I will have to search in the mid to the left.
+709900	712900	Now how will I know that my mid lies in line 1?
+712900	717900	My mid lies in line 1 only when my array of starting index
+717900	719900	will be less than equal to mid.
+719900	721900	What does this mean?
+721900	724900	Let's assume that my mid lies here.
+724900	726900	Now if it lies here,
+726900	730900	can I say that my starting index will always be less than the value of mid?
+730900	733900	Because the slope of the first line is like this.
+733900	735900	So the slope is like this.
+735900	737900	That means this line will always be going up.
+737900	739900	Because the starting elements are in ascending order.
+739900	747900	So the value on the starting index and the value on the mid will always be small.
+747900	749900	So if this condition is true,
+749900	751900	that means my mid lies in line 1.
+751900	753900	What does line 2 mean?
+753900	757900	Line 2 means that if my mid lies here,
+757900	760900	can I say that the value of mid will always be less than the ending index?
+760900	762900	Or will it be equal?
+762900	764900	Either this mid lies here.
+764900	766900	Or its value will be less than this.
+766900	768900	Because the slope of the second line will always be like this.
+768900	772900	So the value of mid will always be less than equal to my ending index.
+772900	774900	So the condition here is that
+774900	776900	my array of mid,
+776900	778900	that means the element which lies on the mid,
+778900	781900	here is also talking about the mid element of the index.
+781900	785900	Its value is always less than the array of the ending index.
+785900	787900	So I have 4 cases.
+787900	790900	The first case is that when I have the line 1,
+790900	792900	that means my mid will be somewhere here.
+792900	795900	The value of the starting index will be less than the mid and will be equal.
+795900	797900	Then I will identify case 1.
+797900	799900	I will search in the left in that case.
+799900	801900	That means if it lies here,
+801900	803900	I will search in the left when this condition is true.
+803900	807900	Or else I will have to search in the right.
+807900	810900	Then case 2 is where my mid lies here.
+810900	813900	In this case, I will search in the right of line 2,
+813900	815900	if this condition is true.
+815900	818900	Or else I will have to search in the left.
+818900	820900	For this, we will write the code.
+820900	823900	And after writing the code, we will see it again.
+823900	825900	So it will be easier to understand.
+825900	828900	And its code will be like a binary search.

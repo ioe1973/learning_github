@@ -1,0 +1,262 @@
+start	end	text
+0	3760	The next question we will talk about next is called quicksort.
+3760	9600	Quicksort mergesort gives you time complexity but in average cases it is more in the worst case.
+9600	12800	But in the average case, it also has the same time complexity.
+12800	17200	The good thing about quicksort is that it doesn't take extra space like a mergesort.
+17200	22240	We do the same thing in the same space and sort our array.
+22240	26960	So the best thing about quicksort is that in the average case of quicksort,
+26960	32640	the time complexity that is equal to big of n log n,
+32640	37360	in the worst case, the time complexity of quicksort is equal to n square.
+37360	42240	And the space complexity here is equal to our constant space which is of 1.
+42240	44560	That means we don't use any extra space.
+44560	48240	So in the questions, we need the average time complexity n log n.
+48240	52400	That means we need some fast sorting but we don't have any extra space.
+52400	54800	In those cases, we can use quicksort.
+54880	60480	In most cases, we don't hit the worst case in every case.
+60480	63040	So let's talk about the approach of quicksort.
+63040	66960	Quicksort is our pivot and partition approach.
+66960	72240	Pivot and partition is a different form of divide and conquer.
+72240	76400	We will call it divide and conquer in other words.
+76400	82640	The first step of quicksort that we have to perform in quicksort is to choose a pivot.
+82640	89600	Pivot is a center point in which around things rotate.
+89600	92240	For example, if I hold this pencil from here,
+92240	97520	if it rotates like this, then this point will be its pivot point.
+97520	100400	Pivot point means around things.
+100400	105200	So the element around which I will rotate my array,
+105200	109120	I will change my array or I will sort my array,
+109120	111120	that will be my pivot element.
+111200	114480	Approach is something like this, that we take out a pivot from here.
+114480	117200	If I take out any random element from here,
+117200	119040	suppose I take out 8.
+119040	122320	So I will sort this array around 8 in such a way
+122320	124960	that I will write 8 smaller elements before 8,
+124960	127280	I will write 8 bigger elements after 8.
+127280	131760	So this 3, this 6, this 2, this 5 will come here.
+131760	133760	So it will come here 6, 3, 2, or 5.
+133760	137120	And this 9 is bigger than 8, so my 9 will come here.
+137120	139200	So what is pivot here? Pivot is 8.
+139280	141760	8 which I have to sort around.
+141760	143600	So we can take any pivot.
+143600	146480	There are a lot of approaches to choose a pivot element.
+146480	148960	It is possible that you are taking a random element,
+148960	151760	it is possible that you take out an array's median and pivot it.
+151760	154160	It is possible that we take our first element,
+154160	156400	it is possible that we take our last element.
+156400	158880	But in the way that I have seen in maximum space,
+158880	162160	in the way of solving a quick sort, we take the last element.
+162160	165200	And here too we will take the last element and solve it.
+165200	168320	You can solve it in any way, the answer has to be the same.
+168400	172560	What will you do here? We will take our last element.
+172560	173840	So this will be my step 1.
+173840	176880	Step 1, what did I do? I took 5 as a pivot.
+176880	178640	Now after that comes my step 2.
+178640	180160	What will I do in step 2?
+180160	181680	I will do partition here.
+181680	188000	Partition means that I will divide my entire array into parts.
+188000	189280	How will I divide?
+189280	190800	Around this pivot.
+190800	192800	I had 5 pivots, so what will I do?
+192800	195200	I will try to take 5 in the center.
+195280	198080	And write the small elements in the left.
+198240	200880	I will write the large elements in the right.
+201200	203200	So I go to all the indexes at once.
+203200	207120	I will look at 6 first whether it is 6 5 or whether it is bigger than 6.
+207120	209520	I will bring 6 here for 3.
+209760	211200	And if 3 has smaller than 5, yes it has smaller.
+211200	213920	So I will bring 3 here, and then 9.
+213920	215280	9 is smaller or not.
+215280	216960	So I will bring 9 here.
+216960	219920	8 for 8, small or bigger than 8, no but bigger.
+219920	221360	So I will bring 8 here.
+221360	222160	And then it will be 2 again.
+222160	223040	Is 2 smaller than 5?
+223040	223760	Yes it is small.
+223760	229760	then I will bring 2 here. So what happened? I had a pivot which I made the elements in front of it.
+229760	234760	I brought the smaller elements before that and the bigger elements after that.
+234760	238760	This process of bringing it is the most important process of a sort.
+238760	244760	That is how I store the smaller elements before the pivot and then store the bigger elements after the pivot.
+244760	247760	This partition step is the main step.
+247760	250760	We will talk about how the partition will actually be.
+250760	254760	But as soon as my partition is done, what will I do?
+254760	261760	Now I will call the quick sort for this part and call the quick sort for my right part.
+261760	271760	So the third step will be to call the quick sort for my left part and call the quick sort for my right part.
+271760	279760	And as soon as the quick sort is done, the bigger elements will be smaller.
+279760	282760	And finally we will hit the base condition.
+282760	287760	My base case will be the same when I have a single element left.
+287760	289760	So what will happen in the case of a single element?
+289760	295760	In the case of a single element, if I have nothing to do, then my array is already sorted.
+295760	297760	So I will have the same base case.
+297760	299760	So I have to do three things.
+299760	302760	First I have to select the pivot and then partition it.
+302760	304760	I have to divide it in parts.
+304760	307760	And then I have to find out the correct position of the pivot.
+307760	309760	It is still written here in this array.
+309760	312760	But if the array is sorted, then what is the correct position of the pivot?
+312760	315760	Before that, all the small elements and then all the big elements.
+315760	317760	This is the step of the partition.
+317760	319760	After that, I will sort the left and the recursively.
+319760	321760	I will sort the right and the recursively.
+321760	323760	I have figured out the base case.
+323760	326760	Now let's discuss this partition in detail.
+326760	328760	What do I have to do for the partition?
+328760	330760	I always know that it is like a merge sort.
+330760	334760	Even in this, my original array will have a starting index.
+334760	336760	And I will have my ending index.
+336760	338760	The starting index will be zero.
+338760	340760	The ending index will be five.
+340760	342760	Now I have selected the pivot.
+342760	344760	What is my pivot? My pivot is five.
+344760	346760	And what is the index of this pivot?
+346760	348760	Right now, the index of this pivot is equal to five.
+348760	350760	That is equal to my ending index.
+350760	352760	What will I do? I will take an iterator.
+352760	355760	I will initialize it from minus one.
+355760	357760	And what will the iterator do?
+357760	359760	It will make a place in my array.
+359760	361760	For what will it make a place?
+361760	363760	For my elements.
+363760	365760	That is, the small elements from the pivots
+365760	367760	will make a place in the original array
+367760	371760	for the i that is my iterator.
+371760	375760	The work of i is to make a place for the small elements from the pivots.
+375760	379760	So, I have initialized the i with minus one.
+379760	381760	I can say that i is minus one.
+381760	383760	If it is zero, it is one, it is two, it is three, it is four, it is five.
+383760	385760	So, i is pointing here right now.
+385760	387760	I am not pointing to any valid index.
+387760	389760	What will I do now?
+389760	391760	I have made an iterator i.
+391760	393760	This is my original array.
+393760	395760	This is not a temporary array.
+395760	397760	I am talking about the original.
+397760	399760	There are already elements stored in the original.
+399760	401760	There are six stored here.
+401760	403760	There are three stored here.
+403760	405760	There are nine stored here.
+405760	407760	There are eight stored here.
+407760	409760	There are two stored here.
+409760	411760	There are five stored here.
+411760	413760	I mean, I can store these elements.
+413760	415760	Now, what I have to do?
+415760	417760	I have to traverse the original array.
+417760	419760	First, I will ask six.
+419760	421760	I will compare six with five.
+421760	423760	Is six bigger than five or smaller?
+423760	425760	If six is bigger than five,
+425760	427760	then I will keep six here or here.
+427760	429760	So, what will i do?
+429760	431760	I don't have to do any work.
+431760	433760	I don't have to make a place for six.
+433760	435760	Because i will make a place for the small elements
+435760	437760	that are smaller than pivots.
+437760	439760	So, I don't have to do any work now.
+439760	441760	I will ask six.
+441760	443760	Is three smaller than pivots or bigger?
+443760	445760	Obviously, three is smaller than pivots.
+445760	447760	So, I will make a place for this.
+447760	449760	How will I make a place?
+449760	451760	What will i do?
+451760	453760	First, it will increase its value.
+453760	455760	I will get this pointer from here.
+455760	457760	I mean, there are six stored here.
+457760	459760	Then, what will i do?
+459760	461760	I will swap the values.
+461760	463760	How will I swap?
+463760	465760	I will pick up six from here
+465760	467760	and put three here.
+467760	469760	So, how will I swap?
+469760	471760	Swap has increased its value
+471760	473760	by one index.
+473760	475760	The smaller element
+475760	477760	that it has to be placed there,
+477760	479760	it has to be placed there.
+479760	481760	The old one has to be removed from there.
+481760	483760	And the old one has to be placed
+483760	485760	instead of this element.
+485760	487760	So, I have swapped
+487760	489760	both the elements.
+489760	491760	How will this change in the code?
+491760	493760	In the code, I will take a temporary variable.
+493760	495760	In which, I will store
+495760	497760	the array of j value.
+497760	499760	Suppose, the j is the iterator
+499760	501760	whose value was zero.
+501760	503760	Then, what will I do?
+503760	505760	I will store the array of j
+505760	507760	in the array of i value.
+507760	509760	And in the array of i,
+509760	511760	what will I store?
+511760	513760	I will store the array of i
+513760	515760	in the array of i.
+515760	517760	In this way, we have always
+517760	519760	swapped.
+519760	521760	So, what will the i iterator do?
+521760	523760	He will swap the values.
+523760	525760	It will be equal to 2.
+525760	527760	So, he will compare the 9 with 5.
+527760	529760	The 9 is bigger than 5.
+529760	531760	So, no work will be done here.
+531760	533760	The value of i has increased from minus 1 to zero.
+533760	535760	After that, the iterator will go to 8.
+535760	537760	He will compare the 8 with 5.
+537760	539760	Is the value of 8 bigger than 5?
+539760	541760	Yes, it is bigger. In this case,
+541760	543760	there will be no swapping.
+543760	545760	The j is equal to 3.
+545760	547760	Then, the iterator will increase.
+547760	549760	The j is equal to 4.
+549760	551760	The value of 2 is bigger than 5.
+551760	553760	What will the i do?
+553760	555760	The i will do plus plus first.
+555760	557760	After plus plus, the value of i will be equal to 1.
+557760	559760	The value of i is equal to 1.
+559760	561760	So, the i came here.
+561760	563760	So, he has to make a place here.
+563760	565760	He already has 6 here.
+565760	567760	So, he will pick up 6.
+567760	569760	And who will he pick up? He will pick up 2.
+569760	571760	So, he will pick up 2 for me.
+571760	573760	And j is equal to 4 for me.
+573760	575760	He will remove 2 here.
+575760	577760	And he will pick up 6 for me.
+577760	579760	So, the swapping will be done in this way.
+579760	581760	There will be changes in the journal.
+581760	583760	How will my array be?
+583760	585760	My array will be something like this.
+585760	587760	First of all, 3 came.
+587760	589760	Then, 2 came.
+589760	591760	Then, 9 came.
+591760	593760	Then, 8 came.
+593760	595760	Then, 6 came.
+595760	597760	And then, 5 came.
+597760	599760	I have copied these same elements.
+599760	601760	This is 2.
+601760	603760	This is 9.
+603760	605760	This is 8.
+605760	607760	This is 6.
+607760	609760	If I do the swapping again,
+609760	611760	then it will be i++.
+611760	613760	That is, index is equal to 2.
+613760	615760	Index is equal to 2.
+615760	617760	Then, 9 will do the swapping.
+617760	619760	Then, 9 will do the swapping.
+619760	621760	And then, 5 will do the swapping.
+621760	623760	That means, it will do the pivot.
+623760	625760	And then, 9 will do the swapping.
+625760	627760	So, 9 will do the swapping.
+627760	629760	And then, last we will see
+629760	631760	what will happen with the help of partition.
+631760	633760	5 was my pivot.
+633760	635760	Smaller elements will come here.
+635760	637760	So, partition has done
+637760	639760	so much magically.
+639760	641760	This i has done its work.
+641760	643760	What i have done?
+643760	645760	i have done this, that it has made
+645760	647760	space for small elements.
+647760	649760	And then, it has made space for 5.
+649760	651760	And then, in the end, I have stored
+651760	653760	my big elements.
+653760	655760	So, this way, my partition step will work.
+655760	657760	Now, we are going to convert the same
+657760	659760	logic into code.

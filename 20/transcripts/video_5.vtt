@@ -1,0 +1,356 @@
+WEBVTT
+
+00:00.000 --> 00:06.600
+For the code, I have already written my array, along with it, I have made a function called printArray, which will print my array.
+
+00:06.600 --> 00:10.400
+Let's write a function, the name of the function is publicStatic,
+
+00:10.400 --> 00:14.000
+give it a return type void and give it a name, quickSort.
+
+00:14.000 --> 00:20.200
+In quickSort, I have my array, apart from that, I have my starting index and my ending index.
+
+00:20.200 --> 00:25.400
+From the main function, I know that if I am calling quickSort, then my starting index will go as 0
+
+00:25.400 --> 00:30.800
+and my ending index will go as my array length minus 1.
+
+00:30.800 --> 00:36.000
+In my quickSort, what was step 1? Step 1 was to find out the pivot.
+
+00:36.000 --> 00:39.400
+So, I have found out the pivot as my last element.
+
+00:39.400 --> 00:43.600
+Now, on the basis of the pivot, I have to partition.
+
+00:43.600 --> 00:47.600
+To partition, let me assume that I have a different function that gives me a partition.
+
+00:47.600 --> 00:52.400
+In this, I am passing my array, I am passing my starting index and ending index.
+
+00:52.400 --> 00:56.400
+Partition function, I assume that it will do my magic.
+
+00:56.400 --> 00:59.400
+What magic will it do? Partition function will take the pivot.
+
+00:59.400 --> 01:03.400
+Before that, it will take the small elements, after that, it will take the big elements.
+
+01:03.400 --> 01:06.400
+It will also give me the right index by bringing the pivot to the right place.
+
+01:06.400 --> 01:10.400
+So, this partition function gives me the index of the pivot.
+
+01:10.400 --> 01:16.400
+So, I will make an integer variable, p index, pivot index, which will bring me the partition function.
+
+01:16.400 --> 01:21.400
+How will the partition function look like? Partition function will look like a public static void.
+
+01:21.400 --> 01:27.400
+Partition, int array, apart from that, I have the starting index, I have the ending index.
+
+01:27.400 --> 01:32.400
+And here, I keep its return type as int.
+
+01:32.400 --> 01:36.400
+So, this is my partition. Now, what I have to do is the third step.
+
+01:36.400 --> 01:44.400
+I will call a quickSort for array, for starting index, and for what? Partition index minus 1.
+
+01:44.400 --> 01:48.400
+The partition on the index, this pivot is on the right index.
+
+01:48.400 --> 01:51.400
+What I have to do? I have to sort the left part of it.
+
+01:51.400 --> 01:55.400
+So, from the starting index to the pivot index minus 1 is my left part.
+
+01:55.400 --> 01:58.400
+Then, where will my right part be?
+
+01:58.400 --> 02:02.400
+My right part will be from the pivot index to the pivot index plus 1.
+
+02:02.400 --> 02:06.400
+Pivot index is right. Pivot index plus 1 is my ending index.
+
+02:06.400 --> 02:08.400
+This will be my right part.
+
+02:08.400 --> 02:14.400
+What will be the base case for this? The base case will be that if the starting index value is greater than or equal to the ending index,
+
+02:14.400 --> 02:17.400
+there is nothing to do in that case. In that case, I simply have to return.
+
+02:17.400 --> 02:19.400
+So, this is my full recursion.
+
+02:19.400 --> 02:23.400
+Now, I have to solve my most important problem, which is to write the partition function.
+
+02:23.400 --> 02:26.400
+What will the partition function do? First of all, we take the pivot.
+
+02:26.400 --> 02:32.400
+What will be the pivot? The pivot will be the last element of my array, that is, the ending index.
+
+02:32.400 --> 02:35.400
+Now, what I have to do? I have to make two variables.
+
+02:35.400 --> 02:39.400
+The first is my i. I will initialize the i from the starting index minus 1.
+
+02:39.400 --> 02:51.400
+The work of this i is to make a place or to make a place for elements smaller than the pivot.
+
+02:51.400 --> 02:54.400
+After that, what I will do? I will run a loop.
+
+02:54.400 --> 02:56.400
+The loop will start from j is equal to 0.
+
+02:56.400 --> 02:59.400
+Where will the loop go until the value of j is less than the ending index.
+
+02:59.400 --> 03:03.400
+That means, it is less than the pivot until the value of j is plus plus.
+
+03:03.400 --> 03:11.400
+I will compare every time that my element, that is, j is less than equal to my pivot.
+
+03:11.400 --> 03:14.400
+If it is less than equal to, then I have to make a place in that case.
+
+03:14.400 --> 03:18.400
+And how do we make a place? First we do the i plus plus, then we do the swap.
+
+03:18.400 --> 03:20.400
+So, how will we do the swap? We will take the temporary variable.
+
+03:20.400 --> 03:23.400
+I will store the value of j in the array of j.
+
+03:23.400 --> 03:28.400
+Then I will store the value of i in the array of j.
+
+03:28.400 --> 03:32.400
+After that, I will store the value of j in the array of i.
+
+03:32.400 --> 03:36.400
+So, I have compared every time that the value of the current element is less than the pivot.
+
+03:36.400 --> 03:38.400
+If it is less, then I will have to make a place.
+
+03:38.400 --> 03:41.400
+To make a place, there will be i plus plus and after that, we will swap.
+
+03:41.400 --> 03:46.400
+That means, the value on the index i and the value on the index j will be swapped.
+
+03:46.400 --> 03:50.400
+In this way, I have analyzed all the elements that are smaller than my pivot.
+
+03:50.400 --> 03:52.400
+Now, let's put the pivot at the right place.
+
+03:52.400 --> 03:56.400
+To put the pivot at the right place, I will have to do this work only one last time.
+
+03:56.400 --> 03:59.400
+That means, I will do the same work here.
+
+03:59.400 --> 04:04.400
+i plus plus, then my swap logic.
+
+04:04.400 --> 04:06.400
+What will I store in the temporary here?
+
+04:06.400 --> 04:09.400
+I will store the value of the pivot in the temporary here.
+
+04:09.400 --> 04:15.400
+And what is the pivot? My pivot is the array of the ending index in which I will store the value of the array of i.
+
+04:15.400 --> 04:17.400
+The array of i is the temporary.
+
+04:17.400 --> 04:20.400
+Now, the right index of the pivot is equal to the index i.
+
+04:20.400 --> 04:23.400
+Where is the pivot stored? I have stored the pivot in the i.
+
+04:23.400 --> 04:27.400
+So, the right index i of the pivot will return the partition function.
+
+04:27.400 --> 04:30.400
+Who will return my quicksort value function?
+
+04:30.400 --> 04:32.400
+And here, we have to pay attention.
+
+04:32.400 --> 04:36.400
+Instead of this line, I don't want to write the pivot is equal to the array of i.
+
+04:36.400 --> 04:39.400
+Why? Because if I write the pivot, the pivot is a variable.
+
+04:39.400 --> 04:42.400
+I have to change the array on the index.
+
+04:42.400 --> 04:46.400
+We don't reflect the variables' change functions because there is a call by value in the functions.
+
+04:46.400 --> 04:49.400
+Call by reference is indirectly implemented.
+
+04:49.400 --> 04:51.400
+How to change the pivot in the array?
+
+04:51.400 --> 04:52.400
+Only in arrays.
+
+04:52.400 --> 04:53.400
+The object is also in it.
+
+04:53.400 --> 04:55.400
+But here, we are talking about the array.
+
+04:55.400 --> 04:58.400
+So, here, through the index, we have to change the pivot index.
+
+04:58.400 --> 05:00.400
+We don't have to change the pivot in the variable.
+
+05:00.400 --> 05:02.400
+So, my partition function is completed.
+
+05:02.400 --> 05:04.400
+This is my quicksort completed.
+
+05:04.400 --> 05:07.400
+I had called the quicksort from the main function.
+
+05:07.400 --> 05:09.400
+I will also call the print array.
+
+05:09.400 --> 05:11.400
+Let's do it. Save and run.
+
+05:11.400 --> 05:13.400
+Where is the error?
+
+05:13.400 --> 05:15.400
+The error is in line number 29.
+
+05:15.400 --> 05:18.400
+29 means the error is here.
+
+05:18.400 --> 05:21.400
+What is the error in the j?
+
+05:21.400 --> 05:23.400
+I have started this loop from 0.
+
+05:23.400 --> 05:25.400
+But should my loop start from 0?
+
+05:25.400 --> 05:27.400
+No, my loop should start from the starting index.
+
+05:27.400 --> 05:30.400
+Because the problem will be divided in small parts.
+
+05:30.400 --> 05:31.400
+So, what will happen?
+
+05:31.400 --> 05:34.400
+My starting index can be 0, it can be 1, it can be 5.
+
+05:34.400 --> 05:35.400
+So, it will not always start from 0.
+
+05:35.400 --> 05:37.400
+It will start from the starting index.
+
+05:37.400 --> 05:38.400
+Let's do it. Save.
+
+05:38.400 --> 05:40.400
+Let's run it again.
+
+05:40.400 --> 05:44.400
+Now, my final array is sorted.
+
+05:44.400 --> 05:47.400
+This array is completely sorted by my quicksort.
+
+05:47.400 --> 05:51.400
+Rabia, we also found out that if there are exceptions and errors,
+
+05:51.400 --> 05:52.400
+how to find out?
+
+05:52.400 --> 05:53.400
+I had an exception.
+
+05:53.400 --> 05:55.400
+My index 6 out of bounds.
+
+05:55.400 --> 05:56.400
+Out of bounds.
+
+05:56.400 --> 05:59.400
+The size of my array is more than that of an index.
+
+05:59.400 --> 06:00.400
+I am accessing it.
+
+06:00.400 --> 06:03.400
+For that, I have seen that the j is equal to 0.
+
+06:03.400 --> 06:04.400
+It was wrong.
+
+06:04.400 --> 06:05.400
+It should have started from the starting index.
+
+06:05.400 --> 06:07.400
+So, the line number also comes in this way.
+
+06:07.400 --> 06:08.400
+If we are coding in this code,
+
+06:08.400 --> 06:09.400
+or if we are coding somewhere else,
+
+06:09.400 --> 06:12.400
+then many editors will tell us where the error came.
+
+06:12.400 --> 06:15.400
+So, here I did it for an even length.
+
+06:15.400 --> 06:17.400
+If we take it to minus 5,
+
+06:17.400 --> 06:20.400
+then how did we get the answer for the order length?
+
+06:20.400 --> 06:22.400
+Quicksort has also sorted for order length.
+
+06:22.400 --> 06:23.400
+Sort.
+

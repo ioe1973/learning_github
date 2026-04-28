@@ -1,0 +1,281 @@
+WEBVTT
+
+00:00.000 --> 00:02.880
+Now let's discuss a special thing for our quicksort.
+
+00:02.880 --> 00:06.280
+The worst case time complexity of a quicksort is when it comes.
+
+00:06.280 --> 00:11.280
+Let's look at this lecture only when the time complexity is already clear.
+
+00:11.280 --> 00:14.280
+We already know about space complexity.
+
+00:14.280 --> 00:18.680
+Otherwise, we can skip this lecture and look at it after the time complexity chapter.
+
+00:18.680 --> 00:25.280
+The worst case time complexity comes in a quicksort when my entire array is sorted in ascending order or descending order.
+
+00:25.280 --> 00:30.280
+And this is when my pivot element is always the smallest element or the largest element.
+
+00:30.280 --> 00:33.280
+How? Let's assume that my array looks like this.
+
+00:33.280 --> 00:36.280
+1, 2, 3, 4, 5.
+
+00:36.280 --> 00:40.280
+Now what will happen if I take my pivot element as the last element?
+
+00:40.280 --> 00:47.280
+If my pivot element is always the last element, then my pivot element will always be the largest element of the array.
+
+00:47.280 --> 00:53.280
+Why? Because the last element sorted in ascending order is always the largest of the array.
+
+00:53.280 --> 00:57.280
+So if I call a quicksort here, then this partition will be divided in two parts.
+
+00:57.280 --> 01:01.280
+If partition is divided through 5, then what will happen before this?
+
+01:01.280 --> 01:04.280
+Before this, I will have 1, 2, 3, and then 4.
+
+01:04.280 --> 01:06.280
+And in the end, I will have empty.
+
+01:06.280 --> 01:08.280
+Again, the pivot will be 4.
+
+01:08.280 --> 01:10.280
+If it is 4, then it will be divided in two parts.
+
+01:10.280 --> 01:11.280
+In the middle, it will be 4.
+
+01:11.280 --> 01:12.280
+And here, it will be empty.
+
+01:12.280 --> 01:14.280
+1, 2, and 3.
+
+01:14.280 --> 01:16.280
+It will be empty here.
+
+01:16.280 --> 01:18.280
+Now again, it will be 3 as the pivot.
+
+01:18.280 --> 01:20.280
+If it is 3 as the pivot, then it will be 3 in the middle.
+
+01:20.280 --> 01:22.280
+This will also be divided in two parts.
+
+01:22.280 --> 01:24.280
+In the first part, I will have 1 and 2.
+
+01:24.280 --> 01:26.280
+And in the second part, it will be empty.
+
+01:26.280 --> 01:28.280
+After this, again, the pivot will choose 2 here.
+
+01:28.280 --> 01:32.280
+If I have two around, then this will come empty.
+
+01:32.280 --> 01:34.280
+And here, I will have 1.
+
+01:34.280 --> 01:36.280
+So what happened every time?
+
+01:36.280 --> 01:38.280
+Every time, my pivot element is the last element.
+
+01:38.280 --> 01:40.280
+That is, the largest element.
+
+01:40.280 --> 01:42.280
+So every time, the size of my array.
+
+01:42.280 --> 01:45.280
+Can I say that if I consider this as a recursion?
+
+01:45.280 --> 01:48.280
+So what is the size of my array on my first level?
+
+01:48.280 --> 01:50.280
+How many times do I have to reverse?
+
+01:50.280 --> 01:52.280
+How many times will my loop run in the partition?
+
+01:52.280 --> 01:54.280
+Here, I am talking about the partition function.
+
+01:54.280 --> 01:56.280
+In the partition function,
+
+01:56.280 --> 01:59.280
+my loop will run N times.
+
+01:59.280 --> 02:01.280
+At this level, in the partition,
+
+02:01.280 --> 02:04.280
+my time complexity will come N minus 1.
+
+02:04.280 --> 02:07.280
+At this level, my time complexity will come N minus 2.
+
+02:07.280 --> 02:09.280
+At this level, N minus 3 will come.
+
+02:09.280 --> 02:11.280
+At this level, N minus 4 will come.
+
+02:11.280 --> 02:13.280
+And in this way, it will go up to 1.
+
+02:13.280 --> 02:15.280
+So can I say that at one level of the recursion,
+
+02:15.280 --> 02:17.280
+the time complexity is N.
+
+02:17.280 --> 02:19.280
+Then there is N minus 1, then there is N minus 2,
+
+02:19.280 --> 02:21.280
+then there is N minus 3.
+
+02:21.280 --> 02:23.280
+And in my total time complexity,
+
+02:23.280 --> 02:25.280
+what do I do? I add them all.
+
+02:25.280 --> 02:27.280
+So N plus N minus 1,
+
+02:27.280 --> 02:29.280
+plus N minus 2,
+
+02:29.280 --> 02:31.280
+plus N minus 3.
+
+02:31.280 --> 02:33.280
+In this way, if I add 3, plus 2, plus 1,
+
+02:33.280 --> 02:35.280
+to all of them.
+
+02:35.280 --> 02:37.280
+Can I say that I have an arithmetic progression here?
+
+02:37.280 --> 02:39.280
+Can I say it in reverse?
+
+02:39.280 --> 02:41.280
+1 plus 2, plus 3, plus 4.
+
+02:41.280 --> 02:43.280
+And up to where? Up to N.
+
+02:43.280 --> 02:45.280
+So what is its sum?
+
+02:45.280 --> 02:47.280
+N plus 1 by 2.
+
+02:47.280 --> 02:48.280
+What is this?
+
+02:48.280 --> 02:50.280
+N square plus N by 2.
+
+02:50.280 --> 02:52.280
+And I can say this
+
+02:52.280 --> 02:54.280
+that it will be big of
+
+02:54.280 --> 02:56.280
+N square.
+
+02:56.280 --> 02:57.280
+So when will be the worst case?
+
+02:57.280 --> 02:58.280
+The worst case will be
+
+02:58.280 --> 03:00.280
+when in my ascending order,
+
+03:00.280 --> 03:02.280
+my pivot element is always the largest element.
+
+03:02.280 --> 03:03.280
+In that case,
+
+03:03.280 --> 03:04.280
+every single level will increase
+
+03:04.280 --> 03:06.280
+the time complexity.
+
+03:06.280 --> 03:08.280
+From which the final worst-case time complexity
+
+03:08.280 --> 03:09.280
+will be equal to N square.
+
+03:09.280 --> 03:10.280
+And in the same case,
+
+03:10.280 --> 03:12.280
+if it is sorted in descending order,
+
+03:12.280 --> 03:14.280
+i.e. if this area is in reverse,
+
+03:14.280 --> 03:16.280
+then it is always the smallest element.
+
+03:16.280 --> 03:17.280
+So in that case,
+
+03:17.280 --> 03:19.280
+the same N square time complexity goes.
+
+03:19.280 --> 03:20.280
+Now the question is
+
+03:20.280 --> 03:22.280
+that the worst-case time complexity of Quixote
+
+03:22.280 --> 03:24.280
+is asked in actual interviews.
+
+03:24.280 --> 03:26.280
+So you should already know this.
+
+03:26.280 --> 03:28.280
+In fact, it is very important to remember this.
+
+03:28.280 --> 03:31.280
+Make a note that the worst-case time complexity
+
+03:31.280 --> 03:34.280
+comes into my Quixote when my pivot element
+
+03:34.280 --> 03:37.280
+is always the smallest element
+
+03:37.280 --> 03:40.280
+or always the largest element.
+

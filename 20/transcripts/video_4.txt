@@ -1,0 +1,261 @@
+The next question we will talk about next is called quicksort.
+Quicksort mergesort gives you time complexity but in average cases it is more in the worst case.
+But in the average case, it also has the same time complexity.
+The good thing about quicksort is that it doesn't take extra space like a mergesort.
+We do the same thing in the same space and sort our array.
+So the best thing about quicksort is that in the average case of quicksort,
+the time complexity that is equal to big of n log n,
+in the worst case, the time complexity of quicksort is equal to n square.
+And the space complexity here is equal to our constant space which is of 1.
+That means we don't use any extra space.
+So in the questions, we need the average time complexity n log n.
+That means we need some fast sorting but we don't have any extra space.
+In those cases, we can use quicksort.
+In most cases, we don't hit the worst case in every case.
+So let's talk about the approach of quicksort.
+Quicksort is our pivot and partition approach.
+Pivot and partition is a different form of divide and conquer.
+We will call it divide and conquer in other words.
+The first step of quicksort that we have to perform in quicksort is to choose a pivot.
+Pivot is a center point in which around things rotate.
+For example, if I hold this pencil from here,
+if it rotates like this, then this point will be its pivot point.
+Pivot point means around things.
+So the element around which I will rotate my array,
+I will change my array or I will sort my array,
+that will be my pivot element.
+Approach is something like this, that we take out a pivot from here.
+If I take out any random element from here,
+suppose I take out 8.
+So I will sort this array around 8 in such a way
+that I will write 8 smaller elements before 8,
+I will write 8 bigger elements after 8.
+So this 3, this 6, this 2, this 5 will come here.
+So it will come here 6, 3, 2, or 5.
+And this 9 is bigger than 8, so my 9 will come here.
+So what is pivot here? Pivot is 8.
+8 which I have to sort around.
+So we can take any pivot.
+There are a lot of approaches to choose a pivot element.
+It is possible that you are taking a random element,
+it is possible that you take out an array's median and pivot it.
+It is possible that we take our first element,
+it is possible that we take our last element.
+But in the way that I have seen in maximum space,
+in the way of solving a quick sort, we take the last element.
+And here too we will take the last element and solve it.
+You can solve it in any way, the answer has to be the same.
+What will you do here? We will take our last element.
+So this will be my step 1.
+Step 1, what did I do? I took 5 as a pivot.
+Now after that comes my step 2.
+What will I do in step 2?
+I will do partition here.
+Partition means that I will divide my entire array into parts.
+How will I divide?
+Around this pivot.
+I had 5 pivots, so what will I do?
+I will try to take 5 in the center.
+And write the small elements in the left.
+I will write the large elements in the right.
+So I go to all the indexes at once.
+I will look at 6 first whether it is 6 5 or whether it is bigger than 6.
+I will bring 6 here for 3.
+And if 3 has smaller than 5, yes it has smaller.
+So I will bring 3 here, and then 9.
+9 is smaller or not.
+So I will bring 9 here.
+8 for 8, small or bigger than 8, no but bigger.
+So I will bring 8 here.
+And then it will be 2 again.
+Is 2 smaller than 5?
+Yes it is small.
+then I will bring 2 here. So what happened? I had a pivot which I made the elements in front of it.
+I brought the smaller elements before that and the bigger elements after that.
+This process of bringing it is the most important process of a sort.
+That is how I store the smaller elements before the pivot and then store the bigger elements after the pivot.
+This partition step is the main step.
+We will talk about how the partition will actually be.
+But as soon as my partition is done, what will I do?
+Now I will call the quick sort for this part and call the quick sort for my right part.
+So the third step will be to call the quick sort for my left part and call the quick sort for my right part.
+And as soon as the quick sort is done, the bigger elements will be smaller.
+And finally we will hit the base condition.
+My base case will be the same when I have a single element left.
+So what will happen in the case of a single element?
+In the case of a single element, if I have nothing to do, then my array is already sorted.
+So I will have the same base case.
+So I have to do three things.
+First I have to select the pivot and then partition it.
+I have to divide it in parts.
+And then I have to find out the correct position of the pivot.
+It is still written here in this array.
+But if the array is sorted, then what is the correct position of the pivot?
+Before that, all the small elements and then all the big elements.
+This is the step of the partition.
+After that, I will sort the left and the recursively.
+I will sort the right and the recursively.
+I have figured out the base case.
+Now let's discuss this partition in detail.
+What do I have to do for the partition?
+I always know that it is like a merge sort.
+Even in this, my original array will have a starting index.
+And I will have my ending index.
+The starting index will be zero.
+The ending index will be five.
+Now I have selected the pivot.
+What is my pivot? My pivot is five.
+And what is the index of this pivot?
+Right now, the index of this pivot is equal to five.
+That is equal to my ending index.
+What will I do? I will take an iterator.
+I will initialize it from minus one.
+And what will the iterator do?
+It will make a place in my array.
+For what will it make a place?
+For my elements.
+That is, the small elements from the pivots
+will make a place in the original array
+for the i that is my iterator.
+The work of i is to make a place for the small elements from the pivots.
+So, I have initialized the i with minus one.
+I can say that i is minus one.
+If it is zero, it is one, it is two, it is three, it is four, it is five.
+So, i is pointing here right now.
+I am not pointing to any valid index.
+What will I do now?
+I have made an iterator i.
+This is my original array.
+This is not a temporary array.
+I am talking about the original.
+There are already elements stored in the original.
+There are six stored here.
+There are three stored here.
+There are nine stored here.
+There are eight stored here.
+There are two stored here.
+There are five stored here.
+I mean, I can store these elements.
+Now, what I have to do?
+I have to traverse the original array.
+First, I will ask six.
+I will compare six with five.
+Is six bigger than five or smaller?
+If six is bigger than five,
+then I will keep six here or here.
+So, what will i do?
+I don't have to do any work.
+I don't have to make a place for six.
+Because i will make a place for the small elements
+that are smaller than pivots.
+So, I don't have to do any work now.
+I will ask six.
+Is three smaller than pivots or bigger?
+Obviously, three is smaller than pivots.
+So, I will make a place for this.
+How will I make a place?
+What will i do?
+First, it will increase its value.
+I will get this pointer from here.
+I mean, there are six stored here.
+Then, what will i do?
+I will swap the values.
+How will I swap?
+I will pick up six from here
+and put three here.
+So, how will I swap?
+Swap has increased its value
+by one index.
+The smaller element
+that it has to be placed there,
+it has to be placed there.
+The old one has to be removed from there.
+And the old one has to be placed
+instead of this element.
+So, I have swapped
+both the elements.
+How will this change in the code?
+In the code, I will take a temporary variable.
+In which, I will store
+the array of j value.
+Suppose, the j is the iterator
+whose value was zero.
+Then, what will I do?
+I will store the array of j
+in the array of i value.
+And in the array of i,
+what will I store?
+I will store the array of i
+in the array of i.
+In this way, we have always
+swapped.
+So, what will the i iterator do?
+He will swap the values.
+It will be equal to 2.
+So, he will compare the 9 with 5.
+The 9 is bigger than 5.
+So, no work will be done here.
+The value of i has increased from minus 1 to zero.
+After that, the iterator will go to 8.
+He will compare the 8 with 5.
+Is the value of 8 bigger than 5?
+Yes, it is bigger. In this case,
+there will be no swapping.
+The j is equal to 3.
+Then, the iterator will increase.
+The j is equal to 4.
+The value of 2 is bigger than 5.
+What will the i do?
+The i will do plus plus first.
+After plus plus, the value of i will be equal to 1.
+The value of i is equal to 1.
+So, the i came here.
+So, he has to make a place here.
+He already has 6 here.
+So, he will pick up 6.
+And who will he pick up? He will pick up 2.
+So, he will pick up 2 for me.
+And j is equal to 4 for me.
+He will remove 2 here.
+And he will pick up 6 for me.
+So, the swapping will be done in this way.
+There will be changes in the journal.
+How will my array be?
+My array will be something like this.
+First of all, 3 came.
+Then, 2 came.
+Then, 9 came.
+Then, 8 came.
+Then, 6 came.
+And then, 5 came.
+I have copied these same elements.
+This is 2.
+This is 9.
+This is 8.
+This is 6.
+If I do the swapping again,
+then it will be i++.
+That is, index is equal to 2.
+Index is equal to 2.
+Then, 9 will do the swapping.
+Then, 9 will do the swapping.
+And then, 5 will do the swapping.
+That means, it will do the pivot.
+And then, 9 will do the swapping.
+So, 9 will do the swapping.
+And then, last we will see
+what will happen with the help of partition.
+5 was my pivot.
+Smaller elements will come here.
+So, partition has done
+so much magically.
+This i has done its work.
+What i have done?
+i have done this, that it has made
+space for small elements.
+And then, it has made space for 5.
+And then, in the end, I have stored
+my big elements.
+So, this way, my partition step will work.
+Now, we are going to convert the same
+logic into code.

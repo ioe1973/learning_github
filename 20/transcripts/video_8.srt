@@ -1,0 +1,820 @@
+1
+00:00:00,000 --> 00:00:05,000
+In my main function, I have defined my target as 0.
+
+2
+00:00:05,000 --> 00:00:10,000
+My output should be equal to index 4.
+
+3
+00:00:10,000 --> 00:00:14,000
+In a function, I write public, static.
+
+4
+00:00:14,000 --> 00:00:17,000
+I write its return type int because it has to return index.
+
+5
+00:00:17,000 --> 00:00:19,000
+And I give it the name search.
+
+6
+00:00:19,000 --> 00:00:21,000
+I will pass my array in search.
+
+7
+00:00:21,000 --> 00:00:23,000
+Along with that, I will pass my target.
+
+8
+00:00:23,000 --> 00:00:27,000
+Apart from the target, I need a starting index and an ending index.
+
+9
+00:00:27,000 --> 00:00:29,000
+How will the call go from the main function?
+
+10
+00:00:29,000 --> 00:00:33,000
+The call will go from the main function that I will pass my array in search.
+
+11
+00:00:33,000 --> 00:00:37,000
+Apart from that, I will pass the starting index as 0.
+
+12
+00:00:37,000 --> 00:00:42,000
+I will pass the ending index as array.length-1.
+
+13
+00:00:42,000 --> 00:00:46,000
+This will give me my target index.
+
+14
+00:00:46,000 --> 00:00:50,000
+And I will get this target index print.
+
+15
+00:00:50,000 --> 00:00:52,000
+Now let's complete our function.
+
+16
+00:00:52,000 --> 00:00:54,000
+What I have to do in the function?
+
+17
+00:00:54,000 --> 00:00:59,000
+The first thing I have to do is to find out the mid function.
+
+18
+00:00:59,000 --> 00:01:04,000
+The mid function will be starting index plus, ending index minus, starting index by 2.
+
+19
+00:01:04,000 --> 00:01:08,000
+I can write it as starting plus, ending by 2.
+
+20
+00:01:08,000 --> 00:01:10,000
+But I will write it as this.
+
+21
+00:01:10,000 --> 00:01:12,000
+Now I want to see my different cases.
+
+22
+00:01:12,000 --> 00:01:16,000
+The first case is my best case.
+
+23
+00:01:16,000 --> 00:01:20,000
+The first case is how I got my target here.
+
+24
+00:01:20,000 --> 00:01:24,000
+If my array of mid value is equal to my target,
+
+25
+00:01:24,000 --> 00:01:27,000
+then I got my index in that case.
+
+26
+00:01:27,000 --> 00:01:30,000
+Like the binary search, first compare it with mid.
+
+27
+00:01:30,000 --> 00:01:33,000
+If I get the target on mid, then I will return the mid value.
+
+28
+00:01:33,000 --> 00:01:35,000
+That mid is the index of my target.
+
+29
+00:01:35,000 --> 00:01:39,000
+If we assume that this did not happen, then what I will do in that case?
+
+30
+00:01:39,000 --> 00:01:43,000
+In that case, I will bring my mid on line 1.
+
+31
+00:01:43,000 --> 00:01:44,000
+I will see that case.
+
+32
+00:01:44,000 --> 00:01:47,000
+That my mid is above line 1.
+
+33
+00:01:47,000 --> 00:01:49,000
+What condition did we write for that?
+
+34
+00:01:49,000 --> 00:01:51,000
+How will we bring it above line 1?
+
+35
+00:01:51,000 --> 00:01:57,000
+When my starting index value is less than equal to my value of mid,
+
+36
+00:01:57,000 --> 00:02:00,000
+in that case, my mid is above line 1.
+
+37
+00:02:00,000 --> 00:02:03,000
+So this condition will happen when my mid will be on line 1.
+
+38
+00:02:03,000 --> 00:02:06,000
+Otherwise, there can be an else condition.
+
+39
+00:02:06,000 --> 00:02:09,000
+When my mid will be on line 2.
+
+40
+00:02:09,000 --> 00:02:11,000
+Here, I will have else condition.
+
+41
+00:02:11,000 --> 00:02:15,000
+When this will be false, then this will be true.
+
+42
+00:02:15,000 --> 00:02:17,000
+So here, I have case A.
+
+43
+00:02:17,000 --> 00:02:19,000
+What was the case A?
+
+44
+00:02:19,000 --> 00:02:21,000
+Case A said that I have to search in the left.
+
+45
+00:02:21,000 --> 00:02:23,000
+What was the condition of searching in the left?
+
+46
+00:02:23,000 --> 00:02:25,000
+The condition of searching in the left was that
+
+47
+00:02:25,000 --> 00:02:30,000
+my starting index value is less than equal to target.
+
+48
+00:02:30,000 --> 00:02:37,000
+And my target is less than equal to my value at ending index.
+
+49
+00:02:37,000 --> 00:02:39,000
+Let's understand this logically.
+
+50
+00:02:39,000 --> 00:02:43,000
+Logically speaking, this means that my target is bigger than the starting index
+
+51
+00:02:43,000 --> 00:02:45,000
+whether it is bigger or equal to it.
+
+52
+00:02:45,000 --> 00:02:47,000
+Here, the ending index should not be mid.
+
+53
+00:02:47,000 --> 00:02:49,000
+But it is smaller than mid.
+
+54
+00:02:49,000 --> 00:02:51,000
+Let me explain this in the diagram.
+
+55
+00:02:51,000 --> 00:02:53,000
+What is the case?
+
+56
+00:02:53,000 --> 00:02:57,000
+When my mid is here,
+
+57
+00:02:57,000 --> 00:02:59,000
+I have identified that I have to search on line 1.
+
+58
+00:02:59,000 --> 00:03:01,000
+But where do I have to search?
+
+59
+00:03:01,000 --> 00:03:03,000
+When my mid is here,
+
+60
+00:03:03,000 --> 00:03:05,000
+and my target's value is bigger than the starting index
+
+61
+00:03:05,000 --> 00:03:07,000
+or equal to it.
+
+62
+00:03:07,000 --> 00:03:09,000
+But it is smaller than mid or equal to it.
+
+63
+00:03:09,000 --> 00:03:11,000
+So, my target will bring something here.
+
+64
+00:03:11,000 --> 00:03:13,000
+That means it will bring something in the left part.
+
+65
+00:03:13,000 --> 00:03:15,000
+What will I call for that?
+
+66
+00:03:15,000 --> 00:03:17,000
+I will search again for that.
+
+67
+00:03:17,000 --> 00:03:19,000
+I will search recursively.
+
+68
+00:03:19,000 --> 00:03:21,000
+I will pass an array in this.
+
+69
+00:03:21,000 --> 00:03:23,000
+I will pass a target.
+
+70
+00:03:23,000 --> 00:03:25,000
+This time, the starting index will be the starting index.
+
+71
+00:03:25,000 --> 00:03:27,000
+But my mid value will be the ending index.
+
+72
+00:03:27,000 --> 00:03:31,000
+And I will return this search by returning the answer.
+
+73
+00:03:31,000 --> 00:03:33,000
+I will return it as my final answer.
+
+74
+00:03:33,000 --> 00:03:37,000
+So, this is my first call of inner recursion.
+
+75
+00:03:37,000 --> 00:03:39,000
+Now, I have searched only the left part.
+
+76
+00:03:39,000 --> 00:03:41,000
+How much is the left part from the starting index?
+
+77
+00:03:41,000 --> 00:03:43,000
+The middle part is my left part.
+
+78
+00:03:43,000 --> 00:03:45,000
+The second will be the condition of the else.
+
+79
+00:03:45,000 --> 00:03:47,000
+The else is the case B
+
+80
+00:03:47,000 --> 00:03:49,000
+in which I am searching in my right.
+
+81
+00:03:49,000 --> 00:03:51,000
+To search in the right, I will call the search.
+
+82
+00:03:51,000 --> 00:03:53,000
+Array, target.
+
+83
+00:03:53,000 --> 00:03:55,000
+This time, I will not start index.
+
+84
+00:03:55,000 --> 00:03:57,000
+This time, I have to pass mid plus 1.
+
+85
+00:03:57,000 --> 00:03:59,000
+And what will I pass instead of the ending index?
+
+86
+00:03:59,000 --> 00:04:01,000
+I will pass the ending index only.
+
+87
+00:04:01,000 --> 00:04:03,000
+And here, because I had searched with mid,
+
+88
+00:04:03,000 --> 00:04:05,000
+that there is no element on mid.
+
+89
+00:04:05,000 --> 00:04:07,000
+Otherwise, it would have been found.
+
+90
+00:04:07,000 --> 00:04:09,000
+So, I can pass mid minus 1 too.
+
+91
+00:04:09,000 --> 00:04:11,000
+I will return it from here.
+
+92
+00:04:11,000 --> 00:04:13,000
+The value that I will get from the search,
+
+93
+00:04:13,000 --> 00:04:15,000
+will return from here.
+
+94
+00:04:15,000 --> 00:04:17,000
+I have covered this case.
+
+95
+00:04:17,000 --> 00:04:19,000
+When my mid line is 1, I will talk about line 2.
+
+96
+00:04:19,000 --> 00:04:21,000
+If my mid line is 2,
+
+97
+00:04:21,000 --> 00:04:23,000
+then what will be the case C?
+
+98
+00:04:23,000 --> 00:04:25,000
+It will be the case C when I have to search in the right.
+
+99
+00:04:25,000 --> 00:04:27,000
+That is, if this is my mid,
+
+100
+00:04:27,000 --> 00:04:29,000
+and this is my ending index,
+
+101
+00:04:29,000 --> 00:04:31,000
+then my target is in between these two.
+
+102
+00:04:31,000 --> 00:04:33,000
+This is my right part.
+
+103
+00:04:33,000 --> 00:04:35,000
+That is, the case C.
+
+104
+00:04:35,000 --> 00:04:37,000
+So, let's write the condition for this.
+
+105
+00:04:37,000 --> 00:04:39,000
+If
+
+106
+00:04:39,000 --> 00:04:41,000
+my array of mid
+
+107
+00:04:41,000 --> 00:04:43,000
+is less than equal to my target,
+
+108
+00:04:43,000 --> 00:04:45,000
+and my target
+
+109
+00:04:45,000 --> 00:04:47,000
+is less than equal to my array of ending index.
+
+110
+00:04:47,000 --> 00:04:49,000
+That means,
+
+111
+00:04:49,000 --> 00:04:51,000
+the target is bigger than mid,
+
+112
+00:04:51,000 --> 00:04:53,000
+and the target is smaller than the ending index.
+
+113
+00:04:53,000 --> 00:04:55,000
+So, in that case, I have to search in the right.
+
+114
+00:04:55,000 --> 00:04:57,000
+To search in the right,
+
+115
+00:04:57,000 --> 00:04:59,000
+I will call the search.
+
+116
+00:04:59,000 --> 00:05:01,000
+Array, target.
+
+117
+00:05:01,000 --> 00:05:03,000
+My index is my mid plus 1
+
+118
+00:05:03,000 --> 00:05:05,000
+equal to the ending index of the ending index C.
+
+119
+00:05:05,000 --> 00:05:07,000
+And what will be its else condition?
+
+120
+00:05:07,000 --> 00:05:09,000
+Else condition is not there,
+
+121
+00:05:09,000 --> 00:05:11,000
+I have to search in the left.
+
+122
+00:05:11,000 --> 00:05:13,000
+This is my case D.
+
+123
+00:05:13,000 --> 00:05:15,000
+I have to search in the left.
+
+124
+00:05:15,000 --> 00:05:17,000
+So, here I will search.
+
+125
+00:05:17,000 --> 00:05:19,000
+Array, target.
+
+126
+00:05:19,000 --> 00:05:21,000
+This time I will pass the starting index
+
+127
+00:05:21,000 --> 00:05:23,000
+and the ending index is mid minus 1.
+
+128
+00:05:23,000 --> 00:05:25,000
+So, like a binary search,
+
+129
+00:05:25,000 --> 00:05:27,000
+we can call it a modified binary search.
+
+130
+00:05:27,000 --> 00:05:29,000
+What did I do?
+
+131
+00:05:29,000 --> 00:05:31,000
+First, let's see, does it exist in mid?
+
+132
+00:05:31,000 --> 00:05:33,000
+After that, let's see the condition of line 1.
+
+133
+00:05:33,000 --> 00:05:35,000
+After that, let's see the condition of line 2.
+
+134
+00:05:35,000 --> 00:05:37,000
+Now, let's see its base case.
+
+135
+00:05:37,000 --> 00:05:39,000
+The base case will be for me
+
+136
+00:05:39,000 --> 00:05:41,000
+that if the value of my starting index
+
+137
+00:05:41,000 --> 00:05:43,000
+becomes greater than my ending index,
+
+138
+00:05:43,000 --> 00:05:45,000
+then in this case, I will return
+
+139
+00:05:45,000 --> 00:05:47,000
+minus 1.
+
+140
+00:05:47,000 --> 00:05:49,000
+That is, I have reached an invalid condition
+
+141
+00:05:49,000 --> 00:05:51,000
+and I have not got my target yet.
+
+142
+00:05:51,000 --> 00:05:53,000
+So, my target
+
+143
+00:05:53,000 --> 00:05:55,000
+does not exist in my array.
+
+144
+00:05:55,000 --> 00:05:57,000
+In that case, I will return
+
+145
+00:05:57,000 --> 00:05:59,000
+minus 1 as an index.
+
+146
+00:05:59,000 --> 00:06:01,000
+Because minus 1 is also an invalid index.
+
+147
+00:06:01,000 --> 00:06:03,000
+So, let's summarize it a little more.
+
+148
+00:06:03,000 --> 00:06:05,000
+This was my search function.
+
+149
+00:06:05,000 --> 00:06:07,000
+The starting index and the ending index came every time.
+
+150
+00:06:07,000 --> 00:06:09,000
+And you will see that if I write a binary search
+
+151
+00:06:09,000 --> 00:06:11,000
+in recursive fashion,
+
+152
+00:06:11,000 --> 00:06:13,000
+then it is solved in that way.
+
+153
+00:06:13,000 --> 00:06:15,000
+Here, I have seen that my starting index
+
+154
+00:06:15,000 --> 00:06:17,000
+has increased from the ending index.
+
+155
+00:06:17,000 --> 00:06:19,000
+If I set the base case, then I have returned minus 1.
+
+156
+00:06:19,000 --> 00:06:21,000
+Otherwise, what would I have done?
+
+157
+00:06:21,000 --> 00:06:23,000
+I would have removed the mid.
+
+158
+00:06:23,000 --> 00:06:25,000
+Would I have checked mid or not?
+
+159
+00:06:25,000 --> 00:06:27,000
+Would I have put it in the left part
+
+160
+00:06:27,000 --> 00:06:29,000
+or would I have to search in the right part?
+
+161
+00:06:29,000 --> 00:06:31,000
+According to that, I have applied the recursive calls.
+
+162
+00:06:31,000 --> 00:06:33,000
+And on these calls, I have believed
+
+163
+00:06:33,000 --> 00:06:35,000
+that these calls will give me the right answer.
+
+164
+00:06:35,000 --> 00:06:37,000
+So, I have shown the recursive faith.
+
+165
+00:06:37,000 --> 00:06:39,000
+Then, what did I see?
+
+166
+00:06:39,000 --> 00:06:41,000
+I have seen that case in which I apply it on the midline 2.
+
+167
+00:06:41,000 --> 00:06:43,000
+Here, the first case is the one
+
+168
+00:06:43,000 --> 00:06:45,000
+that will be applied on the right side of line 2.
+
+169
+00:06:45,000 --> 00:06:47,000
+The fourth case is that it will be applied
+
+170
+00:06:47,000 --> 00:06:49,000
+on the whole left side.
+
+171
+00:06:49,000 --> 00:06:51,000
+Here, I have applied a call for the search
+
+172
+00:06:51,000 --> 00:06:53,000
+to search for them.
+
+173
+00:06:53,000 --> 00:06:55,000
+The recursive function will see this.
+
+174
+00:06:55,000 --> 00:06:57,000
+So, I have called
+
+175
+00:06:57,000 --> 00:06:59,000
+the main function here.
+
+176
+00:06:59,000 --> 00:07:01,000
+And I have printed the target index.
+
+177
+00:07:01,000 --> 00:07:03,000
+Let's do this in shape.
+
+178
+00:07:03,000 --> 00:07:05,000
+And let's run it once.
+
+179
+00:07:05,000 --> 00:07:07,000
+After running, my output is
+
+180
+00:07:07,000 --> 00:07:09,000
+equal to 4.
+
+181
+00:07:09,000 --> 00:07:11,000
+If I change the target to 6,
+
+182
+00:07:11,000 --> 00:07:13,000
+then my output will be
+
+183
+00:07:13,000 --> 00:07:15,000
+equal to 2.
+
+184
+00:07:15,000 --> 00:07:17,000
+Because 6 brings the index to 2 in this array.
+
+185
+00:07:17,000 --> 00:07:19,000
+So, in this way, we solve
+
+186
+00:07:19,000 --> 00:07:21,000
+the search, insorted and rotated array.
+
+187
+00:07:21,000 --> 00:07:23,000
+This is not just about recursion.
+
+188
+00:07:23,000 --> 00:07:25,000
+We can do this whole divide and conquer
+
+189
+00:07:25,000 --> 00:07:27,000
+through iteration.
+
+190
+00:07:27,000 --> 00:07:29,000
+So, the homework problem for you is
+
+191
+00:07:29,000 --> 00:07:31,000
+that we have just solved the
+
+192
+00:07:31,000 --> 00:07:33,000
+binary search, modified binary search
+
+193
+00:07:33,000 --> 00:07:35,000
+through recursion.
+
+194
+00:07:35,000 --> 00:07:37,000
+We have to solve this modified binary search
+
+195
+00:07:37,000 --> 00:07:39,000
+through iteration in the homework.
+
+196
+00:07:39,000 --> 00:07:41,000
+That is, we can solve this problem
+
+197
+00:07:41,000 --> 00:07:43,000
+by applying a single loop.
+
+198
+00:07:43,000 --> 00:07:45,000
+And if we are able to do that,
+
+199
+00:07:45,000 --> 00:07:47,000
+then we will be able to make it clear
+
+200
+00:07:47,000 --> 00:07:49,000
+that we have cleared the binary search
+
+201
+00:07:49,000 --> 00:07:51,000
+through recursion.
+
+202
+00:07:51,000 --> 00:07:53,000
+We have understood the whole logic.
+
+203
+00:07:53,000 --> 00:07:55,000
+We have run it dry on a small array.
+
+204
+00:07:55,000 --> 00:07:57,000
+So, it will be very easy to write
+
+205
+00:07:57,000 --> 00:07:59,000
+an iteration.
+

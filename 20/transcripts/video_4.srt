@@ -1,0 +1,1044 @@
+1
+00:00:00,000 --> 00:00:03,760
+The next question we will talk about next is called quicksort.
+
+2
+00:00:03,760 --> 00:00:09,600
+Quicksort mergesort gives you time complexity but in average cases it is more in the worst case.
+
+3
+00:00:09,600 --> 00:00:12,800
+But in the average case, it also has the same time complexity.
+
+4
+00:00:12,800 --> 00:00:17,200
+The good thing about quicksort is that it doesn't take extra space like a mergesort.
+
+5
+00:00:17,200 --> 00:00:22,240
+We do the same thing in the same space and sort our array.
+
+6
+00:00:22,240 --> 00:00:26,960
+So the best thing about quicksort is that in the average case of quicksort,
+
+7
+00:00:26,960 --> 00:00:32,640
+the time complexity that is equal to big of n log n,
+
+8
+00:00:32,640 --> 00:00:37,360
+in the worst case, the time complexity of quicksort is equal to n square.
+
+9
+00:00:37,360 --> 00:00:42,240
+And the space complexity here is equal to our constant space which is of 1.
+
+10
+00:00:42,240 --> 00:00:44,560
+That means we don't use any extra space.
+
+11
+00:00:44,560 --> 00:00:48,240
+So in the questions, we need the average time complexity n log n.
+
+12
+00:00:48,240 --> 00:00:52,400
+That means we need some fast sorting but we don't have any extra space.
+
+13
+00:00:52,400 --> 00:00:54,800
+In those cases, we can use quicksort.
+
+14
+00:00:54,880 --> 00:01:00,480
+In most cases, we don't hit the worst case in every case.
+
+15
+00:01:00,480 --> 00:01:03,040
+So let's talk about the approach of quicksort.
+
+16
+00:01:03,040 --> 00:01:06,960
+Quicksort is our pivot and partition approach.
+
+17
+00:01:06,960 --> 00:01:12,240
+Pivot and partition is a different form of divide and conquer.
+
+18
+00:01:12,240 --> 00:01:16,400
+We will call it divide and conquer in other words.
+
+19
+00:01:16,400 --> 00:01:22,640
+The first step of quicksort that we have to perform in quicksort is to choose a pivot.
+
+20
+00:01:22,640 --> 00:01:29,600
+Pivot is a center point in which around things rotate.
+
+21
+00:01:29,600 --> 00:01:32,240
+For example, if I hold this pencil from here,
+
+22
+00:01:32,240 --> 00:01:37,520
+if it rotates like this, then this point will be its pivot point.
+
+23
+00:01:37,520 --> 00:01:40,400
+Pivot point means around things.
+
+24
+00:01:40,400 --> 00:01:45,200
+So the element around which I will rotate my array,
+
+25
+00:01:45,200 --> 00:01:49,120
+I will change my array or I will sort my array,
+
+26
+00:01:49,120 --> 00:01:51,120
+that will be my pivot element.
+
+27
+00:01:51,200 --> 00:01:54,480
+Approach is something like this, that we take out a pivot from here.
+
+28
+00:01:54,480 --> 00:01:57,200
+If I take out any random element from here,
+
+29
+00:01:57,200 --> 00:01:59,040
+suppose I take out 8.
+
+30
+00:01:59,040 --> 00:02:02,320
+So I will sort this array around 8 in such a way
+
+31
+00:02:02,320 --> 00:02:04,960
+that I will write 8 smaller elements before 8,
+
+32
+00:02:04,960 --> 00:02:07,280
+I will write 8 bigger elements after 8.
+
+33
+00:02:07,280 --> 00:02:11,760
+So this 3, this 6, this 2, this 5 will come here.
+
+34
+00:02:11,760 --> 00:02:13,760
+So it will come here 6, 3, 2, or 5.
+
+35
+00:02:13,760 --> 00:02:17,120
+And this 9 is bigger than 8, so my 9 will come here.
+
+36
+00:02:17,120 --> 00:02:19,200
+So what is pivot here? Pivot is 8.
+
+37
+00:02:19,280 --> 00:02:21,760
+8 which I have to sort around.
+
+38
+00:02:21,760 --> 00:02:23,600
+So we can take any pivot.
+
+39
+00:02:23,600 --> 00:02:26,480
+There are a lot of approaches to choose a pivot element.
+
+40
+00:02:26,480 --> 00:02:28,960
+It is possible that you are taking a random element,
+
+41
+00:02:28,960 --> 00:02:31,760
+it is possible that you take out an array's median and pivot it.
+
+42
+00:02:31,760 --> 00:02:34,160
+It is possible that we take our first element,
+
+43
+00:02:34,160 --> 00:02:36,400
+it is possible that we take our last element.
+
+44
+00:02:36,400 --> 00:02:38,880
+But in the way that I have seen in maximum space,
+
+45
+00:02:38,880 --> 00:02:42,160
+in the way of solving a quick sort, we take the last element.
+
+46
+00:02:42,160 --> 00:02:45,200
+And here too we will take the last element and solve it.
+
+47
+00:02:45,200 --> 00:02:48,320
+You can solve it in any way, the answer has to be the same.
+
+48
+00:02:48,400 --> 00:02:52,560
+What will you do here? We will take our last element.
+
+49
+00:02:52,560 --> 00:02:53,840
+So this will be my step 1.
+
+50
+00:02:53,840 --> 00:02:56,880
+Step 1, what did I do? I took 5 as a pivot.
+
+51
+00:02:56,880 --> 00:02:58,640
+Now after that comes my step 2.
+
+52
+00:02:58,640 --> 00:03:00,160
+What will I do in step 2?
+
+53
+00:03:00,160 --> 00:03:01,680
+I will do partition here.
+
+54
+00:03:01,680 --> 00:03:08,000
+Partition means that I will divide my entire array into parts.
+
+55
+00:03:08,000 --> 00:03:09,280
+How will I divide?
+
+56
+00:03:09,280 --> 00:03:10,800
+Around this pivot.
+
+57
+00:03:10,800 --> 00:03:12,800
+I had 5 pivots, so what will I do?
+
+58
+00:03:12,800 --> 00:03:15,200
+I will try to take 5 in the center.
+
+59
+00:03:15,280 --> 00:03:18,080
+And write the small elements in the left.
+
+60
+00:03:18,240 --> 00:03:20,880
+I will write the large elements in the right.
+
+61
+00:03:21,200 --> 00:03:23,200
+So I go to all the indexes at once.
+
+62
+00:03:23,200 --> 00:03:27,120
+I will look at 6 first whether it is 6 5 or whether it is bigger than 6.
+
+63
+00:03:27,120 --> 00:03:29,520
+I will bring 6 here for 3.
+
+64
+00:03:29,760 --> 00:03:31,200
+And if 3 has smaller than 5, yes it has smaller.
+
+65
+00:03:31,200 --> 00:03:33,920
+So I will bring 3 here, and then 9.
+
+66
+00:03:33,920 --> 00:03:35,280
+9 is smaller or not.
+
+67
+00:03:35,280 --> 00:03:36,960
+So I will bring 9 here.
+
+68
+00:03:36,960 --> 00:03:39,920
+8 for 8, small or bigger than 8, no but bigger.
+
+69
+00:03:39,920 --> 00:03:41,360
+So I will bring 8 here.
+
+70
+00:03:41,360 --> 00:03:42,160
+And then it will be 2 again.
+
+71
+00:03:42,160 --> 00:03:43,040
+Is 2 smaller than 5?
+
+72
+00:03:43,040 --> 00:03:43,760
+Yes it is small.
+
+73
+00:03:43,760 --> 00:03:49,760
+then I will bring 2 here. So what happened? I had a pivot which I made the elements in front of it.
+
+74
+00:03:49,760 --> 00:03:54,760
+I brought the smaller elements before that and the bigger elements after that.
+
+75
+00:03:54,760 --> 00:03:58,760
+This process of bringing it is the most important process of a sort.
+
+76
+00:03:58,760 --> 00:04:04,760
+That is how I store the smaller elements before the pivot and then store the bigger elements after the pivot.
+
+77
+00:04:04,760 --> 00:04:07,760
+This partition step is the main step.
+
+78
+00:04:07,760 --> 00:04:10,760
+We will talk about how the partition will actually be.
+
+79
+00:04:10,760 --> 00:04:14,760
+But as soon as my partition is done, what will I do?
+
+80
+00:04:14,760 --> 00:04:21,760
+Now I will call the quick sort for this part and call the quick sort for my right part.
+
+81
+00:04:21,760 --> 00:04:31,760
+So the third step will be to call the quick sort for my left part and call the quick sort for my right part.
+
+82
+00:04:31,760 --> 00:04:39,760
+And as soon as the quick sort is done, the bigger elements will be smaller.
+
+83
+00:04:39,760 --> 00:04:42,760
+And finally we will hit the base condition.
+
+84
+00:04:42,760 --> 00:04:47,760
+My base case will be the same when I have a single element left.
+
+85
+00:04:47,760 --> 00:04:49,760
+So what will happen in the case of a single element?
+
+86
+00:04:49,760 --> 00:04:55,760
+In the case of a single element, if I have nothing to do, then my array is already sorted.
+
+87
+00:04:55,760 --> 00:04:57,760
+So I will have the same base case.
+
+88
+00:04:57,760 --> 00:04:59,760
+So I have to do three things.
+
+89
+00:04:59,760 --> 00:05:02,760
+First I have to select the pivot and then partition it.
+
+90
+00:05:02,760 --> 00:05:04,760
+I have to divide it in parts.
+
+91
+00:05:04,760 --> 00:05:07,760
+And then I have to find out the correct position of the pivot.
+
+92
+00:05:07,760 --> 00:05:09,760
+It is still written here in this array.
+
+93
+00:05:09,760 --> 00:05:12,760
+But if the array is sorted, then what is the correct position of the pivot?
+
+94
+00:05:12,760 --> 00:05:15,760
+Before that, all the small elements and then all the big elements.
+
+95
+00:05:15,760 --> 00:05:17,760
+This is the step of the partition.
+
+96
+00:05:17,760 --> 00:05:19,760
+After that, I will sort the left and the recursively.
+
+97
+00:05:19,760 --> 00:05:21,760
+I will sort the right and the recursively.
+
+98
+00:05:21,760 --> 00:05:23,760
+I have figured out the base case.
+
+99
+00:05:23,760 --> 00:05:26,760
+Now let's discuss this partition in detail.
+
+100
+00:05:26,760 --> 00:05:28,760
+What do I have to do for the partition?
+
+101
+00:05:28,760 --> 00:05:30,760
+I always know that it is like a merge sort.
+
+102
+00:05:30,760 --> 00:05:34,760
+Even in this, my original array will have a starting index.
+
+103
+00:05:34,760 --> 00:05:36,760
+And I will have my ending index.
+
+104
+00:05:36,760 --> 00:05:38,760
+The starting index will be zero.
+
+105
+00:05:38,760 --> 00:05:40,760
+The ending index will be five.
+
+106
+00:05:40,760 --> 00:05:42,760
+Now I have selected the pivot.
+
+107
+00:05:42,760 --> 00:05:44,760
+What is my pivot? My pivot is five.
+
+108
+00:05:44,760 --> 00:05:46,760
+And what is the index of this pivot?
+
+109
+00:05:46,760 --> 00:05:48,760
+Right now, the index of this pivot is equal to five.
+
+110
+00:05:48,760 --> 00:05:50,760
+That is equal to my ending index.
+
+111
+00:05:50,760 --> 00:05:52,760
+What will I do? I will take an iterator.
+
+112
+00:05:52,760 --> 00:05:55,760
+I will initialize it from minus one.
+
+113
+00:05:55,760 --> 00:05:57,760
+And what will the iterator do?
+
+114
+00:05:57,760 --> 00:05:59,760
+It will make a place in my array.
+
+115
+00:05:59,760 --> 00:06:01,760
+For what will it make a place?
+
+116
+00:06:01,760 --> 00:06:03,760
+For my elements.
+
+117
+00:06:03,760 --> 00:06:05,760
+That is, the small elements from the pivots
+
+118
+00:06:05,760 --> 00:06:07,760
+will make a place in the original array
+
+119
+00:06:07,760 --> 00:06:11,760
+for the i that is my iterator.
+
+120
+00:06:11,760 --> 00:06:15,760
+The work of i is to make a place for the small elements from the pivots.
+
+121
+00:06:15,760 --> 00:06:19,760
+So, I have initialized the i with minus one.
+
+122
+00:06:19,760 --> 00:06:21,760
+I can say that i is minus one.
+
+123
+00:06:21,760 --> 00:06:23,760
+If it is zero, it is one, it is two, it is three, it is four, it is five.
+
+124
+00:06:23,760 --> 00:06:25,760
+So, i is pointing here right now.
+
+125
+00:06:25,760 --> 00:06:27,760
+I am not pointing to any valid index.
+
+126
+00:06:27,760 --> 00:06:29,760
+What will I do now?
+
+127
+00:06:29,760 --> 00:06:31,760
+I have made an iterator i.
+
+128
+00:06:31,760 --> 00:06:33,760
+This is my original array.
+
+129
+00:06:33,760 --> 00:06:35,760
+This is not a temporary array.
+
+130
+00:06:35,760 --> 00:06:37,760
+I am talking about the original.
+
+131
+00:06:37,760 --> 00:06:39,760
+There are already elements stored in the original.
+
+132
+00:06:39,760 --> 00:06:41,760
+There are six stored here.
+
+133
+00:06:41,760 --> 00:06:43,760
+There are three stored here.
+
+134
+00:06:43,760 --> 00:06:45,760
+There are nine stored here.
+
+135
+00:06:45,760 --> 00:06:47,760
+There are eight stored here.
+
+136
+00:06:47,760 --> 00:06:49,760
+There are two stored here.
+
+137
+00:06:49,760 --> 00:06:51,760
+There are five stored here.
+
+138
+00:06:51,760 --> 00:06:53,760
+I mean, I can store these elements.
+
+139
+00:06:53,760 --> 00:06:55,760
+Now, what I have to do?
+
+140
+00:06:55,760 --> 00:06:57,760
+I have to traverse the original array.
+
+141
+00:06:57,760 --> 00:06:59,760
+First, I will ask six.
+
+142
+00:06:59,760 --> 00:07:01,760
+I will compare six with five.
+
+143
+00:07:01,760 --> 00:07:03,760
+Is six bigger than five or smaller?
+
+144
+00:07:03,760 --> 00:07:05,760
+If six is bigger than five,
+
+145
+00:07:05,760 --> 00:07:07,760
+then I will keep six here or here.
+
+146
+00:07:07,760 --> 00:07:09,760
+So, what will i do?
+
+147
+00:07:09,760 --> 00:07:11,760
+I don't have to do any work.
+
+148
+00:07:11,760 --> 00:07:13,760
+I don't have to make a place for six.
+
+149
+00:07:13,760 --> 00:07:15,760
+Because i will make a place for the small elements
+
+150
+00:07:15,760 --> 00:07:17,760
+that are smaller than pivots.
+
+151
+00:07:17,760 --> 00:07:19,760
+So, I don't have to do any work now.
+
+152
+00:07:19,760 --> 00:07:21,760
+I will ask six.
+
+153
+00:07:21,760 --> 00:07:23,760
+Is three smaller than pivots or bigger?
+
+154
+00:07:23,760 --> 00:07:25,760
+Obviously, three is smaller than pivots.
+
+155
+00:07:25,760 --> 00:07:27,760
+So, I will make a place for this.
+
+156
+00:07:27,760 --> 00:07:29,760
+How will I make a place?
+
+157
+00:07:29,760 --> 00:07:31,760
+What will i do?
+
+158
+00:07:31,760 --> 00:07:33,760
+First, it will increase its value.
+
+159
+00:07:33,760 --> 00:07:35,760
+I will get this pointer from here.
+
+160
+00:07:35,760 --> 00:07:37,760
+I mean, there are six stored here.
+
+161
+00:07:37,760 --> 00:07:39,760
+Then, what will i do?
+
+162
+00:07:39,760 --> 00:07:41,760
+I will swap the values.
+
+163
+00:07:41,760 --> 00:07:43,760
+How will I swap?
+
+164
+00:07:43,760 --> 00:07:45,760
+I will pick up six from here
+
+165
+00:07:45,760 --> 00:07:47,760
+and put three here.
+
+166
+00:07:47,760 --> 00:07:49,760
+So, how will I swap?
+
+167
+00:07:49,760 --> 00:07:51,760
+Swap has increased its value
+
+168
+00:07:51,760 --> 00:07:53,760
+by one index.
+
+169
+00:07:53,760 --> 00:07:55,760
+The smaller element
+
+170
+00:07:55,760 --> 00:07:57,760
+that it has to be placed there,
+
+171
+00:07:57,760 --> 00:07:59,760
+it has to be placed there.
+
+172
+00:07:59,760 --> 00:08:01,760
+The old one has to be removed from there.
+
+173
+00:08:01,760 --> 00:08:03,760
+And the old one has to be placed
+
+174
+00:08:03,760 --> 00:08:05,760
+instead of this element.
+
+175
+00:08:05,760 --> 00:08:07,760
+So, I have swapped
+
+176
+00:08:07,760 --> 00:08:09,760
+both the elements.
+
+177
+00:08:09,760 --> 00:08:11,760
+How will this change in the code?
+
+178
+00:08:11,760 --> 00:08:13,760
+In the code, I will take a temporary variable.
+
+179
+00:08:13,760 --> 00:08:15,760
+In which, I will store
+
+180
+00:08:15,760 --> 00:08:17,760
+the array of j value.
+
+181
+00:08:17,760 --> 00:08:19,760
+Suppose, the j is the iterator
+
+182
+00:08:19,760 --> 00:08:21,760
+whose value was zero.
+
+183
+00:08:21,760 --> 00:08:23,760
+Then, what will I do?
+
+184
+00:08:23,760 --> 00:08:25,760
+I will store the array of j
+
+185
+00:08:25,760 --> 00:08:27,760
+in the array of i value.
+
+186
+00:08:27,760 --> 00:08:29,760
+And in the array of i,
+
+187
+00:08:29,760 --> 00:08:31,760
+what will I store?
+
+188
+00:08:31,760 --> 00:08:33,760
+I will store the array of i
+
+189
+00:08:33,760 --> 00:08:35,760
+in the array of i.
+
+190
+00:08:35,760 --> 00:08:37,760
+In this way, we have always
+
+191
+00:08:37,760 --> 00:08:39,760
+swapped.
+
+192
+00:08:39,760 --> 00:08:41,760
+So, what will the i iterator do?
+
+193
+00:08:41,760 --> 00:08:43,760
+He will swap the values.
+
+194
+00:08:43,760 --> 00:08:45,760
+It will be equal to 2.
+
+195
+00:08:45,760 --> 00:08:47,760
+So, he will compare the 9 with 5.
+
+196
+00:08:47,760 --> 00:08:49,760
+The 9 is bigger than 5.
+
+197
+00:08:49,760 --> 00:08:51,760
+So, no work will be done here.
+
+198
+00:08:51,760 --> 00:08:53,760
+The value of i has increased from minus 1 to zero.
+
+199
+00:08:53,760 --> 00:08:55,760
+After that, the iterator will go to 8.
+
+200
+00:08:55,760 --> 00:08:57,760
+He will compare the 8 with 5.
+
+201
+00:08:57,760 --> 00:08:59,760
+Is the value of 8 bigger than 5?
+
+202
+00:08:59,760 --> 00:09:01,760
+Yes, it is bigger. In this case,
+
+203
+00:09:01,760 --> 00:09:03,760
+there will be no swapping.
+
+204
+00:09:03,760 --> 00:09:05,760
+The j is equal to 3.
+
+205
+00:09:05,760 --> 00:09:07,760
+Then, the iterator will increase.
+
+206
+00:09:07,760 --> 00:09:09,760
+The j is equal to 4.
+
+207
+00:09:09,760 --> 00:09:11,760
+The value of 2 is bigger than 5.
+
+208
+00:09:11,760 --> 00:09:13,760
+What will the i do?
+
+209
+00:09:13,760 --> 00:09:15,760
+The i will do plus plus first.
+
+210
+00:09:15,760 --> 00:09:17,760
+After plus plus, the value of i will be equal to 1.
+
+211
+00:09:17,760 --> 00:09:19,760
+The value of i is equal to 1.
+
+212
+00:09:19,760 --> 00:09:21,760
+So, the i came here.
+
+213
+00:09:21,760 --> 00:09:23,760
+So, he has to make a place here.
+
+214
+00:09:23,760 --> 00:09:25,760
+He already has 6 here.
+
+215
+00:09:25,760 --> 00:09:27,760
+So, he will pick up 6.
+
+216
+00:09:27,760 --> 00:09:29,760
+And who will he pick up? He will pick up 2.
+
+217
+00:09:29,760 --> 00:09:31,760
+So, he will pick up 2 for me.
+
+218
+00:09:31,760 --> 00:09:33,760
+And j is equal to 4 for me.
+
+219
+00:09:33,760 --> 00:09:35,760
+He will remove 2 here.
+
+220
+00:09:35,760 --> 00:09:37,760
+And he will pick up 6 for me.
+
+221
+00:09:37,760 --> 00:09:39,760
+So, the swapping will be done in this way.
+
+222
+00:09:39,760 --> 00:09:41,760
+There will be changes in the journal.
+
+223
+00:09:41,760 --> 00:09:43,760
+How will my array be?
+
+224
+00:09:43,760 --> 00:09:45,760
+My array will be something like this.
+
+225
+00:09:45,760 --> 00:09:47,760
+First of all, 3 came.
+
+226
+00:09:47,760 --> 00:09:49,760
+Then, 2 came.
+
+227
+00:09:49,760 --> 00:09:51,760
+Then, 9 came.
+
+228
+00:09:51,760 --> 00:09:53,760
+Then, 8 came.
+
+229
+00:09:53,760 --> 00:09:55,760
+Then, 6 came.
+
+230
+00:09:55,760 --> 00:09:57,760
+And then, 5 came.
+
+231
+00:09:57,760 --> 00:09:59,760
+I have copied these same elements.
+
+232
+00:09:59,760 --> 00:10:01,760
+This is 2.
+
+233
+00:10:01,760 --> 00:10:03,760
+This is 9.
+
+234
+00:10:03,760 --> 00:10:05,760
+This is 8.
+
+235
+00:10:05,760 --> 00:10:07,760
+This is 6.
+
+236
+00:10:07,760 --> 00:10:09,760
+If I do the swapping again,
+
+237
+00:10:09,760 --> 00:10:11,760
+then it will be i++.
+
+238
+00:10:11,760 --> 00:10:13,760
+That is, index is equal to 2.
+
+239
+00:10:13,760 --> 00:10:15,760
+Index is equal to 2.
+
+240
+00:10:15,760 --> 00:10:17,760
+Then, 9 will do the swapping.
+
+241
+00:10:17,760 --> 00:10:19,760
+Then, 9 will do the swapping.
+
+242
+00:10:19,760 --> 00:10:21,760
+And then, 5 will do the swapping.
+
+243
+00:10:21,760 --> 00:10:23,760
+That means, it will do the pivot.
+
+244
+00:10:23,760 --> 00:10:25,760
+And then, 9 will do the swapping.
+
+245
+00:10:25,760 --> 00:10:27,760
+So, 9 will do the swapping.
+
+246
+00:10:27,760 --> 00:10:29,760
+And then, last we will see
+
+247
+00:10:29,760 --> 00:10:31,760
+what will happen with the help of partition.
+
+248
+00:10:31,760 --> 00:10:33,760
+5 was my pivot.
+
+249
+00:10:33,760 --> 00:10:35,760
+Smaller elements will come here.
+
+250
+00:10:35,760 --> 00:10:37,760
+So, partition has done
+
+251
+00:10:37,760 --> 00:10:39,760
+so much magically.
+
+252
+00:10:39,760 --> 00:10:41,760
+This i has done its work.
+
+253
+00:10:41,760 --> 00:10:43,760
+What i have done?
+
+254
+00:10:43,760 --> 00:10:45,760
+i have done this, that it has made
+
+255
+00:10:45,760 --> 00:10:47,760
+space for small elements.
+
+256
+00:10:47,760 --> 00:10:49,760
+And then, it has made space for 5.
+
+257
+00:10:49,760 --> 00:10:51,760
+And then, in the end, I have stored
+
+258
+00:10:51,760 --> 00:10:53,760
+my big elements.
+
+259
+00:10:53,760 --> 00:10:55,760
+So, this way, my partition step will work.
+
+260
+00:10:55,760 --> 00:10:57,760
+Now, we are going to convert the same
+
+261
+00:10:57,760 --> 00:10:59,760
+logic into code.
+
